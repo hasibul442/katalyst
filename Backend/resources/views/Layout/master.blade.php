@@ -21,7 +21,7 @@
                     <!-- Start Content-->
                     <div class="container-fluid">
 
-
+                        @yield("content")
                     </div> <!-- container -->
 
                 </div> <!-- content -->
