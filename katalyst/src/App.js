@@ -7,11 +7,12 @@ import Homepage from "./Pages/HomePage/Homepage";
 import Product from "./Pages/Products/Product";
 import Partners from "./Pages/Partners/Partners";
 import ContactUs from "./Pages/Contactus/ContactUs";
+import Footer from "./Component/Footer/Footer";
 
 function App() {
   return (
-    <div className="App">
-      <Router>
+    <>
+      <Router basename = {process.env.PUBLIC_URL}>
         <Navbar />
         <Routes>
           <Route path="/" element={<Homepage />} />
@@ -24,8 +25,9 @@ function App() {
           <Route path="/partners" element={<Partners/>} />
           <Route path="/contact-us" element={<ContactUs/>} />
         </Routes>
+        <Footer/>
       </Router>
-    </div>
+    </>
   );
 }
 
