@@ -1,4 +1,5 @@
 import React from "react";
+import "./navbar.css";
 import {
   BrowserRouter as Router,
   Switch,
@@ -9,7 +10,7 @@ import {
 function Navbar() {
   return (
     <>
-      <nav className="navbar navbar-expand-lg navbar-light bg-light">
+      <nav className="navbar navbar-expand-lg navbar-light bg-light ftco-navbar-light" id="ftco-navbar">
         <div className="container">
           <Link className="navbar-brand" to='/'>
             <img src="/logo/katalyst.png" alt="Company Logo" height= '50px' className="navbar-logo"/>
@@ -47,6 +48,7 @@ function Navbar() {
                   id="navbarDropdown"
                   role="button"
                   data-bs-toggle="dropdown"
+                  aria-haspopup="true"
                   aria-expanded="false"
                 >
                   Products
