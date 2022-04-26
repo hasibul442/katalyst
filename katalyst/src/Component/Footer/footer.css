@@ -1,5 +1,9 @@
 .footer2{
-    background-color: #2e2d2e;
+    /* background-color: #2e2d2e; */
+    background-image: url(./../../../public/footer/pattern.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    /* height: 20vh; */
     color: #fff;
     padding-top: 5px;
     padding-bottom: 1px;
