@@ -78,3 +78,14 @@
     -webkit-text-fill-color: transparent;
     transition: all 265ms ease-in;
 }
+@media screen and (max-width: 991px){
+    .footer{
+        text-justify: center;
+        padding-top: 5px;
+        padding-bottom: 1px;
+        height: 150px;
+        position: relative;
+        text-align: center;
+        color: #fff;
+    }
+  }
