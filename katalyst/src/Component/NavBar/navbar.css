@@ -23,7 +23,7 @@
   }
 }
 .ftco-navbar-light .navbar-nav > .nav-item > .nav-link {
-  font-size: 11px;
+  font-size: 14px;
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
   padding-left: 20px;
@@ -81,7 +81,7 @@
   border-radius: 4px;
 }
 .dropdown_auto_menu .dropdown-item {
-  font-size: 12px;
+  font-size: 14px;
   color: #000000;
 }
 .dropdown_auto:hover .dropdown_auto_menu{
