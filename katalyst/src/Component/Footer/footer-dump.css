@@ -1,0 +1,116 @@
+/* .footer2{
+
+    background-image: url(./../../../public/footer/Untitled-1.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 50px;
+    color: #fff;
+    padding-top: 5px;
+    padding-bottom: 1px;
+    font-family: 'Cairo', sans-serif;
+} */
+.footer-text{
+    margin-top: 0px
+}
+.footer{
+    text-justify: center;
+    height: 50px;
+    position: relative;
+    text-align: center;
+    color: #fff;
+}
+.footer-image{
+    height: 150px;
+    width: 100%;
+}
+.centered {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    transform: translate(0%, -50%);
+  }
+
+.social-container {
+    text-align: center;
+}
+.social-icons {
+    margin-top: 25%;
+    padding: 0;
+    list-style: none;
+}
+.social-icons li {
+    display: inline-block;
+    margin-right: 0.15em;
+    position: relative;
+    font-size: 1.2em;
+}
+.social-icons i {
+    color: #fff;
+    position: absolute;
+    top: 22%;
+    left: 30%;
+    transition: all 265ms ease-out;
+}
+.social-icons a {
+    display: inline-block;
+}
+.social-icons a:before {
+    transform: scale(1);
+    -ms-transform: scale(1);
+    -webkit-transform: scale(1);
+    content: " ";
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    display: block;
+    background-color: #f307f3;
+    transition: all 265ms ease-out;
+}
+.social-icons a:hover:before {
+    transform: scale(0);
+    transition: all 265ms ease-in;
+}
+ .social-icons a:hover i {
+    transform: scale(1.5);
+    -ms-transform: scale(1.5);
+    -webkit-transform: scale(1.5);
+    color: #d800f5;
+    background-color: #f307f3;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: all 265ms ease-in;
+}
+@media screen and (max-width: 991px){
+    .footer{
+        height: 150px;
+        color: #fff;
+        text-align: right;
+    }
+    .social-icons {
+        margin-top: 5%;
+    }
+    .footer-image{
+        height: 200px;
+        width: 100%;
+    }
+    .centered {
+        position: absolute;
+        top: 70%;
+        left: 0%;
+        transform: translate(00%, -50%);
+      }
+  }
+
+  /* .footer2{
+
+    background-image: url(./../../../public/footer/Untitled-1.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 50px;
+    color: #fff;
+    padding-top: 5px;
+    padding-bottom: 1px;
+    font-family: 'Cairo', sans-serif;
+} */
