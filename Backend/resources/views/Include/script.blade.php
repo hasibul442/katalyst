@@ -1,6 +1,6 @@
-        <!-- Vendor js -->
-        <script src="{{ asset('assets/js/vendor.min.js') }}"></script>
-
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+<script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
         <!-- KNOB JS -->
         <script src="{{ asset('assets/libs/jquery-knob/jquery.knob.min.js') }}"></script>
         <!-- Chart JS -->
@@ -18,9 +18,15 @@
 
         <!-- Dashboard Init JS -->
         {{-- <script src="{{ asset('assets/js/pages/dashboard.init.js') }}"></script> --}}
+        <!--Summernote js-->
+        <script src="{{ asset('assets/libs/summernote/summernote-bs4.min.js') }}"></script>
 
+        <!-- Init js -->
+        <script src="{{ asset('assets/js/pages/form-summernote.init.js') }}"></script>
         <!-- App js -->
         <script src="{{ asset('assets/js/app.min.js') }}"></script>
+
+
 
     </body>
 </html>

@@ -22,3 +22,18 @@ Auth::routes();
 
 Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('dashboard');
 Route::get('/dashboard', [App\Http\Controllers\HomeController::class, 'index'])->name('dashboard');
+
+
+// Profile Information
+Route::get('/profile', "App\Http\Controllers\ProfileController@index")->name('profile');
+Route::post('/profile/create', "App\Http\Controllers\ProfileController@index")->name('profile.add');
+Route::get('/profile/edit/{id}/', "App\Http\Controllers\ProfileController@edit")->name('profile.edit');
+Route::put('/profile/update/{id}/', "App\Http\Controllers\ProfileController@update")->name('profile.update');
+
+// Banner Information
+Route::get('/banner', "App\Http\Controllers\BannerController@index")->name('banner');
+Route::post('/banner/add', "App\Http\Controllers\BannerController@store")->name('banner.add');
+Route::get('/banner/edit/{id}', "App\Http\Controllers\BannerController@edit")->name('banner.edit');
+Route::post('/banner/update/{id}', "App\Http\Controllers\BannerController@update")->name('banner.update');
+Route::get('/banner/status/{id}/{status}', "App\Http\Controllers\BannerController@statuschange");
+Route::delete('/banner/{id}', "App\Http\Controllers\BannerController@destroy");

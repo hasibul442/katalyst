@@ -19,6 +19,12 @@ class CreateCompanyprofilesTable extends Migration
             $table->longText('mission')->nullable();
             $table->longText('vision')->nullable();
             $table->longText('value')->nullable();
+            $table->string('phoneno')->nullable();
+            $table->string('mobileno1')->nullable();
+            $table->string('mobileno2')->nullable();
+            $table->string('email')->nullable();
+            $table->string('address')->nullable();
+            $table->string('address_link')->nullable();
             $table->timestamps();
         });
     }

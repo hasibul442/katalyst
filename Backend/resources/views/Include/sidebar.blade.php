@@ -17,14 +17,14 @@
                 </li>
 
                 <li>
-                    <a href="#">
+                    <a href="{{ route('profile') }}">
                         <i class="dripicons-meter"></i>
                         <span> Company Profile </span>
                     </a>
                 </li>
 
                 <li>
-                    <a href="#">
+                    <a href="{{ route('banner') }}">
                         <i class="dripicons-meter"></i>
                         <span> Banner </span>
                     </a>
