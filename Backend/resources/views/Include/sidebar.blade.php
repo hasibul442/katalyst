@@ -31,14 +31,14 @@
                 </li>
 
                 <li>
-                    <a href="#">
+                    <a href="{{ route('basicchemicals') }}">
                         <i class="dripicons-meter"></i>
-                        <span> Product </span>
+                        <span> Basic Chemicals </span>
                     </a>
                 </li>
 
                 <li>
-                    <a href="#">
+                    <a href="{{ route('auxiliarychemicals') }}">
                         <i class="dripicons-meter"></i>
                         <span> Auxiliary Chemicals </span>
                     </a>

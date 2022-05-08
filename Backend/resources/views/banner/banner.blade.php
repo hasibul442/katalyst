@@ -44,7 +44,7 @@
                             <td><img src="{{ asset('/assets/image/banner/'.$item->image) }}" alt="" style="width: 100px; height:100px"></td>
                             <td><input type="checkbox" name="status" class="status" id="status" data-toggle="toggle" data-on="Active" data-off="Deactive" data-onstyle="success" data-offstyle="danger" data-id="{{ $item->id }}" {{ $item->status == 'Active' ? 'checked' : '' }}></td>
                             <td>
-                                {{-- <a class="btn btn-outline-warning btn-sm" href="javascript:void(0);" onclick="editbanner({{ $item->id }})"><i class="fas fa-pencil-alt"></i></a> --}}
+                                <a class="btn btn-outline-warning btn-sm" href="javascript:void(0);" onclick="editbanner({{ $item->id }})"><i class="fas fa-pencil-alt"></i></a>
                                 {{-- <button class="btn btn-outline-warning btn-sm edit-btn" value="{{ $item->id }}"><i class="fas fa-pencil-alt"></i></button> --}}
                                 <a href="javascript:void(0);" data-id="{{ $item->id }}" role="button" class="btn btn-sm btn-outline-danger deletebtn"><i class="mdi mdi-trash-can"></i></a>
                             </td>
@@ -187,9 +187,9 @@
             }
         });
         let id = $('#id').val();
-        var title1 = $('#title1').val();
-        var image1 = $('#image1').val();
-        let _token = $('input[name=_token]').val();
+        // var title1 = $('#title1').val();
+        // var image1 = $('#image1').val();
+        // let _token = $('input[name=_token]').val();
         let formData = new FormData($('#bannereditform')[0]);
         console.log(image1);
 
@@ -202,8 +202,8 @@
 
             , success: function(response) {
                 // console.log(response);
-                $('#banner' + response.id + 'td:nth-child(1)').text(response.title1);
-                $('#banner' + response.id + 'td:nth-child(2)').prop(response.image1);
+                // $('#banner' + response.id + 'td:nth-child(1)').text(response.title1);
+                // $('#banner' + response.id + 'td:nth-child(2)').prop(response.image1);
 
                 $('#BannerEditModal').modal("toggle");
                 location.reload();

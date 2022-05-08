@@ -37,3 +37,17 @@ Route::get('/banner/edit/{id}', "App\Http\Controllers\BannerController@edit")->n
 Route::post('/banner/update/{id}', "App\Http\Controllers\BannerController@update")->name('banner.update');
 Route::get('/banner/status/{id}/{status}', "App\Http\Controllers\BannerController@statuschange");
 Route::delete('/banner/{id}', "App\Http\Controllers\BannerController@destroy");
+
+
+// Basic Chemicals Information
+Route::get('/basic-chemicals', "App\Http\Controllers\BasicChemicalsController@index")->name('basicchemicals');
+Route::post('/basicchemical/add', "App\Http\Controllers\BasicChemicalsController@store")->name('basicchemicals.add');
+Route::get('/basicchemicals/status/{id}/{status}', "App\Http\Controllers\BasicChemicalsController@statuschange");
+Route::delete('/basicchemicals/{id}', "App\Http\Controllers\BasicChemicalsController@destroy");
+
+
+// Basic Chemicals Information
+Route::get('/auxiliary-chemicals', "App\Http\Controllers\AuxiliaryChemicalsController@index")->name('auxiliarychemicals');
+Route::post('/auxiliarychemicals/add', "App\Http\Controllers\AuxiliaryChemicalsController@store")->name('auxiliarychemicals.add');
+Route::get('/auxiliarychemicals/status/{id}/{status}', "App\Http\Controllers\AuxiliaryChemicalsController@statuschange");
+Route::delete('/auxiliarychemicals/{id}', "App\Http\Controllers\AuxiliaryChemicalsController@destroy");

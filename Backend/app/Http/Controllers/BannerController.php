@@ -113,8 +113,8 @@ class BannerController extends Controller
             $banner->image = $image_name;
         }
         $banner->save();
-        return response()->json($banner);
-        // return response()->json(['status'=>200,'message' => 'Banner Information Updated Successfully']);
+        // return response()->json($banner);
+        return response()->json(['status'=>200,'message' => 'Banner Information Updated Successfully']);
     }
     public function statuschange($id,$status){
         $banner = Banner::find($id);
