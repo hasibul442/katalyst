@@ -46,8 +46,20 @@ Route::get('/basicchemicals/status/{id}/{status}', "App\Http\Controllers\BasicCh
 Route::delete('/basicchemicals/{id}', "App\Http\Controllers\BasicChemicalsController@destroy");
 
 
-// Basic Chemicals Information
+// Auxiliary Chemicals Information
 Route::get('/auxiliary-chemicals', "App\Http\Controllers\AuxiliaryChemicalsController@index")->name('auxiliarychemicals');
 Route::post('/auxiliarychemicals/add', "App\Http\Controllers\AuxiliaryChemicalsController@store")->name('auxiliarychemicals.add');
 Route::get('/auxiliarychemicals/status/{id}/{status}', "App\Http\Controllers\AuxiliaryChemicalsController@statuschange");
 Route::delete('/auxiliarychemicals/{id}', "App\Http\Controllers\AuxiliaryChemicalsController@destroy");
+
+// Dyestuff Information
+Route::get('/dyestuffs', "App\Http\Controllers\DyestuffsController@index")->name('dyestuffs');
+Route::post('/dyestuffs/add', "App\Http\Controllers\DyestuffsController@store")->name('dyestuffs.add');
+Route::get('/dyestuffs/status/{id}/{status}', "App\Http\Controllers\DyestuffsController@statuschange");
+Route::delete('/dyestuffs/{id}', "App\Http\Controllers\DyestuffsController@destroy");
+
+// Dyestuff Information
+Route::get('/machines', "App\Http\Controllers\MachinesController@index")->name('machines');
+Route::post('/machines/add', "App\Http\Controllers\MachinesController@store")->name('machines.add');
+Route::get('/machines/status/{id}/{status}', "App\Http\Controllers\MachinesController@statuschange");
+Route::delete('/machines/{id}', "App\Http\Controllers\MachinesController@destroy");

@@ -20,6 +20,7 @@ class CreateMachinesTable extends Migration
             $table->longText('description')->nullable();
             $table->string('application')->nullable();
             $table->enum("status",['Active', 'Deactive'])->nullable();
+            $table->timestamps();
         });
     }
 

@@ -45,14 +45,14 @@
                 </li>
 
                 <li>
-                    <a href="#">
+                    <a href="{{ route('dyestuffs') }}">
                         <i class="dripicons-meter"></i>
                         <span> Dyestuffs </span>
                     </a>
                 </li>
 
                 <li>
-                    <a href="#">
+                    <a href="{{ route('machines') }}">
                         <i class="dripicons-meter"></i>
                         <span> Machines </span>
                     </a>

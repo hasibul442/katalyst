@@ -1,5 +1,5 @@
 @extends('Layout.master')
-@section('title', 'Basic Chemicals')
+@section('title', 'Machines')
 @section('content')
 
 <div class="row">
@@ -8,7 +8,7 @@
             <div class="page-title-right">
                 <ol class="breadcrumb m-0">
                     <li class="breadcrumb-item"><a href="javascript: void(0);">Product</a></li>
-                    <li class="breadcrumb-item active">Basic Chemicals</li>
+                    <li class="breadcrumb-item active">Machines</li>
                 </ol>
             </div>
             <h4 class="page-title">Product</h4>
@@ -19,16 +19,16 @@
 <section>
     <div class="card">
         <div class="card-body">
-            <h4 class="text-center">Basic Chemicals</h4>
-            <div class="text-center"><button type="button" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#BasicChemicalAdd">Basic Chemicals Add</button></div>
+            <h4 class="text-center">Machines</h4>
+            <div class="text-center"><button type="button" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#MachinesAdd">Machines Add</button></div>
 
             <div class="pt-5">
                 <table class="table display" width="100%" id="example">
                     <thead>
                         <tr>
                             <th>No</th>
-                            <th>Chemical Name</th>
-                            <th>Chemical Image</th>
+                            <th>Name</th>
+                            <th>Image</th>
                             <th>Description</th>
                             <th>Application</th>
                             <th>Status</th>
@@ -39,12 +39,12 @@
                         @php
                         $i=0;
                         @endphp
-                        @foreach ($basicChemicals as $item )
+                        @foreach ($machines as $item )
 
                         <tr id="banner-{{ $item->id }}">
                             <td>{{ ++$i }}</td>
-                            <td>{{ $item->chemical_name }}</td>
-                            <td><img src="{{ asset('/assets/image/basicchemicals/'.$item->chemical_image) }}" alt="" style="width: 100px; height:100px"></td>
+                            <td>{{ $item->machine_name }}</td>
+                            <td><img src="{{ asset('/assets/image/machines/'.$item->machine_image) }}" alt="" style="width: 100px; height:100px"></td>
                             <td>{!! $item->description !!}</td>
                             <td>{!! $item->application !!}</td>
                             <td><input type="checkbox" name="status" class="status" id="status" data-toggle="toggle" data-on="Active" data-off="Deactive" data-onstyle="success" data-offstyle="danger" data-id="{{ $item->id }}" {{ $item->status == 'Active' ? 'checked' : '' }}></td>
@@ -63,25 +63,24 @@
 </section>
 
 
-
 <!--Add Modal -->
-<div class="modal fade" id="BasicChemicalAdd" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="MachinesAdd" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-lg">
         <div class="modal-content">
             <div class="modal-body">
-                <form class="forms-sample" id="basicChemicalForm" method="POST" enctype="multipart/form-data">
+                <form class="forms-sample" id="MachinesForm" method="POST" enctype="multipart/form-data">
                     @csrf
                     {{-- <ul class="alert alert-warning d-none" id="save_errorList"></ul> --}}
 
                     <div class="form-group row">
-                        <label for="chemical_name" class="col-sm-3 col-form-label">Chemical Name</label>
+                        <label for="machine_name" class="col-sm-3 col-form-label">Name</label>
                         <div class="col-sm-9">
-                            <input type="text" class="form-control" id="chemical_name" placeholder="Chemical Name" name="chemical_name">
+                            <input type="text" class="form-control" id="machine_name" placeholder="Name" name="machine_name">
                         </div>
                     </div>
 
                     <div class="form-group row">
-                        <label for="image" class="col-sm-3 col-form-label">Chemical Image</label>
+                        <label for="image" class="col-sm-3 col-form-label">Image</label>
                         <div class="col-sm-9">
                             <input type="file" class="form-control" id="image" name="image" required>
                         </div>
@@ -121,17 +120,17 @@
 </script>
 
 <script>
-    $('#basicChemicalForm').on('submit', function(e) {
+    $('#MachinesForm').on('submit', function(e) {
         e.preventDefault();
         $.ajaxSetup({
             headers: {
                 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
             }
         });
-        var myformData = new FormData($('#basicChemicalForm')[0]);
+        var myformData = new FormData($('#MachinesForm')[0]);
         $.ajax({
             type: "post"
-            , url: "/basicchemical/add"
+            , url: "/machines/add"
             , data: myformData
             , cache: false
             , processData: false
@@ -139,8 +138,8 @@
             , dataType: "json"
             , success: function(response) {
                 console.log(response);
-                $("#basicChemicalForm").find('input').val('');
-                $('#BasicChemicalAdd').modal('hide');
+                $("#MachinesForm").find('input').val('');
+                $('#MachinesAdd').modal('hide');
                 location.reload();
             }
             , error: function(error) {
@@ -156,7 +155,7 @@
         if (confirm("Are You sure want to delete !")) {
             $.ajax({
                 type: "DELETE"
-                , url: "/basicchemicals/" + id
+                , url: "/machines/" + id
                 , data: {
                     "id": id
                     , "_token": token
@@ -185,7 +184,7 @@
         }
         $.ajax({
             dataType: "json"
-            , url: '/basicchemicals/status/' + id + '/' + catstatus
+            , url: '/machines/status/' + id + '/' + catstatus
             , method: 'get'
             , success: function(result1) {
                 console.log(result1);
