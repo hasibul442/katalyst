@@ -11,63 +11,63 @@
 
                 <li>
                     <a href="{{ route('dashboard') }}">
-                        <i class="dripicons-meter"></i>
+                        <i class="fad fa-dice-d20"></i>
                         <span> Dashboard </span>
                     </a>
                 </li>
 
                 <li>
                     <a href="{{ route('profile') }}">
-                        <i class="dripicons-meter"></i>
+                        <i class="fas fa-info-circle"></i>
                         <span> Company Profile </span>
                     </a>
                 </li>
 
                 <li>
                     <a href="{{ route('banner') }}">
-                        <i class="dripicons-meter"></i>
+                        <i class="fad fa-icons"></i>
                         <span> Banner </span>
                     </a>
                 </li>
 
                 <li>
                     <a href="{{ route('basicchemicals') }}">
-                        <i class="dripicons-meter"></i>
+                        <i class="fas fa-chart-network"></i>
                         <span> Basic Chemicals </span>
                     </a>
                 </li>
 
                 <li>
                     <a href="{{ route('auxiliarychemicals') }}">
-                        <i class="dripicons-meter"></i>
+                        <i class="fas fa-bezier-curve"></i>
                         <span> Auxiliary Chemicals </span>
                     </a>
                 </li>
 
                 <li>
                     <a href="{{ route('dyestuffs') }}">
-                        <i class="dripicons-meter"></i>
+                        <i class="fas fa-ball-pile"></i>
                         <span> Dyestuffs </span>
                     </a>
                 </li>
 
                 <li>
                     <a href="{{ route('machines') }}">
-                        <i class="dripicons-meter"></i>
+                        <i class="fas fa-campground"></i>
                         <span> Machines </span>
                     </a>
                 </li>
 
                 <li>
                     <a href="{{ route('partners') }}">
-                        <i class="dripicons-meter"></i>
+                        <i class="fas fa-hands-helping"></i>
                         <span> Partners </span>
                     </a>
                 </li>
 
                 <li>
-                    <a href="#">
-                        <i class="dripicons-meter"></i>
+                    <a href="{{ route('jobportal') }}">
+                        <i class="fab fa-artstation"></i>
                         <span> Job Post </span>
                     </a>
                 </li>

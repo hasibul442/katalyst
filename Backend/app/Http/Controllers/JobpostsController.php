@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Partners;
+use App\Models\Jobposts;
 use Illuminate\Http\Request;
 
-class PartnersController extends Controller
+class JobpostsController extends Controller
 {
     public function __construct()
     {
@@ -18,8 +18,8 @@ class PartnersController extends Controller
      */
     public function index()
     {
-        $partners = Partners::get();
-        return view('Partners.Partners', compact('partners'));
+        $jobposts = Jobposts::orderByDesc('id')->get();
+        return view("job.job", compact('jobposts'));
     }
 
     /**
@@ -40,27 +40,26 @@ class PartnersController extends Controller
      */
     public function store(Request $request)
     {
-        $partners = new Partners;
-        $partners->company_name = $request->company_name;
-        $partners->description = $request->description;
+        $jobposts = new Jobposts;
+        $jobposts->position_name = $request->position_name;
+        $jobposts->vacancy = $request->vacancy;
+        $jobposts->salary = $request->salary;
+        $jobposts->exprience = $request->exprience;
+        $jobposts->application_dead_line = $request->application_dead_line;
+        $jobposts->description = $request->description;
+        $jobposts->status = "Active";
 
-        if ($request->hasFile('logo')) {
-            $image = $request->file('logo');
-            $image_name = time() . '.' . $image->getClientOriginalExtension();
-            $image->move(public_path() . '/assets/image/partners/', $image_name);
-            $partners->logo = $image_name;
-        }
-        $partners->save();
+        $jobposts->save();
         return response()->json(['success' => 'Data Add successfully.']);
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Partners  $partners
+     * @param  \App\Models\Jobposts  $jobposts
      * @return \Illuminate\Http\Response
      */
-    public function show(Partners $partners)
+    public function show(Jobposts $jobposts)
     {
         //
     }
@@ -68,10 +67,10 @@ class PartnersController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Partners  $partners
+     * @param  \App\Models\Jobposts  $jobposts
      * @return \Illuminate\Http\Response
      */
-    public function edit(Partners $partners)
+    public function edit(Jobposts $jobposts)
     {
         //
     }
@@ -80,10 +79,10 @@ class PartnersController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Partners  $partners
+     * @param  \App\Models\Jobposts  $jobposts
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Partners $partners)
+    public function update(Request $request, Jobposts $jobposts)
     {
         //
     }
@@ -91,15 +90,21 @@ class PartnersController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Partners  $partners
+     * @param  \App\Models\Jobposts  $jobposts
      * @return \Illuminate\Http\Response
      */
+
+    public function statuschange($id, $status)
+    {
+        $jobposts = Jobposts::find($id);
+        $jobposts->status = $status;
+        $jobposts->update();
+        return response()->json(['success' => 'Status changed successfully.']);
+    }
     public function destroy($id)
     {
-        $partners = Partners::find($id);
-        $partners->delete();
+        $jobposts = Jobposts::find($id);
+        $jobposts->delete();
         return response()->json(['success' => 'Data Delete successfully.']);
-
-
     }
 }
