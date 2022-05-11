@@ -29,7 +29,7 @@
                             <div class="col-sm-9">
                                 <h4 class="card-title text-center">Total User</h4>
                                 <div>
-                                    <p class="text-center dashboard-card-text">10</p>
+                                    <p class="text-center dashboard-card-text">{{ App\Models\User::get()->count() }}</p>
                                 </div>
                             </div>
                         </div>
@@ -47,9 +47,9 @@
                                 <i class="fad fa-abacus fa-3x dashboard-card-icon"></i>
                             </div>
                             <div class="col-sm-9">
-                                <h4 class="card-title text-center">Product</h4>
+                                <h4 class="card-title text-center">Basic Chemicals</h4>
                                 <div>
-                                    <p class="text-center dashboard-card-text">10</p>
+                                    <p class="text-center dashboard-card-text">{{ App\Models\BasicChemicals::get()->count() }}</p>
                                 </div>
                             </div>
                         </div>
@@ -67,9 +67,49 @@
                                 <i class="fas fa-dice-d20 fa-3x dashboard-card-icon"></i>
                             </div>
                             <div class="col-sm-9">
-                                <h4 class="card-title text-center">Chemicals</h4>
+                                <h4 class="card-title text-center">Auxiliary Chemicals</h4>
                                 <div>
-                                    <p class="text-center dashboard-card-text">10</p>
+                                    <p class="text-center dashboard-card-text">{{ App\Models\AuxiliaryChemicals::get()->count() }}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card rounded">
+                <div class="card-body rounded dashboard-card-body-3">
+                    <div class='px-3 py-3 justify-content-between'>
+                        <div class="row">
+                            <div class="col-sm-3 my-auto text-center">
+                                <i class="fas fa-dice-d20 fa-3x dashboard-card-icon"></i>
+                            </div>
+                            <div class="col-sm-9">
+                                <h4 class="card-title text-center">Dyestuffs</h4>
+                                <div>
+                                    <p class="text-center dashboard-card-text">{{ App\Models\Dyestuffs::get()->count() }}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card rounded">
+                <div class="card-body rounded dashboard-card-body-3">
+                    <div class='px-3 py-3 justify-content-between'>
+                        <div class="row">
+                            <div class="col-sm-3 my-auto text-center">
+                                <i class="fas fa-dice-d20 fa-3x dashboard-card-icon"></i>
+                            </div>
+                            <div class="col-sm-9">
+                                <h4 class="card-title text-center">Machines</h4>
+                                <div>
+                                    <p class="text-center dashboard-card-text">{{ App\Models\Machines::get()->count() }}</p>
                                 </div>
                             </div>
                         </div>

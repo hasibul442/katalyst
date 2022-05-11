@@ -59,7 +59,7 @@
                 </li>
 
                 <li>
-                    <a href="#">
+                    <a href="{{ route('partners') }}">
                         <i class="dripicons-meter"></i>
                         <span> Partners </span>
                     </a>

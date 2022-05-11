@@ -63,3 +63,9 @@ Route::get('/machines', "App\Http\Controllers\MachinesController@index")->name('
 Route::post('/machines/add', "App\Http\Controllers\MachinesController@store")->name('machines.add');
 Route::get('/machines/status/{id}/{status}', "App\Http\Controllers\MachinesController@statuschange");
 Route::delete('/machines/{id}', "App\Http\Controllers\MachinesController@destroy");
+
+
+// Partners Information
+Route::get('/partners', "App\Http\Controllers\PartnersController@index")->name('partners');
+Route::post('/partners/add', "App\Http\Controllers\PartnersController@store")->name('partners.add');
+Route::delete('/partners/{id}', "App\Http\Controllers\PartnersController@destroy");
