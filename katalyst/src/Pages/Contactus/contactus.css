@@ -1,0 +1,39 @@
+.contact-bg {
+  background-image: linear-gradient(#3d3d3d4b, #3d3d3d63),
+    url("./../../../public/contact/contactus.jpg");
+  width: auto;
+  height: 650px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  /* opacity: 0.3; */
+}
+.item--title {
+  color: #fff;
+}
+.contact-bg div {
+  padding-top: 10%;
+}
+.custome-shape {
+}
+.shape-image {
+  /* transform: translate(0px,-90%); */
+  top: 35%;
+  position: absolute;
+  width: 100%;
+  height: 450px;
+  /* transform: rotate(180deg); */
+}
+.texture {
+  background-image: url("./../../../public/texture/t-4.png");
+  height: 100%;
+}
+
+.contact-map-headline {
+  padding-top: 60px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 50px;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: #000;
+}
