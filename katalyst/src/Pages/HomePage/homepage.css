@@ -32,3 +32,20 @@
 .carousel-indicators .active {
     opacity: 1 !important;
 }
+.history-img{
+    
+}
+.history-side-image{
+    height: 400px;
+    width: 400px;
+    border-radius: 50%;
+    
+}
+.katalyst-history-headline{
+    padding-top: 60px;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    font-size: 30px;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: #000;
+}
