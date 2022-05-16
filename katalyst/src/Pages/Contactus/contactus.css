@@ -7,6 +7,7 @@
   background-position: center;
   background-size: cover;
   /* opacity: 0.3; */
+  background-attachment: fixed;
 }
 .item--title {
   color: #fff;
@@ -14,14 +15,12 @@
 .contact-bg div {
   padding-top: 10%;
 }
-.custome-shape {
-}
 .shape-image {
   /* transform: translate(0px,-90%); */
-  top: 35%;
+  top: 38%;
   position: absolute;
   width: 100%;
-  height: 450px;
+  height: 500px;
   /* transform: rotate(180deg); */
 }
 .texture {
@@ -36,4 +35,126 @@
   text-transform: uppercase;
   font-weight: 600;
   color: #000;
+}
+.cardbox {
+  border-radius: 10px;
+  background: #ffffff;
+  box-shadow:  15px 15px 30px #bfbfbf,
+               -15px -15px 30px #ffffff;
+}
+.contact-us-headline {
+  padding-top: 60px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 50px;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: #000;
+}
+
+
+/* Button style */
+.button-style {
+  /* width: 200px; */
+  padding: 15px 30px;
+  position: relative;
+  overflow: hidden;
+}
+.button-style:hover .wave {
+  top: -120px;
+}
+.button-style span {
+  position: relative;
+  z-index: 1;
+  color: white;
+  font-size: 15px;
+  letter-spacing: 2px;
+}
+.button-style .wave {
+  width: 200px;
+  height: 200px;
+  background-color: #0400ff;
+  box-shadow: inset 0 0 50px #0400ff;
+  position: absolute;
+  left: 0;
+  top: -80px;
+  transition: 0.4s;
+}
+.button-style .wave::before, .button-style .wave::after {
+  width: 200%;
+  height: 200%;
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -75%);
+}
+.button-style .wave::before {
+  border-radius: 45%;
+  background-color: #141414;
+  animation: wave 5s linear infinite;
+}
+.button-style .wave::after {
+  border-radius: 40%;
+  background-color: #14141480;
+  animation: wave 10s linear infinite;
+}
+@keyframes wave {
+  0% {
+    transform: translate(-50%, -75%) rotate(0deg);
+ }
+  100% {
+    transform: translate(-50%, -75%) rotate(360deg);
+ }
+}
+
+.contactinfo{
+  background-image: linear-gradient(#111111f1, #111111a8),
+    url("./../../../public/contact/B-2.jpg");
+    width: auto;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.get-in-touch{
+  padding-top: 60px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 50px;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: #fff;
+  text-align: center;
+}
+.address-icon-box{
+  font-size: 40px;
+  margin: 20px auto;
+  page-break-after: 20px;
+  padding: 10px;
+  height: 80px;
+  width: 80px;
+  border: 1px solid whitesmoke;
+  border-radius: 50%;
+}
+.address-icon-box:hover{
+  background-color: #0400ff;
+  border: 1px solid #0400ff;
+  transition: 0.5s;
+
+}
+
+.address-headline{
+  color: #00d9ff;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  text-transform: uppercase;
+  font-weight: 600;
+  text-align: center;
+}
+.glassmorphism{
+  height: 320px;
+  background: rgba( 244, 0, 255, 0.25 );
+  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+  backdrop-filter: blur( 1.5px );
+  -webkit-backdrop-filter: blur( 1.5px );
+  border-radius: 10px;
+  border: 1px solid rgba( 255, 255, 255, 0.18 );
 }

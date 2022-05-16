@@ -58,3 +58,28 @@
     background-color: #000;
     height: 50px;
 }
+.footer-headline{
+    color: #ffffff;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.touch-with-us-text{
+    color: #fff;
+    text-decoration: none;
+}
+.touch-with-us-text:hover{
+    color: #d800f5;
+}
+
+.quick-link-text{
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+    display: block;
+}
+.quick-link-text:hover{
+    background-color: #F90716;
+    padding: 5px;
+    color: #ffffff;
+    transition: 0.5s;
+    border-radius: 20px 50px;
+}
