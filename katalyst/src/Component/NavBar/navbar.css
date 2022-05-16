@@ -2,7 +2,7 @@
   z-index: 99;
   position: fixed;
   width: 100%;
-  margin-bottom: 50px;
+  /* margin-bottom: 50px; */
 }
 
 .ftco-navbar-light {
@@ -61,7 +61,7 @@
     padding-right: 0;
     padding-top: 0.7rem;
     padding-bottom: 0.7rem;
-    color: rgba(255, 255, 255, 0.7);
+    color: #ffffffb3;
   }
   .ftco-navbar-light .navbar-nav > .nav-item > .nav-link:hover {
     color: #fff;
@@ -82,7 +82,7 @@
 }
 .dropdown_auto_menu .dropdown-item {
   font-size: 14px;
-  color: #000000;
+  color: #000 !important;
 }
 .dropdown_auto:hover .dropdown_auto_menu{
   display: block;
@@ -91,9 +91,9 @@
   transform: scaleX(1);
   transform-origin: bottom left;
 }
-.dropdown-item:hover{
-  background-color: #F90716;
-  color: #fff;
+.dropdown_auto_menu  .dropdown-item:hover{
+  background-color: #F90716 !important;
+  color: #fff !important;
   transition: 0.3s;
 }
 @media screen and (max-width: 991px){
@@ -102,7 +102,7 @@
   }
   .dropdown_auto_menu .dropdown-item {
     font-size: 12px;
-    color: #ffffff;
+    color: #ffffff !important;
   }
 }
 

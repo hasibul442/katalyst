@@ -45,26 +45,26 @@ function ContactUs() {
               <div className="col-md-6 pt-4">
                 <div>
                   <form>
-                    <div class="pb-3">
-                        <input type="text" class="form-control" placeholder="Name"/>
+                    <div className="pb-3">
+                        <input type="text" className="form-control" placeholder="Name"/>
                     </div>
-                    <div class="row pb-3">
-                      <div class="col">
-                        <input type="email" class="form-control" placeholder="Email"/>
+                    <div className="row pb-3">
+                      <div className="col">
+                        <input type="email" className="form-control" placeholder="Email"/>
                       </div>
-                      <div class="col">
-                        <input type="phone" class="form-control" placeholder="Phone Number"/>
+                      <div className="col">
+                        <input type="phone" className="form-control" placeholder="Phone Number"/>
                       </div>
                     </div>
 
-                    <div class="pb-3">
-                        <textarea class="form-control" placeholder="Message" rows={5}></textarea>
+                    <div className="pb-3">
+                        <textarea className="form-control" placeholder="Message" rows={5}></textarea>
                     </div>
 
-                    <div class="pb-3 text-center">
+                    <div className="pb-3 text-center">
                         <button className="btn btn-primary button-style">
                           <span>Send Message</span>
-                          <div class="wave"></div>
+                          <div className="wave"></div>
                         </button>
                     </div>
 

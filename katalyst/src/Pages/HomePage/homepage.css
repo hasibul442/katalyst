@@ -1,0 +1,34 @@
+/* .carousel .control-dots .dot {
+    border-radius: 50% !important;
+    width: 20px !important;
+    height: 20px !important;
+  } */
+  .carousel-indicators {
+    bottom: 10% !important;
+    left: 30% !important;
+    z-index: 2 !important;
+    margin-right: 15%;
+    margin-bottom: 1rem;
+    margin-left: 15%;
+    list-style: none
+}
+  .carousel-indicators [data-coreui-target] {
+    width: 15px !important;
+    height: 15px !important;
+    padding: 0 !important;
+    margin-right: 1px !important;
+    margin-left: 1px !important;
+    background-color:  #e700fc !important;
+    border-radius: 50% !important;
+    opacity: .3 !important;
+    transition: opacity .6s ease !important;
+}
+@media (prefers-reduced-motion:reduce) {
+    .carousel-indicators [data-coreui-target] {
+        transition: none !important;
+    }
+}
+
+.carousel-indicators .active {
+    opacity: 1 !important;
+}
