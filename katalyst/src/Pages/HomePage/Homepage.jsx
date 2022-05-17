@@ -1,108 +1,182 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { CCarousel, CCarouselItem, CImage } from '@coreui/react';
-import '@coreui/coreui/dist/css/coreui.min.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
+import React from "react";
+import { Link } from "react-router-dom";
 
-import './homepage.css'
+import "bootstrap/dist/css/bootstrap.min.css";
 
-import RellaxWrapper from 'react-rellax-wrapper';
+import "./homepage.css";
 
-import AOS from 'aos';
-import 'aos/dist/aos.css';
+import RellaxWrapper from "react-rellax-wrapper";
+
+import AOS from "aos";
+import "aos/dist/aos.css";
+
+import CountUp from "react-countup";
+import { Carousel } from "react-bootstrap";
 
 function Homepage() {
-
   AOS.init({
     duration: 800,
     delay: 200,
-    mirror: true
+    mirror: true,
   });
 
   return (
     <>
-      <section className='carousel-section'>
-        <CCarousel controls indicators interval={2000}>
-          <CCarouselItem>
-            <CImage className='d-block w-100' style={{ height: '800px' }} src='/carousel/Banner-1.jpg'/>
-          </CCarouselItem>
-          <CCarouselItem>
-            <CImage className='d-block w-100' style={{ height: '800px' }} src='/carousel/Banner-2.jpg'/>
-          </CCarouselItem>
-          <CCarouselItem>
-            <CImage className='d-block w-100' style={{ height: '800px' }} src='/carousel/Banner-3.jpg'/>
-          </CCarouselItem>
-          <CCarouselItem>
-            <CImage className='d-block w-100' style={{ height: '800px' }} src='/carousel/Banner-4.jpg'/>
-          </CCarouselItem>
-        </CCarousel>
+      <section className="carousel-section">
+        <Carousel>
+          <Carousel.Item>
+            <img
+              className="d-block w-100"
+              style={{ height: "800px" }}
+              src="/carousel/Banner-1.jpg"
+              alt="Banner_Photo"
+            />
+          </Carousel.Item>
+          <Carousel.Item>
+            <img
+              className="d-block w-100"
+              style={{ height: "800px" }}
+              src="/carousel/Banner-2.jpg"
+              alt="Banner_Photo"
+            />
+          </Carousel.Item>
+          <Carousel.Item>
+            <img
+              className="d-block w-100"
+              style={{ height: "800px" }}
+              src="/carousel/Banner-3.jpg"
+              alt="Banner_Photo"
+            />
+          </Carousel.Item>
+          <Carousel.Item>
+            <img
+              className="d-block w-100"
+              style={{ height: "800px" }}
+              src="/carousel/Banner-4.jpg"
+              alt="Banner_Photo"
+            />
+          </Carousel.Item>
+        </Carousel>
       </section>
 
       <section className="custome-shape">
-        <img src="/custom_shape/11.png" className="shape-image" alt="Custom Shape" />
+        <img
+          src="/custom_shape/11.png"
+          className="shape-image"
+          alt="Custom Shape"
+        />
       </section>
 
-      <section className='texture-1'>
-          <div className="container">
-            <div className="row">
-
-              <div className="col-md-6">
-                <RellaxWrapper speed={3}>
-                  <div className='history-img text-center mt-5'>
-                    <img src="/homepage/homepage-1.jpg" alt="" className='img-fluid history-side-image' />
-                  </div>
-                </RellaxWrapper>
-              </div>
-
-              <div className="col-md-6" data-aos="fade-up">
-                <p className='h2 katalyst-history-headline'>Katalyst Bangladesh, is a partnership entity of four professionals having academic background of Textile Engineering and Biochemistry with combined pharmaceutical and textile experiences of more than 75 years</p>
-                <p className='history-short-description'>has been established in early 2019 considering the growth potentiality of textile dyeing and washing industries. And, to exclusively focus in its target industries currently Katalyst Bangladesh is closely working with one of the major sole distributor of soda ash light and Soda Ash Dense from Double Ring, China. Besides, Katalyst Bangladesh sources others basic chemicals from renowned manufacturer worldwide which include Glauber Salt from Sateri (China), </p>
-
-                <div>
-                  <Link to="/about-us"  className="btn learn-more button-style-2">
-                    <span className="circle" aria-hidden="true">
-                      <span className="icon arrow"></span>
-                    </span>
-                    <span className="button-text">Learn More</span>
-                  </Link>
+      <section className="texture-1">
+        <div className="container">
+          <div className="row">
+            <div className="col-md-6 my-auto">
+              <RellaxWrapper speed={2}>
+                <div className="history-img text-center mt-5">
+                  <img
+                    src="/homepage/homepage-1.jpg"
+                    alt=""
+                    className="img-fluid history-side-image"
+                  />
                 </div>
+              </RellaxWrapper>
+            </div>
 
+            <div className="col-md-6 my-auto" data-aos="fade-up">
+              <p className="h2 katalyst-history-headline">
+                Welcome to Katalyst BD.{" "}
+              </p>
+              <p className="history-short-description">
+                Katalyst Bangladesh, is a partnership entity of four
+                professionals having academic background of Textile Engineering
+                and Biochemistry with combined pharmaceutical and textile
+                experiences of more than 75 years. has been established in early
+                2019 considering the growth potentiality of textile dyeing and
+                washing industries.
+              </p>
+
+              <div>
+                <Link to="/about-us" className="learn-more button-style-2">
+                  <span className="circle" aria-hidden="true">
+                    <span className="icon arrow"></span>
+                  </span>
+                  <span className="button-text">Learn More</span>
+                </Link>
               </div>
-
-              <div className="col-md-6" data-aos="fade-up">
-                <p className='h2 katalyst-history-headline'>Katalyst Bangladesh, is a partnership entity of four professionals having academic background of Textile Engineering and Biochemistry with combined pharmaceutical and textile experiences of more than 75 years</p>
-                <p className='history-short-description'>has been established in early 2019 considering the growth potentiality of textile dyeing and washing industries. And, to exclusively focus in its target industries currently Katalyst Bangladesh is closely working with one of the major sole distributor of soda ash light and Soda Ash Dense from Double Ring, China. Besides, Katalyst Bangladesh sources others basic chemicals from renowned manufacturer worldwide which include Glauber Salt from Sateri (China), </p>
-
-                <div>
-                  <Link to="/about-us"  className="btn learn-more button-style-2">
-                    <span className="circle" aria-hidden="true">
-                      <span className="icon arrow"></span>
-                    </span>
-                    <span className="button-text">Learn More</span>
-                  </Link>
-                </div>
-
-              </div>
-              
-              <div className="col-md-6">
-                <RellaxWrapper speed={3}>
-                  <div className='history-img text-center mt-5'>
-                    <img src="/homepage/homepage-1.jpg" alt="" className='img-fluid history-side-image' />
-                  </div>
-                </RellaxWrapper>
-              </div>
-
             </div>
           </div>
 
-          
+        </div>
+
+        <section>
+          <div className="company-history-point" data-aos="fade-up">
+            <p className="h2 katalyst-history-headline text-center">
+              ecofriendly chemicals and process
+            </p>
+            <p
+              className="history-short-description text-center"
+              style={{ color: "#ec008c" }}
+            >
+              OUR JOURNEY FOR THE LAST 10 YEARS WAS ALL ABOUT EXPLORING NEW
+              FRONTIERS
+            </p>
+            <div className="d-sm-flex justify-content-around pt-3">
+              <div className="pb-2">
+                <div className="text-center">
+                  <i className="fas fa-trophy fa-3x"></i>
+                  <p>
+                    Year Of Exprience <br /> <CountUp end={75} />
+                  </p>
+                </div>
+              </div>
+
+              <div className="pb-2">
+                <div className="text-center">
+                  <i className="fas fa-flag fa-3x"></i>
+                  <p>
+                    Year Of Established <br /> <CountUp end={2019} />
+                  </p>
+                </div>
+              </div>
+
+              <div className="pb-2">
+                <div className="text-center">
+                  <i className="fas fa-globe fa-3x"></i>
+                  <p>
+                    Imported From
+                    <br /> China
+                  </p>
+                </div>
+              </div>
+
+              <div className="pb-2">
+                <div className="text-center">
+                  <i className="fas fa-user-friends fa-3x"></i>
+                  <p>
+                    Employees <br /> <CountUp end={26} />
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
       </section>
 
-      <section className="custome-shape">
-            <img src="/custom_shape/shape-2.png" className="shape-image1" alt="Custom Shape" />
-          </section>
+      <section className="product-show">
+        <div className="custom-shape">
+          <img
+            src="/custom_shape/Asset 2.png"
+            className="shape-image1"
+            alt="Custom Shape"
+          />
+        </div>
+        <div className="container pb-5">
+            <p></p>
+        </div>
+        
+      </section>
     </>
-  )
+  );
 }
 
-export default Homepage
+export default Homepage;
