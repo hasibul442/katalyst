@@ -1,9 +1,5 @@
-/* .carousel .control-dots .dot {
-    border-radius: 50% !important;
-    width: 20px !important;
-    height: 20px !important;
-  } */
-  .carousel-indicators {
+
+.carousel-indicators {
     bottom: 10% !important;
     left: 30% !important;
     z-index: 2 !important;
@@ -12,17 +8,19 @@
     margin-left: 15%;
     list-style: none
 }
-  .carousel-indicators [data-coreui-target] {
+
+.carousel-indicators [data-coreui-target] {
     width: 15px !important;
     height: 15px !important;
     padding: 0 !important;
     margin-right: 1px !important;
     margin-left: 1px !important;
-    background-color:  #e700fc !important;
+    background-color: #ec008c !important;
     border-radius: 50% !important;
     opacity: .3 !important;
     transition: opacity .6s ease !important;
 }
+
 @media (prefers-reduced-motion:reduce) {
     .carousel-indicators [data-coreui-target] {
         transition: none !important;
@@ -32,20 +30,132 @@
 .carousel-indicators .active {
     opacity: 1 !important;
 }
-.history-img{
-    
+
+.texture-1{
+    background-image: linear-gradient(#fffffff8, #ffffffec),
+    url("./../../../public/texture/Asset 3.png");
+
+    /* background-repeat: no-repeat; */
+    /* background-position: center; */
+    /* background-size: cover; */
 }
-.history-side-image{
+.history-img {
+    padding-top: 20%;
+}
+
+.history-side-image {
     height: 400px;
     width: 400px;
     border-radius: 50%;
-    
+    box-shadow: 0px 5px 10px #ec008c;
+
 }
-.katalyst-history-headline{
+
+.katalyst-history-headline {
     padding-top: 60px;
     font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
     font-size: 30px;
     text-transform: uppercase;
     font-weight: 600;
-    color: #000;
+    color: #0083ca;
 }
+.history-short-description{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 18px;
+    justify-content: center;
+}
+
+
+
+.button-style-2 {
+    position: relative;
+    display: inline-block;
+    outline: none;
+    text-decoration: none;
+    background: transparent;
+    padding: 0;
+    font-size: inherit;
+    font-family: inherit;
+}
+.button-style-2 {
+    width: 12rem;
+    height: auto;
+}
+.button-style-2 .circle {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    position: relative;
+    display: block;
+    margin: 0;
+    width: 3rem;
+    height: 3rem;
+    background: #ec008c;
+    border-radius: 1.625rem;
+}
+.button-style-2 .circle .icon {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    background: #fff;
+}
+.button-style-2 .circle .icon.arrow {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    left: 0.625rem;
+    width: 1.125rem;
+    height: 0.125rem;
+    background: none;
+}
+.button-style-2 .circle .icon.arrow::before {
+    position: absolute;
+    content: '';
+    top: -0.25rem;
+    right: 0.0625rem;
+    width: 0.625rem;
+    height: 0.625rem;
+    border-top: 0.125rem solid #fff;
+    border-right: 0.125rem solid #fff;
+    transform: rotate(45deg);
+}
+.button-style-2 .button-text {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 0.75rem 0;
+    margin: 0 0 0 1.85rem;
+    color: #282936;
+    font-weight: 700;
+    line-height: 1.6;
+    text-align: center;
+    text-transform: uppercase;
+}
+.button-style-2:hover .circle {
+    width: 100%;
+}
+.button-style-2:hover .circle .icon.arrow {
+    background: #fff;
+    transform: translate(1rem, 0);
+}
+.button-style-2:hover .button-text {
+    color: #fff;
+}
+
+@media screen and (max-width: 760px){
+    .history-img {
+        padding-top: 10%;
+    }
+    .katalyst-history-headline {
+        padding-top: 0px;
+    }
+}
+.shape-image1 {
+    transform: translate(0px,-10%);
+    /* top: 38%; */
+    /* position: absolute; */
+    width: 100%;
+    height: 500px;
+    /* transform: rotate(180deg); */
+  }
