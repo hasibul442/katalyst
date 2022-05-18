@@ -1,6 +1,6 @@
 import React from "react";
 import RellaxWrapper from "react-rellax-wrapper";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 
 function Product_Details() {
   return (
