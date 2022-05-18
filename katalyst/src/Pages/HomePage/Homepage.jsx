@@ -84,7 +84,7 @@ function Homepage() {
 
             <div className="col-md-6 my-auto" data-aos="fade-up">
               <p className="h2 katalyst-history-headline">
-                Welcome to Katalyst BD.{" "}
+              OUR STORIES
               </p>
               <p className="history-short-description">
                 Katalyst Bangladesh, is a partnership entity of four
