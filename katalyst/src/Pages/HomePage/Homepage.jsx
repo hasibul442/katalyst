@@ -71,21 +71,21 @@ function Homepage() {
         <div className="container">
           <div className="row">
             <div className="col-md-6 my-auto">
-              <RellaxWrapper speed={2}>
-                <div className="history-img text-center mt-5">
-                  <img
-                    src="/homepage/homepage-1.jpg"
-                    alt=""
-                    className="img-fluid history-side-image"
-                  />
+              <RellaxWrapper speed={3} className="text-center">
+                <div className="history-img  mt-5">
+                  <div className="history-image-shape">
+                    <img
+                      src="/homepage/homepage-1.jpg"
+                      alt=""
+                      className="img-fluid shadow history-side-image"
+                    />
+                  </div>
                 </div>
               </RellaxWrapper>
             </div>
 
             <div className="col-md-6 my-auto" data-aos="fade-up">
-              <p className="h2 katalyst-history-headline">
-              OUR STORIES
-              </p>
+              <p className="h2 katalyst-history-headline">OUR STORIES</p>
               <p className="history-short-description">
                 Katalyst Bangladesh, is a partnership entity of four
                 professionals having academic background of Textile Engineering
@@ -105,7 +105,6 @@ function Homepage() {
               </div>
             </div>
           </div>
-
         </div>
 
         <section>
@@ -162,7 +161,7 @@ function Homepage() {
         </section>
       </section>
 
-      <section className="product-show">
+      {/* <section className="product-show">
         <div className="custom-shape">
           <img
             src="/custom_shape/Asset 2.png"
@@ -174,6 +173,37 @@ function Homepage() {
             <p></p>
         </div>
         
+      </section> */}
+
+      <section className="mt-5">
+        <div className="container pt-5">
+          <div className="row">
+            <div className="col-md-5 col-lg-6">
+              <div className="homepage-product-left-block">
+                <h2 className="katalyst-history-headline">Our Product</h2>
+                <p>
+                  For over 10 years, the Katalyst family has been building
+                  relationships with many Company. Our core values define what
+                  we stand for, whom we work with and how we interact with
+                  colleagues, customers, principles, shareholders and others
+                  stakeholders.
+                </p>
+                <Link
+                  to="/basic-chemicals"
+                  className="learn-more button-style-2"
+                >
+                  <span className="circle" aria-hidden="true">
+                    <span className="icon arrow"></span>
+                  </span>
+                  <span className="button-text">Learn More</span>
+                </Link>
+              </div>
+            </div>
+            <div className="col-md-7 col-lg-6">
+              
+            </div>
+          </div>
+        </div>
       </section>
     </>
   );
