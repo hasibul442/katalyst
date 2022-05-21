@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./product.css";
+import "./../custom.css"
 
 function BasicChemical() {
   return (

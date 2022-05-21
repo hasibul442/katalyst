@@ -1,0 +1,174 @@
+.aboutus-bg {
+  background-image: linear-gradient(#3d3d3d4b, #3d3d3d63),
+    url("./../../../public/aboutus/aboutus-background-1.jpg");
+  width: auto;
+  height: 650px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  /* opacity: 0.3; */
+  background-attachment: fixed;
+}
+.item--title {
+  color: #fff;
+}
+.aboutus-bg div {
+  padding-top: 10%;
+}
+.shape-image {
+  transform: translate(0px, -90%);
+  /* top: 38%; */
+  position: absolute;
+  width: 100%;
+  height: 500px;
+  /* transform: rotate(180deg); */
+}
+.texture-3 {
+  background-image: linear-gradient(#fffffff8, #ffffffec),
+    url("./../../../public/texture/Asset-2.png");
+  height: 100%;
+}
+.background-title {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 35px;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: #0083ca;
+}
+.background-title:after,
+.background-title:before {
+  position: relative;
+  content: " ";
+  display: inline-block;
+  width: 50px;
+  height: 4px;
+  background: #ff0000;
+  vertical-align: middle;
+}
+.background-description {
+  font-size: 18px;
+}
+.background-image{
+    margin-top: 20%;
+}
+.aboutus-mission-vision{
+    background-image: linear-gradient(#ffffffd5,#00000070, #000000),
+    url("./../../../public/aboutus/aboutus-3.jpg");
+  width: auto;
+  /* height: 650px; */
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  padding-bottom: 100px;
+}
+.border-box-1{
+    height: 380px;
+    background-color: transparent;
+    /* box-shadow: 0px 5px 10px #ec008c; */
+}
+.border-box-2{
+    height: 380px;
+    background-color: #ec008c;
+    justify-content: center;
+}
+.border-box-3{
+    height: 380px;
+    background-color: transparent;
+    /* box-shadow: 0px 5px 10px #ec008c; */
+}
+.border-box-4{
+    height: 380px;
+    background-color: #0083ca;
+    padding-top: 5%;
+}
+.border-box-5{
+    height: 380px;
+    background-color: transparent;
+    padding-top: 10%;
+    color: #fff;
+}
+.border-box-6{
+    height: 380px;
+    background-color: #552e8c;
+    color: #fff;
+}
+/* .border-box-7{
+    height: 350px;
+    background-color: #4d0686;
+}
+.border-box-8{
+    height: 350px;
+    background-color: #73ff00;
+}
+.border-box-9{
+    height: 350px;
+    background-color: #ffee00;
+} */
+.mission-title{
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    font-size: 35px;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: #ffffff;
+}
+.border-box-2 ul{
+    color: #fff;
+}
+.border-box-6 ul{
+    color: #fff;
+}
+@media screen and (max-width: 991px){
+    .border-box-1{
+        display: none;
+    }
+    .border-box-3{
+        display: none; 
+    }
+    .border-box-5{
+        display: none;
+    }
+}
+.custom-shape-box{
+    position: relative;
+    
+
+}
+.custom-shape-image-2{
+    width: 100%;
+    height: 150px;
+    transform: translate(0px,-50%);
+}
+.why-choose-us-title {
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    font-size: 35px;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: #0083ca;
+  }
+  .why-choose-us-title:after,
+  .why-choose-us-title:before {
+    position: relative;
+    content: " ";
+    display: inline-block;
+    width: 50px;
+    height: 4px;
+    background: #ff0000;
+    vertical-align: middle;
+  }
+  .why-choose-us-subtitle{
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    color: #000000;
+  }
+  .why-choose-us-description{
+    font-size: 18px;
+    color: #000000;
+  }
+  .why-choose-us-progress-bar-title{
+        font-size: 20px;
+        font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+        font-weight: 600;
+        text-transform: uppercase;
+  }

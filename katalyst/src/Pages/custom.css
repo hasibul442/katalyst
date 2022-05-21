@@ -1,0 +1,316 @@
+/* Image Hover Effect 1 */
+.box {
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  border-radius: 15px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.5s ease 0s;
+}
+.box:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.box:before {
+  content: "";
+  background-image: linear-gradient(
+    to top,
+    rgba(14, 174, 87, 1),
+    rgba(12, 116, 117, 1)
+  );
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  transition: all 0.5s ease 0s;
+}
+.box:hover:before {
+  bottom: 0;
+}
+.box img {
+  width: 100%;
+  height: auto;
+  transition: all 0.5s ease 0s;
+}
+.box:hover img {
+  opacity: 0.3;
+}
+.box .box-content {
+  color: #fff;
+  background-image: linear-gradient(
+    to right,
+    rgba(14, 174, 87, 1),
+    rgba(12, 116, 117, 1)
+  );
+  width: 100%;
+  padding: 13px 20px 12px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  transition: all 0.5s ease 0s;
+}
+.box:hover .box-content {
+  color: rgba(14, 174, 87, 1);
+  background: #fff;
+}
+.box .title {
+  font-size: 25px;
+  font-weight: 400;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  text-transform: uppercase;
+  margin: 0;
+}
+.box .post {
+  font-size: 13px;
+  font-weight: 400;
+  letter-spacing: 4px;
+  text-transform: lowercase;
+}
+.box .icon {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  opacity: 0;
+  transform: translateX(-50%) translateY(-35%);
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  z-index: 1;
+  transition: all 0.3s ease 0s;
+}
+.box:hover .icon {
+  opacity: 1;
+}
+
+.box .icon li {
+  margin: 0 3px;
+  /* display: inline-block; */
+}
+.box .icon li .see-more {
+  color: #0eae57;
+  background: #fff;
+  font-size: 18px;
+  padding: 10px;
+  display: block;
+  transition: all 0.5s ease 0s;
+  text-decoration: none;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+.box .icon li .see-more:hover {
+  color: #fff;
+  background: #ec008c;
+  border-radius: 10px 0;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+@media only screen and (max-width: 990px) {
+  .box {
+    margin: 0 0 30px;
+  }
+}
+
+/* Image Hover Effect 2 */
+.product-box {
+  width: 100%;
+  height: 400px;
+  background: #ec008c;
+  font-family: "Raleway", sans-serif;
+  text-align: center;
+  /* box-shadow: 0 0 5px #00000026; */
+  overflow: hidden;
+  position: relative;
+}
+.product-box:before,
+.product-box:after {
+  content: "";
+  background: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+  transform: scale(0);
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.35s ease-in-out;
+}
+
+.product-box:hover:before {
+  transform: scale(1);
+}
+
+.product-box img {
+  width: 100%;
+  height: 350px;
+  transition: all 0.5s ease;
+}
+.product-box:hover img {
+  opacity: 0.3;
+}
+
+.product-box .box-content {
+  width: 100%;
+  padding: 0 20px;
+  opacity: 0;
+  transform: translateX(-50%) translateY(-50%);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 2;
+  transition: all 0.5s ease;
+}
+.product-box:hover .box-content {
+  opacity: 1;
+}
+.product-box .title {
+  font-size: 22px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #fff;
+}
+.product-box .post {
+  color: #fff;
+  font-size: 14px;
+  text-transform: capitalize;
+  letter-spacing: 1px;
+  margin: 0 0 12px;
+  display: block;
+}
+
+@media only screen and (max-width: 990px) {
+  .product-box-boxx {
+    margin: 0 0 30px;
+  }
+}
+
+/* Button style 1*/
+.button-style {
+  /* width: 200px; */
+  padding: 15px 30px;
+  position: relative;
+  overflow: hidden;
+}
+.button-style:hover .wave {
+  top: -120px;
+}
+.button-style span {
+  position: relative;
+  z-index: 1;
+  color: white;
+  font-size: 15px;
+  letter-spacing: 2px;
+}
+.button-style .wave {
+  width: 200px;
+  height: 200px;
+  background-color: #0400ff;
+  box-shadow: inset 0 0 50px #0400ff;
+  position: absolute;
+  left: 0;
+  top: -80px;
+  transition: 0.4s;
+}
+.button-style .wave::before,
+.button-style .wave::after {
+  width: 200%;
+  height: 200%;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -75%);
+}
+.button-style .wave::before {
+  border-radius: 45%;
+  background-color: #141414;
+  animation: wave 5s linear infinite;
+}
+.button-style .wave::after {
+  border-radius: 40%;
+  background-color: #14141480;
+  animation: wave 10s linear infinite;
+}
+@keyframes wave {
+  0% {
+    transform: translate(-50%, -75%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -75%) rotate(360deg);
+  }
+}
+
+/* Button Style 2 */
+
+.button-style-2 {
+  position: relative;
+  display: inline-block;
+  outline: none;
+  text-decoration: none;
+  background: transparent;
+  padding: 0;
+  font-size: inherit;
+  font-family: inherit;
+}
+.button-style-2 {
+  width: 12rem;
+  height: auto;
+}
+.button-style-2 .circle {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: relative;
+  display: block;
+  margin: 0;
+  width: 3rem;
+  height: 3rem;
+  background: #ec008c;
+  border-radius: 1.625rem;
+}
+.button-style-2 .circle .icon {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  background: #fff;
+}
+.button-style-2 .circle .icon.arrow {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  left: 0.625rem;
+  width: 1.125rem;
+  height: 0.125rem;
+  background: none;
+}
+.button-style-2 .circle .icon.arrow::before {
+  position: absolute;
+  content: "";
+  top: -0.25rem;
+  right: 0.0625rem;
+  width: 0.625rem;
+  height: 0.625rem;
+  border-top: 0.125rem solid #fff;
+  border-right: 0.125rem solid #fff;
+  transform: rotate(45deg);
+}
+.button-style-2 .button-text {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 0.75rem 0;
+  margin: 0 0 0 1.85rem;
+  color: #282936;
+  font-weight: 700;
+  line-height: 1.6;
+  text-align: center;
+  text-transform: uppercase;
+}
+.button-style-2:hover .circle {
+  width: 100%;
+}
+.button-style-2:hover .circle .icon.arrow {
+  background: #fff;
+  transform: translate(1rem, 0);
+}
+.button-style-2:hover .button-text {
+  color: #fff;
+}

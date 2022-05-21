@@ -68,11 +68,6 @@ function Navbar() {
                 </ul>
               </li>
 
-              <li className="nav-item">
-                <Link className="nav-link" to="/partners">
-                  Partners
-                </Link>
-              </li>
 
               <li className="nav-item">
                 <Link className="nav-link" to="/contact-us">

@@ -51,62 +51,6 @@
   color: #000;
 }
 
-
-/* Button style */
-.button-style {
-  /* width: 200px; */
-  padding: 15px 30px;
-  position: relative;
-  overflow: hidden;
-}
-.button-style:hover .wave {
-  top: -120px;
-}
-.button-style span {
-  position: relative;
-  z-index: 1;
-  color: white;
-  font-size: 15px;
-  letter-spacing: 2px;
-}
-.button-style .wave {
-  width: 200px;
-  height: 200px;
-  background-color: #0400ff;
-  box-shadow: inset 0 0 50px #0400ff;
-  position: absolute;
-  left: 0;
-  top: -80px;
-  transition: 0.4s;
-}
-.button-style .wave::before, .button-style .wave::after {
-  width: 200%;
-  height: 200%;
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translate(-50%, -75%);
-}
-.button-style .wave::before {
-  border-radius: 45%;
-  background-color: #141414;
-  animation: wave 5s linear infinite;
-}
-.button-style .wave::after {
-  border-radius: 40%;
-  background-color: #14141480;
-  animation: wave 10s linear infinite;
-}
-@keyframes wave {
-  0% {
-    transform: translate(-50%, -75%) rotate(0deg);
- }
-  100% {
-    transform: translate(-50%, -75%) rotate(360deg);
- }
-}
-
 .contactinfo{
   background-image: linear-gradient(#111111f1, #111111a8),
     url("./../../../public/contact/B-2.jpg");

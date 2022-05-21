@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 
 import "./homepage.css";
+import "./../custom.css";
 
 import RellaxWrapper from "react-rellax-wrapper";
 
@@ -13,26 +14,87 @@ import "aos/dist/aos.css";
 import CountUp from "react-countup";
 import { Carousel } from "react-bootstrap";
 
+import Slider from "react-slick/lib/slider";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+
 function Homepage() {
+  const settings = {
+    dots: false,
+    infinite: true,
+    autoplay: true,
+    speed: 2000,
+    autoplaySpeed: 2000,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    initialSlide: 0,
+    lazyLoad: true,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+          infinite: true,
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          initialSlide: 2,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
+  };
+
   AOS.init({
     duration: 800,
     delay: 200,
     mirror: true,
   });
 
+  const [banners, setBanners] = useState([]);
+  const fetchData = async () => {
+    const response = await fetch('http://127.0.0.1:8000/api/banner');
+    const data = await response.json()
+    setBanners(data)
+    console.log(data);
+  }
+
+  useEffect(() => {
+    fetchData()
+  },[])
+
   return (
     <>
       <section className="carousel-section">
+      {banners.length > 0 && (
         <Carousel>
-          <Carousel.Item>
-            <img
-              className="d-block w-100"
-              style={{ height: "800px" }}
-              src="/carousel/Banner-1.jpg"
-              alt="Banner_Photo"
-            />
-          </Carousel.Item>
-          <Carousel.Item>
+
+          
+            {banners.map(banner =>
+              <Carousel.Item key={banner.id}>
+              <img
+                className="d-block w-100"
+                style={{ height: "800px" }}
+                src={`http://127.0.0.1:8000/assets/image/banner/${banner.image}`}
+                alt="Banner_Photo"
+                
+              />
+            </Carousel.Item>
+              )}
+
+         
+          {/* <Carousel.Item>
             <img
               className="d-block w-100"
               style={{ height: "800px" }}
@@ -55,8 +117,10 @@ function Homepage() {
               src="/carousel/Banner-4.jpg"
               alt="Banner_Photo"
             />
-          </Carousel.Item>
+          </Carousel.Item> */}
+          
         </Carousel>
+         )}
       </section>
 
       <section className="custome-shape">
@@ -70,9 +134,9 @@ function Homepage() {
       <section className="texture-1">
         <div className="container">
           <div className="row">
-            <div className="col-md-6 my-auto">
-              <RellaxWrapper speed={3} className="text-center">
-                <div className="history-img  mt-5">
+            <div className="col-md-6">
+              <RellaxWrapper speed={2} className="text-center">
+                <div className="history-img mx-auto my-auto">
                   <div className="history-image-shape">
                     <img
                       src="/homepage/homepage-1.jpg"
@@ -175,12 +239,14 @@ function Homepage() {
         
       </section> */}
 
-      <section className="mt-5">
+      <section className="mt-5 texture-1">
         <div className="container pt-5">
           <div className="row">
             <div className="col-md-5 col-lg-6">
               <div className="homepage-product-left-block">
-                <h2 className="katalyst-history-headline">Our Product</h2>
+                <h2 className="katalyst-history-headline text-center">
+                  Types Of Product
+                </h2>
                 <p>
                   For over 10 years, the Katalyst family has been building
                   relationships with many Company. Our core values define what
@@ -200,9 +266,200 @@ function Homepage() {
               </div>
             </div>
             <div className="col-md-7 col-lg-6">
-              
+              <div className="product-box mb-2 mt-2">
+                <img
+                  src="/product/Product-type-1.jpg"
+                  alt=""
+                  className="img-fluid"
+                />
+                <h3 className="title pt-3">Basic Chemical</h3>
+                <div className="box-content">
+                  <span className="post">
+                    Our Basic Chemicals Are: Soda Ash, Glauber Salt, Sodium
+                    Metabisulphite, Acetic Acid etc.
+                  </span>
+                  <Link
+                    to="/basic-chemicals"
+                    className="learn-more button-style-2"
+                  >
+                    <span className="circle" aria-hidden="true">
+                      <span className="icon arrow"></span>
+                    </span>
+                    <span className="button-text text-light">Learn More</span>
+                  </Link>
+                </div>
+              </div>
+
+              <div className="product-box mb-2 mt-2">
+                <img
+                  src="/product/Product-type-2.jpg"
+                  alt=""
+                  className="img-fluid"
+                />
+                <h3 className="title pt-3">Auxiliary Chemicals</h3>
+                <div className="box-content">
+                  <span className="post">
+                    We Also Provide A lot of Other Chemicals Like: Enzyme, Eco
+                    Bleach, Micro Silicone, Ect.{" "}
+                  </span>
+                  <Link
+                    to="/basic-chemicals"
+                    className="learn-more button-style-2"
+                  >
+                    <span className="circle" aria-hidden="true">
+                      <span className="icon arrow"></span>
+                    </span>
+                    <span className="button-text text-light">Learn More</span>
+                  </Link>
+                </div>
+              </div>
+
+              <div className="product-box mb-2 mt-2">
+                <img
+                  src="/product/Product-type-3.jpg"
+                  alt=""
+                  className="img-fluid"
+                />
+                <h3 className="title pt-3">Dyestuffs</h3>
+                <div className="box-content">
+                  <span className="post">
+                    We Provide three Type of Dyestuffs: Naturel Dyes, Vat Dyes,
+                    Sulphur Dyes. Every Category also have lot of color.{" "}
+                  </span>
+                  <Link
+                    to="/basic-chemicals"
+                    className="learn-more button-style-2"
+                  >
+                    <span className="circle" aria-hidden="true">
+                      <span className="icon arrow"></span>
+                    </span>
+                    <span className="button-text text-light">Learn More</span>
+                  </Link>
+                </div>
+              </div>
             </div>
           </div>
+        </div>
+      </section>
+
+      <section className="tranging-product-section mt-5">
+        <div className="custom-shape">
+          <img
+            src="/custom_shape/Asset-2.png"
+            className="shape-image1"
+            alt="Custom Shape"
+          />
+        </div>
+        <div className="container pb-5">
+          <p className="tranding-product-title text-center">Tranding Product</p>
+
+          <Slider {...settings}>
+            <div>
+              <div className="box m-2">
+                <img
+                  src="/product/Picture 002.jpg"
+                  style={{ height: "400px" }}
+                  alt="Product"
+                />
+                <div className="box-content">
+                  <h3 className="title">Soda Ash Dense</h3>
+                  {/* <span className="post">Web designer</span> */}
+                </div>
+                <ul className="icon">
+                  <li>
+                    <Link to="/product/details" className="see-more ">
+                      See More
+                    </Link>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div>
+              <div className="box m-2">
+              <img
+                  src="/product/Picture 0002.jpg"
+                  style={{ height: "400px" }}
+                  alt="Product"
+                />
+                <div className="box-content">
+                  <h3 className="title">Anhydrous Sodium Sulfat</h3>
+                  {/* <span className="post">Web designer</span> */}
+                </div>
+                <ul className="icon">
+                  <li>
+                    <Link to="/product/details" className="see-more ">
+                      See More
+                    </Link>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div>
+              <div className="box m-2">
+              <img
+                  src="/product/Picture 04.jpg"
+                  style={{ height: "400px" }}
+                  alt="Product"
+                />
+                <div className="box-content">
+                  <h3 className="title">Anhydrous Sodium Sulfat</h3>
+                  {/* <span className="post">Web designer</span> */}
+                </div>
+                <ul className="icon">
+                  <li>
+                    <Link to="/product/details" className="see-more ">
+                      See More
+                    </Link>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div>
+              <div className="box m-2">
+                <img
+                  src="/product/Picture 08.jpg"
+                  style={{ height: "400px" }}
+                  alt="Product"
+                />
+                <div className="box-content">
+                  <h3 className="title">Natural Dyes</h3>
+                  {/* <span className="post">Web designer</span> */}
+                </div>
+                <ul className="icon">
+                  <li>
+                    <Link to="/product/details" className="see-more ">
+                      See More
+                    </Link>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div>
+              <div className="box m-2">
+                <img
+                  src="/product/Picture 07.jpg"
+                  style={{ height: "400px" }}
+                  alt="Product"
+                />
+                <div className="box-content">
+                  <h3 className="title">Auxiliary Chemicals</h3>
+                  {/* <span className="post">Web designer</span> */}
+                </div>
+                <ul className="icon">
+                  <li>
+                    <Link to="/product/details" className="see-more ">
+                      See More
+                    </Link>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+          </Slider>
         </div>
       </section>
     </>
