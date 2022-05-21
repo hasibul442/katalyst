@@ -30,7 +30,7 @@ class ApiController extends Controller
         $message->save();
         return response()->json([
             'status' => 200,
-            'message' => 'Message Successfully',
+            'message' => 'Message Sent Successfully Done',
         ]);
 
     }
