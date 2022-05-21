@@ -11,9 +11,6 @@ class Dyestuffs extends Model
     protected $table = "dyestuffs";
     protected $fillable = [
         'dyestuff_name',
-        'dyestuff_image',
-        'description',
-        'application',
         'status'
     ];
 }

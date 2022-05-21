@@ -29,9 +29,6 @@
                         <tr>
                             <th>No</th>
                             <th>Name</th>
-                            <th>Image</th>
-                            <th>Description</th>
-                            <th>Application</th>
                             <th>Status</th>
                             <th>Action</th>
                         </tr>
@@ -42,12 +39,9 @@
                         @endphp
                         @foreach ($dyestuffs as $item )
 
-                        <tr id="auxiliary-{{ $item->id }}">
+                        <tr id="dyestuff-{{ $item->id }}">
                             <td>{{ ++$i }}</td>
                             <td>{{ $item->dyestuff_name }}</td>
-                            <td><img src="{{ asset('/assets/image/dyestuffs/'.$item->dyestuff_image) }}" alt="" style="width: 100px; height:100px"></td>
-                            <td>{!! $item->description !!}</td>
-                            <td>{!! $item->application !!}</td>
                             <td><input type="checkbox" name="status" class="status" id="status" data-toggle="toggle" data-on="Active" data-off="Deactive" data-onstyle="success" data-offstyle="danger" data-id="{{ $item->id }}" {{ $item->status == 'Active' ? 'checked' : '' }}></td>
                             <td>
                                 <a class="btn btn-outline-warning btn-sm" href="javascript:void(0);" onclick="editbanner({{ $item->id }})"><i class="fas fa-pencil-alt"></i></a>
@@ -66,40 +60,31 @@
 
 <!--Add Modal -->
 <div class="modal fade" id="DyestuffsAdd" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
             <div class="modal-body">
                 <form class="forms-sample" id="DyestuffsForm" method="POST" enctype="multipart/form-data">
                     @csrf
                     {{-- <ul class="alert alert-warning d-none" id="save_errorList"></ul> --}}
 
-                    <div class="form-group row">
-                        <label for="dyestuff_name" class="col-sm-3 col-form-label">Name</label>
-                        <div class="col-sm-9">
-                            <input type="text" class="form-control" id="dyestuff_name" placeholder="Name" name="dyestuff_name">
-                        </div>
-                    </div>
-
-                    <div class="form-group row">
-                        <label for="image" class="col-sm-3 col-form-label">Image</label>
-                        <div class="col-sm-9">
-                            <input type="file" class="form-control" id="image" name="image" required>
-                        </div>
-                    </div>
-
-                    <div class="form-group row">
-                        <label for="title" class="col-sm-3 col-form-label">Desctiption</label>
-                        <div class="col-sm-9">
-                            <textarea name="description" required class="form-control summernote-editor" id="description"></textarea>
-                        </div>
-                    </div>
-
-                    <div class="form-group row">
-                        <label for="title" class="col-sm-3 col-form-label">Application</label>
-                        <div class="col-sm-9">
-                            <textarea name="application" required class="form-control " id="application"></textarea>
-                        </div>
-                    </div>
+                    <table class="table table-borderless " id="table_field">
+                        <thead>
+                            <tr>
+                                <th>Dyestuffs Name</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <input type="text" class="form-control" id="dyestuff_name" placeholder="Dyestuff Name" name="dyestuff_name[]">
+                                </td>
+                                <td>
+                                    <button type="button" class="btn btn-sm" style="background-color: #3a86ff;color:#FFF" id="add1"><i class="fas fa-plus"></i></button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
 
                     <div class="text-center pb-2">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -116,6 +101,28 @@
         var table = $('#example').DataTable({
             responsive: true
         , });
+    });
+
+</script>
+
+<script>
+    $(document).ready(function() {
+        var html = '<tr>'+
+                   '     <td>'+
+                   '             <input type="text" class="form-control" id="dyestuff_name" placeholder="Dyestuff Name" name="dyestuff_name[]">'+
+                   '     </td>'+
+                   '     <td>'+
+                   '         <button name="remove" class="btn btn-danger btn-sm" id="remove"><i class="fas fa-eraser"></i> </button>'+
+                   '     </td>'+
+                   ' </tr>';
+
+        var x = 1;
+        $("#add1").click(function() {
+            $("#table_field").append(html);
+        });
+        $("#table_field").on('click', '#remove', function() {
+            $(this).closest('tr').remove();
+        });
     });
 
 </script>

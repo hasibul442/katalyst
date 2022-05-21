@@ -11,9 +11,6 @@ class AuxiliaryChemicals extends Model
     protected $table = 'ausxiliarychemicals';
     protected $fillable = [
         'chemical_name',
-        'chemical_image',
-        'description',
-        'application',
         "status"
     ];
 }

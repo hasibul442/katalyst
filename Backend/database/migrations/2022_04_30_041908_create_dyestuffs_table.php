@@ -16,9 +16,6 @@ class CreateDyestuffsTable extends Migration
         Schema::create('dyestuffs', function (Blueprint $table) {
             $table->increments('id');
             $table->string('dyestuff_name')->nullable();
-            $table->string('dyestuff_image')->nullable();
-            $table->longText('description')->nullable();
-            $table->string('application')->nullable();
             $table->enum("status",['Active', 'Deactive'])->nullable();
             $table->timestamps();
         });

@@ -40,19 +40,13 @@ class AuxiliaryChemicalsController extends Controller
      */
     public function store(Request $request)
     {
-        $auxiliaryChemicals = new AuxiliaryChemicals;
-        $auxiliaryChemicals->chemical_name = $request->chemical_name;
-        $auxiliaryChemicals->description = $request->description;
-        $auxiliaryChemicals->application = $request->application;
-        $auxiliaryChemicals->status = "Active";
-
-        if ($request->hasFile('image')) {
-            $image = $request->file('image');
-            $image_name = time() . '.' . $image->getClientOriginalExtension();
-            $image->move(public_path() . '/assets/image/auxiliarychemicals/', $image_name);
-            $auxiliaryChemicals->chemical_image = $image_name;
+        for($i=0;$i<count($request->chemical_name);$i++){
+            $auxiliaryChemicals = new AuxiliaryChemicals;
+            $auxiliaryChemicals->chemical_name = $request->chemical_name[$i];
+            $auxiliaryChemicals->status = "Active";
+            $auxiliaryChemicals->save();
         }
-        $auxiliaryChemicals->save();
+
         return response()->json(['success' => 'Data Add successfully.']);
     }
 
@@ -107,16 +101,8 @@ class AuxiliaryChemicalsController extends Controller
     public function destroy($id)
     {
         $auxiliaryChemicals = AuxiliaryChemicals::find($id);
-        if (!is_null($auxiliaryChemicals)) {
-            if (!is_null($auxiliaryChemicals->chemical_image)) {
-                $image_path = public_path() . '/assets/image/auxiliarychemicals/' . $auxiliaryChemicals->chemical_image;
-                unlink($image_path);
-                $auxiliaryChemicals->delete();
-                return response()->json(['success' => 'Data Delete successfully.']);
-            } else {
-                $auxiliaryChemicals->delete();
-                return response()->json(['success' => 'Data Delete successfully.']);
-            }
-        }
+        $auxiliaryChemicals->delete();
+        return response()->json(['success' => 'Data Delete successfully.']);
+
     }
 }

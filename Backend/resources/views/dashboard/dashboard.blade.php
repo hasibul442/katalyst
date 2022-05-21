@@ -109,7 +109,7 @@
                             <div class="col-sm-9">
                                 <h4 class="card-title text-center">Machines</h4>
                                 <div>
-                                    <p class="text-center dashboard-card-text">{{ App\Models\Machines::get()->count() }}</p>
+                                    <p class="text-center dashboard-card-text">0</p>
                                 </div>
                             </div>
                         </div>

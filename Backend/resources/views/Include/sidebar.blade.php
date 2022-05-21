@@ -52,23 +52,16 @@
                 </li>
 
                 <li>
-                    <a href="{{ route('machines') }}">
-                        <i class="fas fa-campground"></i>
-                        <span> Machines </span>
-                    </a>
-                </li>
-
-                <li>
-                    <a href="{{ route('partners') }}">
-                        <i class="fas fa-hands-helping"></i>
-                        <span> Partners </span>
-                    </a>
-                </li>
-
-                <li>
                     <a href="{{ route('jobportal') }}">
                         <i class="fab fa-artstation"></i>
                         <span> Job Post </span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="{{ route('messages') }}">
+                        <i class="fab fa-artstation"></i>
+                        <span> Messages </span>
                     </a>
                 </li>
 

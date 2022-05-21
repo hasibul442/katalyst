@@ -17,3 +17,5 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
+Route::get('/banner', 'App\Http\Controllers\ApiController@bannerindex')->name('banner');
+Route::post('/messages/add', 'App\Http\Controllers\ApiController@messagestore')->name('messagesstotre');

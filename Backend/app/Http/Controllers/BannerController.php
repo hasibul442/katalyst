@@ -77,18 +77,6 @@ class BannerController extends Controller
         $banner = Banner::find($id);
         return response()->json($banner);
 
-        // if($banner){
-        //     return response()->json([
-        //         'status'=>200,
-        //         'banner'=>$banner
-        //     ]);
-        // }
-        // else{
-        //     return response()->json([
-        //         'status'=>404,
-        //         'message'=>"Banner Not Found"
-        //     ]);
-        // }
     }
 
     /**

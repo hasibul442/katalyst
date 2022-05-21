@@ -40,19 +40,13 @@ class DyestuffsController extends Controller
      */
     public function store(Request $request)
     {
-        $dyestuffs = new Dyestuffs;
-        $dyestuffs->dyestuff_name = $request->dyestuff_name;
-        $dyestuffs->description = $request->description;
-        $dyestuffs->application = $request->application;
-        $dyestuffs->status = "Active";
-
-        if ($request->hasFile('image')) {
-            $image = $request->file('image');
-            $image_name = time() . '.' . $image->getClientOriginalExtension();
-            $image->move(public_path() . '/assets/image/dyestuffs/', $image_name);
-            $dyestuffs->dyestuff_image = $image_name;
+        for($i=0; $i<count($request->dyestuff_name); $i++){
+            $dyestuffs = new Dyestuffs;
+            $dyestuffs->dyestuff_name = $request->dyestuff_name[$i];
+            $dyestuffs->status = "Active";
+            $dyestuffs->save();
         }
-        $dyestuffs->save();
+
         return response()->json(['success' => 'Data Add successfully.']);
     }
 
