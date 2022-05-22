@@ -1,9 +1,24 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import "./product.css";
 import "./../custom.css"
+import axios from "axios";
 
 function BasicChemical() {
+
+  const [basicchemical, setBasicChemical] = useState([]);
+
+  useEffect(()=>{
+    fetchBasicChemical();
+  },[])
+
+  const fetchBasicChemical = async () => {
+    await axios.get(`http://localhost:8000/api/basic-chemicals`).then(({data})=>{
+      setBasicChemical(data)
+      console.log(data)
+    })
+  }
+
   return (
     <>
       <div className="product-bg">
@@ -39,89 +54,33 @@ function BasicChemical() {
           </p>
 
           <div className="row mt-5 mb-5">
-            <div className="col-md-4 col-sm-6 pb-3">
-              <div className="box">
-                <img
-                  src="/product/Picture 002.jpg"
-                  style={{ height: "400px" }}
-                  alt="Product"
-                />
-                <div className="box-content">
-                  <h3 className="title">Soda Ash Light</h3>
-                  {/* <span className="post">Web designer</span> */}
+            {
+              basicchemical.length > 0 && (
+                basicchemical.map((item, key)=>(
+                  <div className="col-md-4 col-sm-6 pb-3" key={key}>
+                  <div className="box">
+                    <img
+                      src={`http://127.0.0.1:8000/assets/image/basicchemicals/${item.chemical_image}`}
+                      style={{ height: "400px" }}
+                      alt="Product"
+                    />
+                    <div className="box-content">
+                      <h3 className="title">{item.chemical_name}</h3>
+                      
+                    </div>
+                    <ul className="icon">
+                      <li><p className="short_description">{item.short_description}</p></li>
+                      <li>
+                        <Link to="/product/details" className="see-more ">
+                          See More
+                        </Link>
+                      </li>
+                    </ul>
+                  </div>
                 </div>
-                <ul className="icon">
-                  <li>
-                    <Link to="/product/details" className="see-more ">
-                      See More
-                    </Link>
-                  </li>
-                </ul>
-              </div>
-            </div>
-
-            <div className="col-md-4 col-sm-6 pb-3">
-              <div className="box">
-                <img
-                  src="/product/Picture 002.jpg"
-                  style={{ height: "400px" }}
-                  alt="Product"
-                />
-                <div className="box-content">
-                  <h3 className="title">Soda Ash Dense</h3>
-                  {/* <span className="post">Web designer</span> */}
-                </div>
-                <ul className="icon">
-                  <li>
-                    <Link to="/product/details" className="see-more ">
-                      See More
-                    </Link>
-                  </li>
-                </ul>
-              </div>
-            </div>
-
-            <div className="col-md-4 col-sm-6 pb-3">
-              <div className="box">
-                <img
-                  src="/product/Picture 04.jpg"
-                  style={{ height: "400px" }}
-                  alt="Product"
-                />
-                <div className="box-content">
-                  <h3 className="title">Anhydrous Sodium Sulfate</h3>
-                  {/* <span className="post">Web designer</span> */}
-                </div>
-                <ul className="icon">
-                  <li>
-                    <Link to="/product/details" className="see-more ">
-                      See More
-                    </Link>
-                  </li>
-                </ul>
-              </div>
-            </div>
-
-            <div className="col-md-4 col-sm-6 pb-3">
-              <div className="box">
-                <img
-                  src="/product/Picture 005.jpg"
-                  style={{ height: "400px" }}
-                  alt="Product"
-                />
-                <div className="box-content">
-                  <h3 className="title">Sodium Metabisulphite</h3>
-                  {/* <span className="post">Web designer</span> */}
-                </div>
-                <ul className="icon">
-                  <li>
-                    <Link to="/product/details" className="see-more ">
-                      See More
-                    </Link>
-                  </li>
-                </ul>
-              </div>
-            </div>
+                ))
+              )
+            }
           </div>
         </div>
       </section>

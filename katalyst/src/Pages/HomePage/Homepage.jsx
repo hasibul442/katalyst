@@ -17,6 +17,7 @@ import { Carousel } from "react-bootstrap";
 import Slider from "react-slick/lib/slider";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import axios from "axios";
 
 function Homepage() {
   const settings = {
@@ -64,37 +65,47 @@ function Homepage() {
 
   const [banners, setBanners] = useState([]);
   const fetchData = async () => {
-    const response = await fetch('http://127.0.0.1:8000/api/banner');
-    const data = await response.json()
-    setBanners(data)
+    const response = await fetch("http://127.0.0.1:8000/api/banner");
+    const data = await response.json();
+    setBanners(data);
     console.log(data);
-  }
+  };
 
   useEffect(() => {
-    fetchData()
-  },[])
+    fetchData();
+  }, []);
 
+  const [basicchemical, setBasicChemical] = useState([]);
+
+  useEffect(() => {
+    fetchBasicChemical();
+  }, []);
+
+  const fetchBasicChemical = async () => {
+    await axios
+      .get(`http://localhost:8000/api/basic-chemicals`)
+      .then(({ data }) => {
+        setBasicChemical(data);
+        console.log(data);
+      });
+  };
   return (
     <>
       <section className="carousel-section">
-      {banners.length > 0 && (
-        <Carousel>
-
-          
-            {banners.map(banner =>
+        {banners.length > 0 && (
+          <Carousel>
+            {banners.map((banner) => (
               <Carousel.Item key={banner.id}>
-              <img
-                className="d-block w-100"
-                style={{ height: "800px" }}
-                src={`http://127.0.0.1:8000/assets/image/banner/${banner.image}`}
-                alt="Banner_Photo"
-                
-              />
-            </Carousel.Item>
-              )}
+                <img
+                  className="d-block w-100"
+                  style={{ height: "800px" }}
+                  src={`http://127.0.0.1:8000/assets/image/banner/${banner.image}`}
+                  alt="Banner_Photo"
+                />
+              </Carousel.Item>
+            ))}
 
-         
-          {/* <Carousel.Item>
+            {/* <Carousel.Item>
             <img
               className="d-block w-100"
               style={{ height: "800px" }}
@@ -118,9 +129,8 @@ function Homepage() {
               alt="Banner_Photo"
             />
           </Carousel.Item> */}
-          
-        </Carousel>
-         )}
+          </Carousel>
+        )}
       </section>
 
       <section className="custome-shape">
@@ -224,20 +234,6 @@ function Homepage() {
           </div>
         </section>
       </section>
-
-      {/* <section className="product-show">
-        <div className="custom-shape">
-          <img
-            src="/custom_shape/Asset 2.png"
-            className="shape-image1"
-            alt="Custom Shape"
-          />
-        </div>
-        <div className="container pb-5">
-            <p></p>
-        </div>
-        
-      </section> */}
 
       <section className="mt-5 texture-1">
         <div className="container pt-5">
@@ -354,102 +350,51 @@ function Homepage() {
           <p className="tranding-product-title text-center">Tranding Product</p>
 
           <Slider {...settings}>
-            <div>
-              <div className="box m-2">
-                <img
-                  src="/product/Picture 002.jpg"
-                  style={{ height: "400px" }}
-                  alt="Product"
-                />
-                <div className="box-content">
-                  <h3 className="title">Soda Ash Dense</h3>
-                  {/* <span className="post">Web designer</span> */}
+            {basicchemical.length > 0 &&
+              basicchemical.map((item,key) => (
+                <div key={item.id}>
+                  <div className="box m-2">
+                    <img
+                      src={`http://127.0.0.1:8000/assets/image/basicchemicals/${item.chemical_image}`}
+                      style={{ height: "400px" }}
+                      alt="Product"
+                    />
+                    <div className="box-content">
+                      <h3 className="title">{item.chemical_name}</h3>
+                    </div>
+                    <ul className="icon">
+                      <li>
+                        <p className="short_description">
+                          {item.short_description}
+                        </p>
+                      </li>
+                      <li>
+                        <Link to={`/basic-chemical/details/${item.id}`} className="see-more ">
+                          See More
+                        </Link>
+                      </li>
+                    </ul>
+                  </div>
                 </div>
-                <ul className="icon">
-                  <li>
-                    <Link to="/product/details" className="see-more ">
-                      See More
-                    </Link>
-                  </li>
-                </ul>
-              </div>
-            </div>
-
-            <div>
-              <div className="box m-2">
-              <img
-                  src="/product/Picture 0002.jpg"
-                  style={{ height: "400px" }}
-                  alt="Product"
-                />
-                <div className="box-content">
-                  <h3 className="title">Anhydrous Sodium Sulfat</h3>
-                  {/* <span className="post">Web designer</span> */}
-                </div>
-                <ul className="icon">
-                  <li>
-                    <Link to="/product/details" className="see-more ">
-                      See More
-                    </Link>
-                  </li>
-                </ul>
-              </div>
-            </div>
-
-            <div>
-              <div className="box m-2">
-              <img
-                  src="/product/Picture 04.jpg"
-                  style={{ height: "400px" }}
-                  alt="Product"
-                />
-                <div className="box-content">
-                  <h3 className="title">Anhydrous Sodium Sulfat</h3>
-                  {/* <span className="post">Web designer</span> */}
-                </div>
-                <ul className="icon">
-                  <li>
-                    <Link to="/product/details" className="see-more ">
-                      See More
-                    </Link>
-                  </li>
-                </ul>
-              </div>
-            </div>
+              ))}
 
             <div>
               <div className="box m-2">
                 <img
-                  src="/product/Picture 08.jpg"
-                  style={{ height: "400px" }}
-                  alt="Product"
-                />
-                <div className="box-content">
-                  <h3 className="title">Natural Dyes</h3>
-                  {/* <span className="post">Web designer</span> */}
-                </div>
-                <ul className="icon">
-                  <li>
-                    <Link to="/product/details" className="see-more ">
-                      See More
-                    </Link>
-                  </li>
-                </ul>
-              </div>
-            </div>
-
-            <div>
-              <div className="box m-2">
-                <img
-                  src="/product/Picture 07.jpg"
+                  src="/product/auxiliary_chemicals.jpg"
                   style={{ height: "400px" }}
                   alt="Product"
                 />
                 <div className="box-content">
                   <h3 className="title">Auxiliary Chemicals</h3>
-                  {/* <span className="post">Web designer</span> */}
                 </div>
                 <ul className="icon">
+                  <li>
+                    <p className="short_description">
+                      We also import Other type of Chemicals like Different type
+                      of Enzyme, Micro Silicone, Scouring Agent ect.
+                    </p>
+                  </li>
                   <li>
                     <Link to="/product/details" className="see-more ">
                       See More
@@ -459,6 +404,31 @@ function Homepage() {
               </div>
             </div>
 
+            <div>
+              <div className="box m-2">
+                <img
+                  src="/product/dyestuffs.jpg"
+                  style={{ height: "400px" }}
+                  alt="Product"
+                />
+                <div className="box-content">
+                  <h3 className="title">Dyestuffs</h3>
+                  {/* <span className="post">Web designer</span> */}
+                </div>
+                <ul className="icon">
+                  <li>
+                    <p className="short_description">
+                      We also provide many type of Dyestuffs. Our Dyestuffs Qulity Are 100% good. We had A lot of option a lot of color
+                    </p>
+                  </li>
+                  <li>
+                    <Link to="/product/details" className="see-more ">
+                      See More
+                    </Link>
+                  </li>
+                </ul>
+              </div>
+            </div>
           </Slider>
         </div>
       </section>
