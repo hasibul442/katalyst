@@ -9,8 +9,6 @@ import Slider from "react-slick/lib/slider";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import axios from "axios";
-// import HTMLReactParser from "html-react-parser";
-import parser from 'html-react-parser'
 
 function Product_Details() {
   AOS.init({
