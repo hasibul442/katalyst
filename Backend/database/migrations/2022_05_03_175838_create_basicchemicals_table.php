@@ -17,6 +17,7 @@ class CreateBasicchemicalsTable extends Migration
             $table->increments('id');
             $table->string('chemical_name')->nullable();
             $table->string('chemical_image')->nullable();
+            $table->longText('short_description')->nullable();
             $table->longText('description')->nullable();
             $table->string('application')->nullable();
             $table->enum("status",['Active', 'Deactive'])->nullable();

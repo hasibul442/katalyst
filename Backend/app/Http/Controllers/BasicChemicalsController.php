@@ -42,6 +42,7 @@ class BasicChemicalsController extends Controller
     {
         $basicChemicals = new BasicChemicals;
         $basicChemicals->chemical_name = $request->chemical_name;
+        $basicChemicals->short_description = $request->short_description;
         $basicChemicals->description = $request->description;
         $basicChemicals->application = $request->application;
         $basicChemicals->status = "Active";

@@ -18,4 +18,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 Route::get('/banner', 'App\Http\Controllers\ApiController@bannerindex')->name('banner');
+Route::get('/basic-chemicals', 'App\Http\Controllers\ApiController@basicchemicals')->name('basicchemicals');
+Route::get('/basic-chemical/details/{id}', 'App\Http\Controllers\ApiController@basicchemicals_show');
+
 Route::post('/messages/add', 'App\Http\Controllers\ApiController@messagestore')->name('messagesstotre');

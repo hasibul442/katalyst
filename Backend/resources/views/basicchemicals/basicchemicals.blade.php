@@ -29,6 +29,7 @@
                             <th>No</th>
                             <th>Chemical Name</th>
                             <th>Chemical Image</th>
+                            <th>Short Description</th>
                             <th>Description</th>
                             <th>Application</th>
                             <th>Status</th>
@@ -45,6 +46,7 @@
                             <td>{{ ++$i }}</td>
                             <td>{{ $item->chemical_name }}</td>
                             <td><img src="{{ asset('/assets/image/basicchemicals/'.$item->chemical_image) }}" alt="" style="width: 100px; height:100px"></td>
+                            <td>{!! $item->short_description !!}</td>
                             <td>{!! $item->description !!}</td>
                             <td>{!! $item->application !!}</td>
                             <td><input type="checkbox" name="status" class="status" id="status" data-toggle="toggle" data-on="Active" data-off="Deactive" data-onstyle="success" data-offstyle="danger" data-id="{{ $item->id }}" {{ $item->status == 'Active' ? 'checked' : '' }}></td>
@@ -84,6 +86,13 @@
                         <label for="image" class="col-sm-3 col-form-label">Chemical Image</label>
                         <div class="col-sm-9">
                             <input type="file" class="form-control" id="image" name="image" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label for="short_description" class="col-sm-3 col-form-label">Short Description</label>
+                        <div class="col-sm-9">
+                            <textarea name="short_description" required class="form-control " id="short_description"></textarea>
                         </div>
                     </div>
 

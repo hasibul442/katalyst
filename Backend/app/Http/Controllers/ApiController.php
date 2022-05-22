@@ -17,7 +17,13 @@ class ApiController extends Controller
         $basicchemicals = BasicChemicals::where('status','Active')->get();
         return response()->json($basicchemicals);
     }
-
+    public function basicchemicals_show($id){
+        $basicchemicals1 = BasicChemicals::find($id);
+        return response()->json([
+            'status' => 200,
+            'basicchemicals1' => $basicchemicals1,
+         ]);
+    }
     public function messagestore(Request $request){
         $message = new Message;
         $message->f_name = $request->f_name;

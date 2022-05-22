@@ -14,6 +14,7 @@ class BasicChemicals extends Model
         'chemical_image',
         'description',
         'application',
-        "status"
+        "status",
+        "short_description"
     ];
 }
