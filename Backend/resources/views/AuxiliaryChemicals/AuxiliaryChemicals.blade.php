@@ -42,7 +42,7 @@
                             <td>{{ $item->chemical_name }}</td>
                             <td><input type="checkbox" name="status" class="status" id="status"  data-on="Active" data-off="Deactive" data-onstyle="success" data-offstyle="danger" data-id="{{ $item->id }}" {{ $item->status == 'Active' ? 'checked' : '' }}></td>
                             <td>
-                                <a class="btn btn-outline-warning btn-sm" href="javascript:void(0);" onclick="editbanner({{ $item->id }})"><i class="fas fa-pencil-alt"></i></a>
+                                <a class="btn btn-outline-warning btn-sm" href="javascript:void(0);" onclick="editAuxiliaryChemicals({{ $item->id }})"><i class="fas fa-pencil-alt"></i></a>
                                 {{-- <button class="btn btn-outline-warning btn-sm edit-btn" value="{{ $item->id }}"><i class="fas fa-pencil-alt"></i></button> --}}
                                 <a href="javascript:void(0);" data-id="{{ $item->id }}" role="button" class="btn btn-sm btn-outline-danger deletebtn"><i class="mdi mdi-trash-can"></i></a>
                             </td>
@@ -85,6 +85,28 @@
                     </table>
 
 
+                    <div class="text-center pb-2">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <input type="submit" class="btn btn-success" name="submit" id="submit" value="Submit" />
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!--Edit Modal -->
+<div class="modal fade" id="AuxiliaryChemicalsEdit" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-body">
+                <form class="forms-sample" id="AuxiliaryChemicalsEditForm" method="POST" enctype="multipart/form-data">
+                    @csrf
+                    <input type="hidden" name="id" id="id">
+                    {{-- <ul class="alert alert-warning d-none" id="save_errorList"></ul> --}}
+                    <label for="chemical_name1">Chemical Name</label>
+                    <input type="text" class="form-control" id="chemical_name1" name="chemical_name1">
                     <div class="text-center pb-2">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                         <input type="submit" class="btn btn-success" name="submit" id="submit" value="Submit" />
@@ -157,6 +179,43 @@
             });
         }
     });
+
+
+    function editAuxiliaryChemicals(id){
+        $.get("/auxiliarychemicals/edit/"+id, function(auxi_chem){
+            $('#id').val(auxi_chem.id);
+            $('#chemical_name1').val(auxi_chem.chemical_name);
+            $('#AuxiliaryChemicalsEdit').modal("toggle");
+        });
+    }
+    $('#AuxiliaryChemicalsEditForm').submit(function (e) {
+        e.preventDefault();
+
+        let id = $('#id').val();
+        let chemical_name1 = $('#chemical_name1').val();
+        let _token = $('input[name=_token]').val();
+
+        $.ajax({
+            type: "PUT",
+            url: "/auxiliarychemicals/update",
+            data: {
+                id:id,
+                chemical_name1:chemical_name1,
+                _token:_token,
+            },
+            dataType: "json",
+            success: function (response) {
+                // console.log(response);
+                $('#auxiliary-'+response.id + 'td:nth-child(1)').text(response.chemical_name1);
+                $('#AuxiliaryChemicalsEdit').modal("toggle");
+                location.reload();
+                $('#AuxiliaryChemicalsEditForm')[0].reset();
+
+            }
+        });
+
+    });
+
 
 </script>
 

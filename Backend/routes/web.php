@@ -50,6 +50,8 @@ Route::delete('/basicchemicals/{id}', "App\Http\Controllers\BasicChemicalsContro
 Route::get('/auxiliary-chemicals', "App\Http\Controllers\AuxiliaryChemicalsController@index")->name('auxiliarychemicals');
 Route::post('/auxiliarychemicals/add', "App\Http\Controllers\AuxiliaryChemicalsController@store")->name('auxiliarychemicals.add');
 Route::get('/auxiliarychemicals/status/{id}/{status}', "App\Http\Controllers\AuxiliaryChemicalsController@statuschange");
+Route::get('/auxiliarychemicals/edit/{id}', "App\Http\Controllers\AuxiliaryChemicalsController@edit");
+Route::put('/auxiliarychemicals/update', "App\Http\Controllers\AuxiliaryChemicalsController@update");
 Route::delete('/auxiliarychemicals/{id}', "App\Http\Controllers\AuxiliaryChemicalsController@destroy");
 
 // Dyestuff Information
@@ -74,3 +76,9 @@ Route::get('/messages', "App\Http\Controllers\MessageController@index")->name('m
 
 
 Route::get('/users', "App\Http\Controllers\UsersController@index")->name('users');
+Route::post('/users/add', "App\Http\Controllers\UsersController@store")->name('users.add');
+Route::get('/users/edit/{id}', "App\Http\Controllers\UsersController@edit");
+Route::put('/users/update', "App\Http\Controllers\UsersController@update");
+// Route::get('/users/pass/edit/{id}', "App\Http\Controllers\UsersController@edit");
+Route::put('/users/password/update', "App\Http\Controllers\UsersController@passupdate");
+Route::delete('/users/{id}', "App\Http\Controllers\UsersController@destroy");

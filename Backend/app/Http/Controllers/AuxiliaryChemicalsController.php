@@ -67,9 +67,10 @@ class AuxiliaryChemicalsController extends Controller
      * @param  \App\Models\AuxiliaryChemicals  $auxiliaryChemicals
      * @return \Illuminate\Http\Response
      */
-    public function edit(AuxiliaryChemicals $auxiliaryChemicals)
+    public function edit($id)
     {
-        //
+        $auxiliaryChemicals = AuxiliaryChemicals::find($id);
+        return response()->json($auxiliaryChemicals);
     }
 
     /**
@@ -79,9 +80,12 @@ class AuxiliaryChemicalsController extends Controller
      * @param  \App\Models\AuxiliaryChemicals  $auxiliaryChemicals
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, AuxiliaryChemicals $auxiliaryChemicals)
+    public function update(Request $request)
     {
-        //
+        $auxiliaryChemicals = AuxiliaryChemicals::find($request->id);
+        $auxiliaryChemicals->chemical_name = $request->chemical_name1;
+        $auxiliaryChemicals->update();
+        return response()->json($auxiliaryChemicals);
     }
 
     public function statuschange($id, $status)

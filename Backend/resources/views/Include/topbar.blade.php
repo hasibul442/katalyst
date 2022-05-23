@@ -22,24 +22,6 @@
                     <span>My Account</span>
                 </a>
 
-                <!-- item-->
-                <a href="javascript:void(0);" class="dropdown-item notify-item">
-                    <i class="dripicons-gear"></i>
-                    <span>Settings</span>
-                </a>
-
-                <!-- item-->
-                <a href="javascript:void(0);" class="dropdown-item notify-item">
-                    <i class="dripicons-help"></i>
-                    <span>Support</span>
-                </a>
-
-                <!-- item-->
-                <a href="javascript:void(0);" class="dropdown-item notify-item">
-                    <i class="dripicons-lock"></i>
-                    <span>Lock Screen</span>
-                </a>
-
                 <div class="dropdown-divider"></div>
 
                 <!-- item-->
