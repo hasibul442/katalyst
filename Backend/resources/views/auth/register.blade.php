@@ -68,6 +68,10 @@
                                     @enderror
                                 </div>
 
+                                <div class="form-group mb-3" style="display: none">
+                                    <input class="form-control" type="text" name="user_type" value="Super_Admin">
+                                </div>
+
                                 <div class="form-group mb-3">
                                     <label for="password-confirm">Confirm Password</label>
                                     <input class="form-control" type="password" name="password_confirmation" required id="password-confirm" autocomplete="new-password" placeholder="Enter your password Again">

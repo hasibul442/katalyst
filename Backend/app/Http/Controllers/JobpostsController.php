@@ -59,9 +59,10 @@ class JobpostsController extends Controller
      * @param  \App\Models\Jobposts  $jobposts
      * @return \Illuminate\Http\Response
      */
-    public function show(Jobposts $jobposts)
+    public function show($id)
     {
-        //
+        $jobposts = Jobposts::find($id);
+        return view('job.applicent-details', compact('jobposts'));
     }
 
     /**
@@ -70,9 +71,10 @@ class JobpostsController extends Controller
      * @param  \App\Models\Jobposts  $jobposts
      * @return \Illuminate\Http\Response
      */
-    public function edit(Jobposts $jobposts)
+    public function edit($id)
     {
-        //
+        $jobposts = Jobposts::find($id);
+        return view('job.jobpostedit', compact('jobposts'));
     }
 
     /**
@@ -82,9 +84,19 @@ class JobpostsController extends Controller
      * @param  \App\Models\Jobposts  $jobposts
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Jobposts $jobposts)
+    public function update(Request $request, $id)
     {
-        //
+        $jobposts = Jobposts::find($id);
+        $jobposts->position_name = $request->position_name;
+        $jobposts->vacancy = $request->vacancy;
+        $jobposts->salary = $request->salary;
+        $jobposts->exprience = $request->exprience;
+        $jobposts->application_dead_line = $request->application_dead_line;
+        $jobposts->description = $request->description;
+        // $jobposts->status = "Active";
+
+        $jobposts->update();
+        return redirect()->route('jobportal');
     }
 
     /**

@@ -15,6 +15,15 @@
                         <span> Dashboard </span>
                     </a>
                 </li>
+                @if (  Auth::user()->user_type  == 'Super_Admin' )
+                <li>
+                    <a href="{{ route('users') }}">
+                        <i class="fas fa-users"></i>
+                        <span> User </span>
+                    </a>
+                </li>
+                @endif
+
 
                 <li>
                     <a href="{{ route('profile') }}">
@@ -60,7 +69,7 @@
 
                 <li>
                     <a href="{{ route('messages') }}">
-                        <i class="fab fa-artstation"></i>
+                        <i class="fas fa-mailbox"></i>
                         <span> Messages </span>
                     </a>
                 </li>

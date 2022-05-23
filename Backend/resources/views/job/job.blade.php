@@ -54,8 +54,8 @@
                             <td>{!! $item->description !!}</td>
                             <td><input type="checkbox" name="status" class="status" id="status" data-toggle="toggle" data-on="Active" data-off="Deactive" data-onstyle="success" data-offstyle="danger" data-id="{{ $item->id }}" {{ $item->status == 'Active' ? 'checked' : '' }}></td>
                             <td>
-                                <a class="btn btn-outline-warning btn-sm" href="javascript:void(0);" onclick="editbanner({{ $item->id }})"><i class="fas fa-pencil-alt"></i></a>
-                                {{-- <button class="btn btn-outline-warning btn-sm edit-btn" value="{{ $item->id }}"><i class="fas fa-pencil-alt"></i></button> --}}
+                                <a class="btn btn-outline-warning btn-sm" href="{{ route('jobpost.edit', $item->id) }}"><i class="fas fa-pencil-alt"></i></a>
+                                <a class="btn btn-outline-info btn-sm" href="{{ route('applicant_list', $item->id) }}"><i class="fas fa-eye"></i></a>
                                 <a href="javascript:void(0);" data-id="{{ $item->id }}" role="button" class="btn btn-sm btn-outline-danger deletebtn"><i class="mdi mdi-trash-can"></i></a>
                             </td>
                         </tr>

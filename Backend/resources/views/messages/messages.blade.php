@@ -32,7 +32,7 @@
                             <th>Phone Number</th>
                             <th>Email</th>
                             <th>Description</th>
-                            <th>Action</th>
+                            <th>Date & Time</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -49,11 +49,7 @@
                             <td>{{ $item->phone_number }}</td>
                             <td>{{ $item->email }}</td>
                             <td>{{ $item->description }}</td>
-                            <td>
-                                {{-- <a class="btn btn-outline-warning btn-sm" href="javascript:void(0);" onclick="editbanner({{ $item->id }})"><i class="fas fa-pencil-alt"></i></a> --}}
-                                {{-- <button class="btn btn-outline-warning btn-sm edit-btn" value="{{ $item->id }}"><i class="fas fa-pencil-alt"></i></button> --}}
-                                {{-- <a href="javascript:void(0);" data-id="{{ $item->id }}" role="button" class="btn btn-sm btn-outline-danger deletebtn"><i class="mdi mdi-trash-can"></i></a> --}}
-                            </td>
+                            <td>{{ $item->created_at }}</td>
                         </tr>
                         @endforeach
                     </tbody>

@@ -59,11 +59,18 @@ Route::get('/dyestuffs/status/{id}/{status}', "App\Http\Controllers\DyestuffsCon
 Route::delete('/dyestuffs/{id}', "App\Http\Controllers\DyestuffsController@destroy");
 
 
-// Partners Information
+// Job Post Information
 Route::get('/jobportal', "App\Http\Controllers\JobpostsController@index")->name('jobportal');
 Route::post('/job/add', "App\Http\Controllers\JobpostsController@store")->name('job.add');
 Route::get('/job/status/{id}/{status}', "App\Http\Controllers\JobpostsController@statuschange");
+Route::get('/job/applicant-list/{id}', "App\Http\Controllers\JobpostsController@show")->name('applicant_list');
+Route::get('/job/post/edit/{id}', "App\Http\Controllers\JobpostsController@edit")->name('jobpost.edit');
+Route::put('/job/post/update/{id}', "App\Http\Controllers\JobpostsController@update")->name('jobpost.update');
+
 Route::delete('/job/{id}', "App\Http\Controllers\JobpostsController@destroy");
 
 // Messages
 Route::get('/messages', "App\Http\Controllers\MessageController@index")->name('messages');
+
+
+Route::get('/users', "App\Http\Controllers\UsersController@index")->name('users');
