@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 22, 2022 at 03:18 PM
+-- Generation Time: May 24, 2022 at 07:16 PM
 -- Server version: 10.4.18-MariaDB
 -- PHP Version: 7.3.27
 
@@ -41,13 +41,13 @@ CREATE TABLE `banners` (
 --
 
 INSERT INTO `banners` (`id`, `title`, `status`, `image`, `created_at`, `updated_at`) VALUES
-(1, 'Banner 1', 'Active', '1653122671.jpg', '2022-05-21 02:44:31', '2022-05-21 02:44:31'),
-(2, 'Banner 2', 'Active', '1653122691.jpg', '2022-05-21 02:44:51', '2022-05-21 02:44:51'),
-(3, 'Banner 3', 'Active', '1653122705.jpg', '2022-05-21 02:45:05', '2022-05-21 02:45:05'),
-(4, 'Banner 4', 'Active', '1653122720.png', '2022-05-21 02:45:20', '2022-05-21 02:45:20'),
-(5, 'Banner 5', 'Active', '1653122740.jpg', '2022-05-21 02:45:40', '2022-05-21 02:45:40'),
-(6, 'Banner 6', 'Active', '1653122753.jpg', '2022-05-21 02:45:53', '2022-05-21 02:45:53'),
-(7, 'Banner 7', 'Active', '1653122768.jpg', '2022-05-21 02:46:08', '2022-05-21 02:46:08');
+(1, 'Banner 1', 'Deactive', '1653122671.jpg', '2022-05-20 20:44:31', '2022-05-24 11:04:48'),
+(2, 'Challenge to minimize the CO2 emission', 'Active', '1653122691.jpg', '2022-05-20 20:44:51', '2022-05-20 20:44:51'),
+(3, 'In every wood in every spring there is a different green', 'Active', '1653122705.jpg', '2022-05-20 20:45:05', '2022-05-20 20:45:05'),
+(4, 'Challenge to minimize the impact of chemicals', 'Active', '1653122720.png', '2022-05-20 20:45:20', '2022-05-20 20:45:20'),
+(5, 'Safe planet but being fashionable', 'Active', '1653122740.jpg', '2022-05-20 20:45:40', '2022-05-20 20:45:40'),
+(6, 'Eco-friendly dying can reduce water pollution', 'Active', '1653122753.jpg', '2022-05-20 20:45:53', '2022-05-20 20:45:53'),
+(7, 'Challenge to minimize the use of water', 'Active', '1653122768.jpg', '2022-05-20 20:46:08', '2022-05-20 20:46:08');
 
 --
 -- Indexes for dumped tables
