@@ -103,7 +103,7 @@ function Homepage() {
                   alt="Banner_Photo"
                 />
                 <Carousel.Caption fade={true}>
-                    <h2 className="animate__animated animate__bounce">{banner.title}</h2>
+                    <h2 className="animate__animated animate__bounceInDown" >{banner.title}</h2>
                 </Carousel.Caption>
               </Carousel.Item>
             ))}

@@ -32,13 +32,23 @@
 }
 
 .carousel-caption{
-    bottom: 50% !important;
+    bottom: 60% !important;
     left: 0% !important;
     z-index: 2 !important;
-    margin-right: 15%;
-    margin-bottom: 1rem;
-    margin-left: 15%;
-
+    margin-right: 15% !important;
+    margin-bottom: 1rem !important;
+    margin-left: 15% !important;
+    text-align: left !important;
+}
+.carousel-caption h2{
+    /* padding-top: 10px;
+    padding-bottom: 10px; */
+    /* background-color: #1616166c; */
+    text-transform: uppercase;
+    font-size: 40px;
+     color:#ffffff ;
+     text-shadow: 3px 3px 5px #ec008c;
+     font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 
 .texture-1{
