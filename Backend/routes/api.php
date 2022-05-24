@@ -21,4 +21,7 @@ Route::get('/banner', 'App\Http\Controllers\ApiController@bannerindex')->name('b
 Route::get('/basic-chemicals', 'App\Http\Controllers\ApiController@basicchemicals')->name('basicchemicals');
 Route::get('/basic-chemical/details/{id}', 'App\Http\Controllers\ApiController@basicchemicals_show');
 
+Route::get('/auxiliarychemicals', 'App\Http\Controllers\ApiController@auxiliarychemical');
+Route::get('/dyestuffs', 'App\Http\Controllers\ApiController@dyestuff');
+
 Route::post('/messages/add', 'App\Http\Controllers\ApiController@messagestore')->name('messagesstotre');

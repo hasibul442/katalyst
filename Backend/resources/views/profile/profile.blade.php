@@ -210,23 +210,23 @@
     });
 
 
-    function editdetails(id){
-        $.get("/profile/edit/"+id, function(profile){
-            $('#id').val(profile.id);
-            $('#phone_1').val(profile.phoneno);
-            $('#mobile1_1').val(profile.mobileno1);
-            $('#mobile2_1').val(profile.mobileno2);
-            $('#email_1').val(profile.email);
-            $('#address_1').val(profile.address);
-            $('#address_link_1').val(profile.address_link);
-            $('#history_1').html(profile.history);
-            $('#mission_1').val(profile.mission);
-            $('#vision_1').val(profile.vision);
-            $('#value_1').val(profile.value);
-            // $('#balance').val(bank.balance);
-            // $('#BankEditModal').modal("toggle");
-        });
-    }
+    // function editdetails(id){
+    //     $.get("/profile/edit/"+id, function(profile){
+    //         $('#id').val(profile.id);
+    //         $('#phone_1').val(profile.phoneno);
+    //         $('#mobile1_1').val(profile.mobileno1);
+    //         $('#mobile2_1').val(profile.mobileno2);
+    //         $('#email_1').val(profile.email);
+    //         $('#address_1').val(profile.address);
+    //         $('#address_link_1').val(profile.address_link);
+    //         $('#history_1').html(profile.history);
+    //         $('#mission_1').val(profile.mission);
+    //         $('#vision_1').val(profile.vision);
+    //         $('#value_1').val(profile.value);
+    //         // $('#balance').val(bank.balance);
+    //         // $('#BankEditModal').modal("toggle");
+    //     });
+    // }
 
 </script>
 @endsection

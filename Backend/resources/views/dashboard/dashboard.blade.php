@@ -100,46 +100,6 @@
 
         <div class="col-md-4">
             <div class="card rounded">
-                <div class="card-body rounded dashboard-card-body-3">
-                    <div class='px-3 py-3 justify-content-between'>
-                        <div class="row">
-                            <div class="col-sm-3 my-auto text-center">
-                                <i class="fas fa-dice-d20 fa-3x dashboard-card-icon"></i>
-                            </div>
-                            <div class="col-sm-9">
-                                <h4 class="card-title text-center">Machines</h4>
-                                <div>
-                                    <p class="text-center dashboard-card-text">0</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-md-4">
-            <div class="card rounded">
-                <div class="card-body rounded dashboard-card-body-4">
-                    <div class='px-3 py-3 justify-content-between'>
-                        <div class="row">
-                            <div class="col-sm-3 my-auto text-center">
-                                <i class="fad fa-hands-helping fa-3x dashboard-card-icon"></i>
-                            </div>
-                            <div class="col-sm-9">
-                                <h4 class="card-title text-center">Partners</h4>
-                                <div>
-                                    <p class="text-center dashboard-card-text">10</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-md-4">
-            <div class="card rounded">
                 <div class="card-body rounded dashboard-card-body-5">
                     <div class='px-3 py-3 justify-content-between'>
                         <div class="row">

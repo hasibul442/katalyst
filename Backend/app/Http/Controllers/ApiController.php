@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\AuxiliaryChemicals;
 use App\Models\Banner;
 use App\Models\BasicChemicals;
+use App\Models\Dyestuffs;
 use App\Models\Message;
 use Illuminate\Http\Request;
 
@@ -23,6 +25,15 @@ class ApiController extends Controller
             'status' => 200,
             'basicchemicals1' => $basicchemicals1,
          ]);
+    }
+
+    public function auxiliarychemical(){
+        $auxiliarychemicals = AuxiliaryChemicals::where('status','Active')->get();
+        return response()->json($auxiliarychemicals);
+    }
+    public function dyestuff(){
+        $dyestuff = Dyestuffs::where('status','Active')->get();
+        return response()->json($dyestuff);
     }
     public function messagestore(Request $request){
         $message = new Message;
