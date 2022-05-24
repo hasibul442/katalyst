@@ -67,9 +67,10 @@ class DyestuffsController extends Controller
      * @param  \App\Models\Dyestuffs  $dyestuffs
      * @return \Illuminate\Http\Response
      */
-    public function edit(Dyestuffs $dyestuffs)
+    public function edit($id)
     {
-        //
+        $dyestuffs = Dyestuffs::find($id);
+        return response()->json($dyestuffs);
     }
 
     /**
@@ -79,9 +80,12 @@ class DyestuffsController extends Controller
      * @param  \App\Models\Dyestuffs  $dyestuffs
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Dyestuffs $dyestuffs)
+    public function update(Request $request)
     {
-        //
+        $dyestuffs = Dyestuffs::find($request->id);
+        $dyestuffs->dyestuff_name = $request->dyestuff_name1;
+        $dyestuffs->update();
+        return response()->json($dyestuffs);
     }
 
     /**

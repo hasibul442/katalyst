@@ -42,7 +42,7 @@
                         @endphp
                         @foreach ($basicChemicals as $item )
 
-                        <tr id="banner-{{ $item->id }}">
+                        <tr>
                             <td>{{ ++$i }}</td>
                             <td>{{ $item->chemical_name }}</td>
                             <td><img src="{{ asset('/assets/image/basicchemicals/'.$item->chemical_image) }}" alt="" style="width: 100px; height:100px"></td>
@@ -51,8 +51,7 @@
                             <td>{!! $item->application !!}</td>
                             <td><input type="checkbox" name="status" class="status" id="status" data-toggle="toggle" data-on="Active" data-off="Deactive" data-onstyle="success" data-offstyle="danger" data-id="{{ $item->id }}" {{ $item->status == 'Active' ? 'checked' : '' }}></td>
                             <td>
-                                <a class="btn btn-outline-warning btn-sm" href="javascript:void(0);" onclick="editbanner({{ $item->id }})"><i class="fas fa-pencil-alt"></i></a>
-                                {{-- <button class="btn btn-outline-warning btn-sm edit-btn" value="{{ $item->id }}"><i class="fas fa-pencil-alt"></i></button> --}}
+                                <a class="btn btn-outline-warning btn-sm" href="{{ route('basicchemicals.edit', $item->id) }}"><i class="fas fa-pencil-alt"></i></a>
                                 <a href="javascript:void(0);" data-id="{{ $item->id }}" role="button" class="btn btn-sm btn-outline-danger deletebtn"><i class="mdi mdi-trash-can"></i></a>
                             </td>
                         </tr>
@@ -76,35 +75,35 @@
                     {{-- <ul class="alert alert-warning d-none" id="save_errorList"></ul> --}}
 
                     <div class="form-group row">
-                        <label for="chemical_name" class="col-sm-3 col-form-label">Chemical Name</label>
+                        <label for="chemical_name" class="col-sm-3 col-form-label">Chemical Name <small class="text-danger">*</small></label>
                         <div class="col-sm-9">
                             <input type="text" class="form-control" id="chemical_name" placeholder="Chemical Name" name="chemical_name">
                         </div>
                     </div>
 
                     <div class="form-group row">
-                        <label for="image" class="col-sm-3 col-form-label">Chemical Image</label>
+                        <label for="image" class="col-sm-3 col-form-label">Chemical Image <small class="text-danger">*</small></label>
                         <div class="col-sm-9">
-                            <input type="file" class="form-control" id="image" name="image" required>
+                            <input type="file" class="form-control" id="image" name="image" accept=".png, .jpg, .jpeg" required>
                         </div>
                     </div>
 
                     <div class="form-group row">
-                        <label for="short_description" class="col-sm-3 col-form-label">Short Description</label>
+                        <label for="short_description" class="col-sm-3 col-form-label">Short Description <small class="text-danger">*</small></label>
                         <div class="col-sm-9">
                             <textarea name="short_description" required class="form-control " id="short_description"></textarea>
                         </div>
                     </div>
 
                     <div class="form-group row">
-                        <label for="title" class="col-sm-3 col-form-label">Desctiption</label>
+                        <label for="title" class="col-sm-3 col-form-label">Desctiption <small class="text-danger">*</small></label>
                         <div class="col-sm-9">
                             <textarea name="description" required class="form-control summernote-editor" id="description"></textarea>
                         </div>
                     </div>
 
                     <div class="form-group row">
-                        <label for="title" class="col-sm-3 col-form-label">Application</label>
+                        <label for="title" class="col-sm-3 col-form-label">Application <small class="text-danger">*</small></label>
                         <div class="col-sm-9">
                             <textarea name="application" required class="form-control " id="application"></textarea>
                         </div>

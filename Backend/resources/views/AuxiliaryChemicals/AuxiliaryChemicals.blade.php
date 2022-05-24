@@ -43,7 +43,6 @@
                             <td><input type="checkbox" name="status" class="status" id="status"  data-on="Active" data-off="Deactive" data-onstyle="success" data-offstyle="danger" data-id="{{ $item->id }}" {{ $item->status == 'Active' ? 'checked' : '' }}></td>
                             <td>
                                 <a class="btn btn-outline-warning btn-sm" href="javascript:void(0);" onclick="editAuxiliaryChemicals({{ $item->id }})"><i class="fas fa-pencil-alt"></i></a>
-                                {{-- <button class="btn btn-outline-warning btn-sm edit-btn" value="{{ $item->id }}"><i class="fas fa-pencil-alt"></i></button> --}}
                                 <a href="javascript:void(0);" data-id="{{ $item->id }}" role="button" class="btn btn-sm btn-outline-danger deletebtn"><i class="mdi mdi-trash-can"></i></a>
                             </td>
                         </tr>

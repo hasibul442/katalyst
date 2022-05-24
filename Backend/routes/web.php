@@ -43,6 +43,8 @@ Route::delete('/banner/{id}', "App\Http\Controllers\BannerController@destroy");
 Route::get('/basic-chemicals', "App\Http\Controllers\BasicChemicalsController@index")->name('basicchemicals');
 Route::post('/basicchemical/add', "App\Http\Controllers\BasicChemicalsController@store")->name('basicchemicals.add');
 Route::get('/basicchemicals/status/{id}/{status}', "App\Http\Controllers\BasicChemicalsController@statuschange");
+Route::get('/basicchemicals/edit/{id}', "App\Http\Controllers\BasicChemicalsController@edit")->name('basicchemicals.edit');
+Route::put('/basicchemicals/update/{id}', "App\Http\Controllers\BasicChemicalsController@update")->name('basicchemicals.update');
 Route::delete('/basicchemicals/{id}', "App\Http\Controllers\BasicChemicalsController@destroy");
 
 
@@ -58,6 +60,8 @@ Route::delete('/auxiliarychemicals/{id}', "App\Http\Controllers\AuxiliaryChemica
 Route::get('/dyestuffs', "App\Http\Controllers\DyestuffsController@index")->name('dyestuffs');
 Route::post('/dyestuffs/add', "App\Http\Controllers\DyestuffsController@store")->name('dyestuffs.add');
 Route::get('/dyestuffs/status/{id}/{status}', "App\Http\Controllers\DyestuffsController@statuschange");
+Route::get('/dyestuffs/edit/{id}', "App\Http\Controllers\DyestuffsController@edit");
+Route::put('/dyestuffs/update', "App\Http\Controllers\DyestuffsController@update");
 Route::delete('/dyestuffs/{id}', "App\Http\Controllers\DyestuffsController@destroy");
 
 
@@ -68,7 +72,6 @@ Route::get('/job/status/{id}/{status}', "App\Http\Controllers\JobpostsController
 Route::get('/job/applicant-list/{id}', "App\Http\Controllers\JobpostsController@show")->name('applicant_list');
 Route::get('/job/post/edit/{id}', "App\Http\Controllers\JobpostsController@edit")->name('jobpost.edit');
 Route::put('/job/post/update/{id}', "App\Http\Controllers\JobpostsController@update")->name('jobpost.update');
-
 Route::delete('/job/{id}', "App\Http\Controllers\JobpostsController@destroy");
 
 // Messages

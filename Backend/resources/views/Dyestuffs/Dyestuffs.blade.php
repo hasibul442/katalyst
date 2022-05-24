@@ -44,8 +44,7 @@
                             <td>{{ $item->dyestuff_name }}</td>
                             <td><input type="checkbox" name="status" class="status" id="status" data-toggle="toggle" data-on="Active" data-off="Deactive" data-onstyle="success" data-offstyle="danger" data-id="{{ $item->id }}" {{ $item->status == 'Active' ? 'checked' : '' }}></td>
                             <td>
-                                <a class="btn btn-outline-warning btn-sm" href="javascript:void(0);" onclick="editbanner({{ $item->id }})"><i class="fas fa-pencil-alt"></i></a>
-                                {{-- <button class="btn btn-outline-warning btn-sm edit-btn" value="{{ $item->id }}"><i class="fas fa-pencil-alt"></i></button> --}}
+                                <a class="btn btn-outline-warning btn-sm" href="javascript:void(0);" onclick="editdyestuffs({{ $item->id }})"><i class="fas fa-pencil-alt"></i></a>
                                 <a href="javascript:void(0);" data-id="{{ $item->id }}" role="button" class="btn btn-sm btn-outline-danger deletebtn"><i class="mdi mdi-trash-can"></i></a>
                             </td>
                         </tr>
@@ -86,6 +85,27 @@
                         </tbody>
                     </table>
 
+                    <div class="text-center pb-2">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <input type="submit" class="btn btn-success" name="submit" id="submit" value="Submit" />
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--Edit Modal -->
+<div class="modal fade" id="DyestuffsEdit" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-body">
+                <form class="forms-sample" id="DyestuffsEditForm" method="POST" enctype="multipart/form-data">
+                    @csrf
+                    <input type="hidden" name="id" id="id">
+                    {{-- <ul class="alert alert-warning d-none" id="save_errorList"></ul> --}}
+                    <label for="dyestuff_name1">Dyestuffs Name</label>
+                    <input type="text" class="form-control" id="dyestuff_name1" name="dyestuff_name1">
                     <div class="text-center pb-2">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                         <input type="submit" class="btn btn-success" name="submit" id="submit" value="Submit" />
@@ -178,6 +198,42 @@
                 }
             });
         }
+    });
+
+    function editdyestuffs(id){
+        $.get("/dyestuffs/edit/"+id, function(dyestuff){
+            $('#id').val(dyestuff.id);
+            $('#dyestuff_name1').val(dyestuff.dyestuff_name);
+            $('#DyestuffsEdit').modal("toggle");
+        });
+    }
+
+    $('#DyestuffsEditForm').submit(function (e) {
+        e.preventDefault();
+
+        let id = $('#id').val();
+        let dyestuff_name1 = $('#dyestuff_name1').val();
+        let _token = $('input[name=_token]').val();
+
+        $.ajax({
+            type: "PUT",
+            url: "/dyestuffs/update",
+            data: {
+                id:id,
+                dyestuff_name1:dyestuff_name1,
+                _token:_token,
+            },
+            dataType: "json",
+            success: function (response) {
+                // console.log(response);
+                $('#dyestuff-'+response.id + 'td:nth-child(1)').text(response.dyestuff_name1);
+                $('#DyestuffsEdit').modal("toggle");
+                location.reload();
+                $('#DyestuffsEditForm')[0].reset();
+
+            }
+        });
+
     });
 
 </script>

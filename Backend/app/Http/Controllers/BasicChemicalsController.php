@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\BasicChemicals;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\File;
 
 class BasicChemicalsController extends Controller
 {
@@ -74,9 +75,10 @@ class BasicChemicalsController extends Controller
      * @param  \App\Models\BasicChemicals  $basicChemicals
      * @return \Illuminate\Http\Response
      */
-    public function edit(BasicChemicals $basicChemicals)
+    public function edit($id)
     {
-        //
+        $basicChemicals = BasicChemicals::find($id);
+        return view('basicchemicals.basicchemical_edit',compact('basicChemicals'));
     }
 
     /**
@@ -86,9 +88,26 @@ class BasicChemicalsController extends Controller
      * @param  \App\Models\BasicChemicals  $basicChemicals
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, BasicChemicals $basicChemicals)
+    public function update(Request $request,$id)
     {
-        //
+        $basicChemicals = BasicChemicals::find($id);
+        $basicChemicals->chemical_name = $request->chemical_name;
+        $basicChemicals->short_description = $request->short_description;
+        $basicChemicals->description = $request->description;
+        $basicChemicals->application = $request->application;
+        if($request->hasFile('image')){
+            $destination = public_path().'/assets/image/basicchemicals/'.$basicChemicals->chemical_image;
+            if(File::exists($destination)){
+                File::delete($destination);
+            }
+            $image = $request->file('image');
+            $image_name = time().'.'.$image->getClientOriginalExtension();
+            $image->move(public_path().'/assets/image/basicchemicals/',$image_name);
+            $basicChemicals->chemical_image = $image_name;
+        }
+        $basicChemicals->update();
+        return redirect()->route('basicchemicals');
+
     }
     public function statuschange($id,$status){
         $basicChemicals = BasicChemicals::find($id);
