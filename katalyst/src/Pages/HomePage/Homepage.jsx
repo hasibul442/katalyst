@@ -11,14 +11,14 @@ import RellaxWrapper from "react-rellax-wrapper";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-import CountUp from "react-countup";
+// import CountUp from "react-countup";
 import { Carousel } from "react-bootstrap";
 
 import Slider from "react-slick/lib/slider";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import axios from "axios";
-
+import 'animate.css';
 function Homepage() {
   const settings = {
     dots: false,
@@ -98,37 +98,15 @@ function Homepage() {
               <Carousel.Item key={banner.id}>
                 <img
                   className="d-block w-100"
-                  style={{ height: "800px" }}
+                  style={{ height: "650px" }}
                   src={`http://127.0.0.1:8000/assets/image/banner/${banner.image}`}
                   alt="Banner_Photo"
                 />
+                <Carousel.Caption fade={true}>
+                    <h2 className="animate__animated animate__bounce">{banner.title}</h2>
+                </Carousel.Caption>
               </Carousel.Item>
             ))}
-
-            {/* <Carousel.Item>
-            <img
-              className="d-block w-100"
-              style={{ height: "800px" }}
-              src="/carousel/Banner-2.jpg"
-              alt="Banner_Photo"
-            />
-          </Carousel.Item>
-          <Carousel.Item>
-            <img
-              className="d-block w-100"
-              style={{ height: "800px" }}
-              src="/carousel/Banner-3.jpg"
-              alt="Banner_Photo"
-            />
-          </Carousel.Item>
-          <Carousel.Item>
-            <img
-              className="d-block w-100"
-              style={{ height: "800px" }}
-              src="/carousel/Banner-4.jpg"
-              alt="Banner_Photo"
-            />
-          </Carousel.Item> */}
           </Carousel>
         )}
       </section>
@@ -184,7 +162,7 @@ function Homepage() {
         <section>
           <div className="company-history-point" data-aos="fade-up">
             <p className="h2 katalyst-history-headline text-center">
-              ecofriendly chemicals and process
+              Our Strength
             </p>
             <p
               className="history-short-description text-center"
@@ -198,26 +176,25 @@ function Homepage() {
                 <div className="text-center">
                   <i className="fas fa-trophy fa-3x"></i>
                   <p>
-                    Year Of Exprience <br /> <CountUp end={75} />
+                    Quality <br/> Products 
                   </p>
                 </div>
               </div>
 
               <div className="pb-2">
                 <div className="text-center">
-                  <i className="fas fa-flag fa-3x"></i>
+                  <i className="fad fa-dollar-sign fa-3x"></i>
                   <p>
-                    Year Of Established <br /> <CountUp end={2019} />
+                    Competitive <br/> price
                   </p>
                 </div>
               </div>
 
               <div className="pb-2">
                 <div className="text-center">
-                  <i className="fas fa-globe fa-3x"></i>
+                  <i className="fad fa-ship fa-3x"></i>
                   <p>
-                    Imported From
-                    <br /> China
+                    In time <br/> shipment
                   </p>
                 </div>
               </div>
@@ -226,7 +203,7 @@ function Homepage() {
                 <div className="text-center">
                   <i className="fas fa-user-friends fa-3x"></i>
                   <p>
-                    Employees <br /> <CountUp end={26} />
+                    Our outstanding <br/> services
                   </p>
                 </div>
               </div>

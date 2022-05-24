@@ -34,7 +34,7 @@ function BasicChemical() {
               color: "#fff",
             }}
           >
-            Product Info
+            Basic Chemical
           </h1>
           <h5 className="text-center item--title">
           Produce with the highest quality of material ,provide the best service
@@ -49,15 +49,14 @@ function BasicChemical() {
         <div className="container">
           <p className="basic-chemicals-title">Basic Chemical</p>
           <p className="basic-chemicals-subtitle">
-            Filler text is text that shares some characteristics of a real
-            written text, but is random or otherwise generated.
+          To become the first choice of customers for a value added, ecofriendly chemicals and process.
           </p>
 
           <div className="row mt-5 mb-5">
             {
               basicchemical.length > 0 && (
-                basicchemical.map((item, key)=>(
-                  <div className="col-md-4 col-sm-6 pb-3" key={key}>
+                basicchemical.map((item)=>(
+                  <div className="col-md-4 col-sm-6 pb-3" key={item.id}>
                   <div className="box">
                     <img
                       src={`http://127.0.0.1:8000/assets/image/basicchemicals/${item.chemical_image}`}
@@ -71,7 +70,7 @@ function BasicChemical() {
                     <ul className="icon">
                       <li><p className="short_description">{item.short_description}</p></li>
                       <li>
-                        <Link to="/product/details" className="see-more ">
+                        <Link to={`/basic-chemical/details/${item.id}`} className="see-more ">
                           See More
                         </Link>
                       </li>

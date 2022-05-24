@@ -56,18 +56,17 @@ function Product_Details() {
  
   const { id } = useParams();
 
-  const [basicchemical1, setBasicChemicalDetails] = useState([]);
+  const [basicchemical1, setBasicChemicalDetails] = useState("");
   const fetchProduct = async () => {
     await axios
       .get(`http://localhost:8000/api/basic-chemical/details/${id}`)
       .then(({ data }) => {
         setBasicChemicalDetails(data.basicchemicals1);
-        console.log(data);
       });
   };
   useEffect(() => {
     fetchProduct();
-  }, []);
+  });
 
 
   const [basicchemical, setBasicChemical] = useState([]);
@@ -81,7 +80,6 @@ function Product_Details() {
       .get(`http://localhost:8000/api/basic-chemicals`)
       .then(({ data }) => {
         setBasicChemical(data);
-        console.log(data);
       });
   };
   return (
@@ -121,7 +119,7 @@ function Product_Details() {
                       <div className="product-details-octa-img-block2">
                         <img
                           src={`http://127.0.0.1:8000/assets/image/basicchemicals/${basicchemical1.chemical_image}`}
-                          alt=""
+                          alt={ basicchemical1.chemical_name}
                           className="img-fluid product-details-octa-image"
                         />
                       </div>
@@ -144,6 +142,7 @@ function Product_Details() {
                     <i className="fad fa-biohazard"></i> Application Area
                   </h1>
                   <p className="product-description">{basicchemical1.application}</p>
+                  {/* <p className="product-description">{basicchemical1.chemical_image}</p> */}
                 </div>
               </div>
             </div>
@@ -151,7 +150,7 @@ function Product_Details() {
         </section>
 
       {/* related Product */}
-      <section className="mb-5">
+      <section className="mb-5  texture-1">
         <div className="container">
           <h1 className="product-description-title">Related Product</h1>
           <Slider {...settings}>

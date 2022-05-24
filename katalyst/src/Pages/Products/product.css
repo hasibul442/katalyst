@@ -76,3 +76,12 @@
   font-size: 18px;
   font-weight: 500;
 }
+
+.item-hover:hover{
+  text-decoration: underline;
+  cursor: pointer;
+  color: #ec008c;
+  font-size: 20px;
+  transition: 0.5s;
+  padding-left: 10px;
+}

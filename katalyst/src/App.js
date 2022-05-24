@@ -8,6 +8,8 @@ import ContactUs from "./Pages/Contactus/ContactUs";
 import Footer from "./Component/Footer/Footer";
 import BasicChemical from "./Pages/Products/BasicChemical";
 import ProductDetails from "./Pages/Products/Product_Details";
+import AuxiliaryChemiacl from "./Pages/Products/AuxiliaryChemiacl";
+import Dyestuff from "./Pages/Products/Dyestuff";
 
 function App() {
   return (
@@ -20,9 +22,8 @@ function App() {
               <Route path="/home" element={<Homepage />} />
               <Route path="/about-us" element={<Aboutus />} />
               <Route path="/basic-chemicals" element={<BasicChemical/>} />
-              <Route path="/auxiliary-chemicals" element={<BasicChemical/>} />
-              <Route path="/dyes-stuff" element={<BasicChemical/>} />
-              <Route path="/machines" element={<BasicChemical/>} />
+              <Route path="/auxiliarychemicals" element={<AuxiliaryChemiacl/>} />
+              <Route path="/dyestuff" element={<Dyestuff/>} />
               <Route path="/contact-us" element={<ContactUs/>} />
               <Route path="/basic-chemical/details/:id" element={<ProductDetails/>} />
             </Routes>

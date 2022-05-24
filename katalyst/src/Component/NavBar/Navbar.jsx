@@ -1,9 +1,6 @@
 import React,{useState} from 'react';
 import "./navbar.css";
 import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
   Link
 } from "react-router-dom";
 
@@ -51,18 +48,13 @@ function Navbar() {
                     </Link>
                   </li>
                   <li>
-                    <Link className="dropdown-item" to="/auxiliary-chemicals">
+                    <Link className="dropdown-item" to="/auxiliarychemicals">
                       Auxiliary Chemicals
                     </Link>
                   </li>
                   <li>
-                    <Link className="dropdown-item" to="/dyes-stuff">
+                    <Link className="dropdown-item" to="/dyestuff">
                       Dyes Stuff
-                    </Link>
-                  </li>
-                  <li>
-                    <Link className="dropdown-item" to="/machines">
-                      Machines
                     </Link>
                   </li>
                 </ul>

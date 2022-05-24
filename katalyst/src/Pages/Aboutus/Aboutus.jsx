@@ -1,7 +1,7 @@
 import React from "react";
 import RellaxWrapper from "react-rellax-wrapper";
 import "./aboutus.css";
-import { ProgressBar } from "react-bootstrap";
+// import { ProgressBar } from "react-bootstrap";
 
 import AOS from "aos";
 import "aos/dist/aos.css";
