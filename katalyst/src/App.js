@@ -10,6 +10,7 @@ import BasicChemical from "./Pages/Products/BasicChemical";
 import ProductDetails from "./Pages/Products/Product_Details";
 import AuxiliaryChemiacl from "./Pages/Products/AuxiliaryChemiacl";
 import Dyestuff from "./Pages/Products/Dyestuff";
+import Career from "./Pages/Career/Career";
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
               <Route path="/dyestuff" element={<Dyestuff/>} />
               <Route path="/contact-us" element={<ContactUs/>} />
               <Route path="/basic-chemical/details/:id" element={<ProductDetails/>} />
+              <Route path ="/career" element={<Career/>} />
             </Routes>
           </div>
         <Footer/>

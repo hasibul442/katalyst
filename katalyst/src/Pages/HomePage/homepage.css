@@ -130,7 +130,7 @@
   }
 
   .homepage-product-left-block{
-      position: sticky;
+      /* position: sticky; */
       overflow: visible;
       top: 140px;
   }

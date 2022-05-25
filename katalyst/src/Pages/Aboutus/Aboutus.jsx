@@ -5,6 +5,7 @@ import "./aboutus.css";
 
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { Link } from "react-router-dom";
 
 function Aboutus() {
   AOS.init({
@@ -86,7 +87,7 @@ function Aboutus() {
         </div>
       </section>
 
-      <section className="aboutus-mission-vision ">
+      <section className="aboutus-mission-vision">
         <div className="custom-shape">
           <img
             src="/custom_shape/Asset-2.png"
@@ -95,55 +96,7 @@ function Aboutus() {
           />
         </div>
 
-        <div className="container pt-5 pb-5">
-          <div className="row">
-            <div className="col-lg-4 border-box-1"></div>
-
-            <div className="col-lg-4 border-box-2 my-auto" data-aos="fade-up">
-              <p className="mission-title text-center mt-3">Mission</p>
-              <ul>
-                <li>
-                  To source and supply the best quality, value added and
-                  ecofriendly chemicals and process to customers of the
-                  industries we operate in so that we can promote natural
-                  decomposition to reduce carbon footprint, to reduce water and
-                  energy consumption to overcome the challenges of global
-                  warming.{" "}
-                </li>
-                <li>
-                  To develop and to retain customers committed to quality and
-                  consistent purchase behavior.
-                </li>
-              </ul>
-            </div>
-
-            <div className="col-lg-4 border-box-3"></div>
-
-            <div className="col-lg-4 border-box-4" data-aos="fade-up">
-              <p className="mission-title text-center pt-3">Vision</p>
-              <p className="text-white">
-                To become the first choice of customers for a value added,
-                ecofriendly chemicals and process.{" "}
-              </p>
-            </div>
-
-            <div className="col-lg-4 border-box-5 text-center "></div>
-            <div className="col-lg-4 border-box-6" data-aos="fade-up">
-              <p className="mission-title text-center pt-3">Values</p>
-              <p>
-                Our core values define what we stand for, whom we work with and
-                how we interact with colleagues, customers, principles,
-                shareholders and others stakeholders. Our core values are:
-              </p>
-              <ul>
-                <li>Passion for quality partners</li>
-                <li>Accountability</li>
-                <li>Promises and commitments.</li>
-                <li>Professional Attitude and ethics.</li>
-              </ul>
-            </div>
-          </div>
-        </div>
+            
       </section>
 
       <div className="custom-shape-box">
@@ -169,7 +122,9 @@ function Aboutus() {
             </div>
 
             <div className="col-md-6">
-              <span className="why-choose-us-progress-bar-title">Product Supply</span>
+              <span className="why-choose-us-progress-bar-title">
+                Product Supply
+              </span>
               <div className="progress">
                 <div
                   className="progress-bar bg-info progress-bar-animated progress-bar-striped"
@@ -185,12 +140,14 @@ function Aboutus() {
 
               <br />
 
-              <span className="why-choose-us-progress-bar-title">Product Qulity</span>
+              <span className="why-choose-us-progress-bar-title">
+                Product Qulity
+              </span>
               <div className="progress">
                 <div
                   className="progress-bar progress-bar-animated progress-bar-striped"
                   role="progressbar"
-                  style={{ width: "95%",backgroundColor:'#242F9B' }}
+                  style={{ width: "95%", backgroundColor: "#242F9B" }}
                   aria-valuenow="25"
                   aria-valuemin="0"
                   aria-valuemax="100"
@@ -201,22 +158,21 @@ function Aboutus() {
 
               <br />
 
-              <span className="why-choose-us-progress-bar-title">Customer Satisfaction</span>
+              <span className="why-choose-us-progress-bar-title">
+                Customer Satisfaction
+              </span>
               <div className="progress">
                 <div
                   className="progress-bar progress-bar-animated progress-bar-striped"
                   role="progressbar"
-                  style={{ width: "99%" , backgroundColor:'#FF5D5D'}}
+                  style={{ width: "99%", backgroundColor: "#FF5D5D" }}
                   aria-valuenow="25"
                   aria-valuemin="0"
                   aria-valuemax="100"
-                  
                 >
                   99%
                 </div>
               </div>
-
-
             </div>
           </div>
         </div>

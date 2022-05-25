@@ -18,7 +18,7 @@ import Slider from "react-slick/lib/slider";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import axios from "axios";
-import 'animate.css';
+import "animate.css";
 function Homepage() {
   const settings = {
     dots: false,
@@ -103,7 +103,9 @@ function Homepage() {
                   alt="Banner_Photo"
                 />
                 <Carousel.Caption fade={true}>
-                    <h2 className="animate__animated animate__bounceInDown" >{banner.title}</h2>
+                  <h2 className="animate__animated animate__bounceInDown">
+                    {banner.title}
+                  </h2>
                 </Carousel.Caption>
               </Carousel.Item>
             ))}
@@ -176,7 +178,7 @@ function Homepage() {
                 <div className="text-center">
                   <i className="fas fa-trophy fa-3x"></i>
                   <p>
-                    Quality <br/> Products 
+                    Quality <br /> Products
                   </p>
                 </div>
               </div>
@@ -185,7 +187,7 @@ function Homepage() {
                 <div className="text-center">
                   <i className="fad fa-dollar-sign fa-3x"></i>
                   <p>
-                    Competitive <br/> price
+                    Competitive <br /> price
                   </p>
                 </div>
               </div>
@@ -194,7 +196,7 @@ function Homepage() {
                 <div className="text-center">
                   <i className="fad fa-ship fa-3x"></i>
                   <p>
-                    In time <br/> shipment
+                    In time <br /> shipment
                   </p>
                 </div>
               </div>
@@ -203,7 +205,7 @@ function Homepage() {
                 <div className="text-center">
                   <i className="fas fa-user-friends fa-3x"></i>
                   <p>
-                    Our outstanding <br/> services
+                    Our outstanding <br /> services
                   </p>
                 </div>
               </div>
@@ -214,31 +216,25 @@ function Homepage() {
 
       <section className="mt-5 texture-1">
         <div className="container pt-5">
+          <div className="homepage-product-left-block">
+            <h2 className="katalyst-history-headline text-center">
+              Types Of Product
+            </h2>
+            <p className="text-center pb-4">
+              For over 10 years, the Katalyst family has been building
+              relationships with many Company. Our core values define what we
+              stand for, whom we work with and how we interact with colleagues,
+              customers, principles, shareholders and others stakeholders.
+            </p>
+            {/* <Link to="/basic-chemicals" className="learn-more button-style-2">
+              <span className="circle" aria-hidden="true">
+                <span className="icon arrow"></span>
+              </span>
+              <span className="button-text">Learn More</span>
+            </Link> */}
+          </div>
           <div className="row">
-            <div className="col-md-5 col-lg-6">
-              <div className="homepage-product-left-block">
-                <h2 className="katalyst-history-headline text-center">
-                  Types Of Product
-                </h2>
-                <p>
-                  For over 10 years, the Katalyst family has been building
-                  relationships with many Company. Our core values define what
-                  we stand for, whom we work with and how we interact with
-                  colleagues, customers, principles, shareholders and others
-                  stakeholders.
-                </p>
-                <Link
-                  to="/basic-chemicals"
-                  className="learn-more button-style-2"
-                >
-                  <span className="circle" aria-hidden="true">
-                    <span className="icon arrow"></span>
-                  </span>
-                  <span className="button-text">Learn More</span>
-                </Link>
-              </div>
-            </div>
-            <div className="col-md-7 col-lg-6">
+            <div className="col-lg-4">
               <div className="product-box mb-2 mt-2">
                 <img
                   src="/product/Product-type-1.jpg"
@@ -262,7 +258,8 @@ function Homepage() {
                   </Link>
                 </div>
               </div>
-
+            </div>
+            <div className="col-lg-4">
               <div className="product-box mb-2 mt-2">
                 <img
                   src="/product/Product-type-2.jpg"
@@ -276,7 +273,7 @@ function Homepage() {
                     Bleach, Micro Silicone, Ect.{" "}
                   </span>
                   <Link
-                    to="/basic-chemicals"
+                    to="/auxiliarychemicals"
                     className="learn-more button-style-2"
                   >
                     <span className="circle" aria-hidden="true">
@@ -286,7 +283,9 @@ function Homepage() {
                   </Link>
                 </div>
               </div>
+            </div>
 
+            <div className="col-lg-4">
               <div className="product-box mb-2 mt-2">
                 <img
                   src="/product/Product-type-3.jpg"
@@ -299,10 +298,7 @@ function Homepage() {
                     We Provide three Type of Dyestuffs: Naturel Dyes, Vat Dyes,
                     Sulphur Dyes. Every Category also have lot of color.{" "}
                   </span>
-                  <Link
-                    to="/basic-chemicals"
-                    className="learn-more button-style-2"
-                  >
+                  <Link to="/dyestuff" className="learn-more button-style-2">
                     <span className="circle" aria-hidden="true">
                       <span className="icon arrow"></span>
                     </span>
@@ -328,7 +324,7 @@ function Homepage() {
 
           <Slider {...settings}>
             {basicchemical.length > 0 &&
-              basicchemical.map((item,key) => (
+              basicchemical.map((item, key) => (
                 <div key={item.id}>
                   <div className="box m-2">
                     <img
@@ -346,7 +342,10 @@ function Homepage() {
                         </p>
                       </li>
                       <li>
-                        <Link to={`/basic-chemical/details/${item.id}`} className="see-more ">
+                        <Link
+                          to={`/basic-chemical/details/${item.id}`}
+                          className="see-more "
+                        >
                           See More
                         </Link>
                       </li>
@@ -395,7 +394,9 @@ function Homepage() {
                 <ul className="icon">
                   <li>
                     <p className="short_description">
-                      We also provide many type of Dyestuffs. Our Dyestuffs Qulity Are 100% good. We had A lot of option a lot of color
+                      We also provide many type of Dyestuffs. Our Dyestuffs
+                      Qulity Are 100% good. We had A lot of option a lot of
+                      color
                     </p>
                   </li>
                   <li>
