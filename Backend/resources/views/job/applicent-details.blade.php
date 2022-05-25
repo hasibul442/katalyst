@@ -44,7 +44,7 @@
                     <span class="h5">Exprience: </span><span>{{ $jobposts->exprience }}</span>
                 </div>
                 <div class="col-md-4">
-                    <span class="h5">Total Applied: </span><span>{{ App\Models\Applicant::where('jod_id', $jobposts->id)->get()->count() }}</span>
+                    <span class="h5">Total Applied: </span><span>{{ App\Models\Applicant::where('job_id', $jobposts->id)->get()->count() }}</span>
                 </div>
             </div>
 
@@ -73,7 +73,7 @@
                         @php
                             $i = 0;
                         @endphp
-                        @foreach (App\Models\Applicant::where('jod_id', $jobposts->id)->get() as $item )
+                        @foreach (App\Models\Applicant::where('job_id', $jobposts->id)->get() as $item )
                             <tr>
                                 <td>{{ ++$i }}</td>
                                 <td>{{ $item->candidate_name }}</td>

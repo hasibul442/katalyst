@@ -23,5 +23,8 @@ Route::get('/basic-chemical/details/{id}', 'App\Http\Controllers\ApiController@b
 
 Route::get('/auxiliarychemicals', 'App\Http\Controllers\ApiController@auxiliarychemical');
 Route::get('/dyestuffs', 'App\Http\Controllers\ApiController@dyestuff');
+Route::get('/jobsopen', 'App\Http\Controllers\ApiController@job');
+Route::get('/jobs/details/{id}', 'App\Http\Controllers\ApiController@jobdetails');
 
+Route::post('/application/submit', 'App\Http\Controllers\ApiController@applyfojob');
 Route::post('/messages/add', 'App\Http\Controllers\ApiController@messagestore')->name('messagesstotre');
