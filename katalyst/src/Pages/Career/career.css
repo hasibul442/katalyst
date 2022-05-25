@@ -1,0 +1,28 @@
+.career-bg {
+    background-image: linear-gradient(#3d3d3da1, #3d3d3d63),
+      url("./../../../public/job/career.jpeg");
+    width: auto;
+    height: 650px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    /* opacity: 0.3; */
+    background-attachment: fixed;
+  }
+  .career-bg div {
+    padding-top: 15%;
+  }
+
+  .job_blocks{
+    text-decoration: none;
+  }
+  .position_name{
+    font-size:25px;
+    font-weight: 600;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    color: #552e8c;
+  }
+  .application_dead_line{
+    color: #000;
+  }
+  

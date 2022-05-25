@@ -15,7 +15,7 @@ function BasicChemical() {
   const fetchBasicChemical = async () => {
     await axios.get(`http://localhost:8000/api/basic-chemicals`).then(({data})=>{
       setBasicChemical(data)
-      console.log(data)
+      // console.log(data)
     })
   }
 

@@ -62,11 +62,12 @@ function Product_Details() {
       .get(`http://localhost:8000/api/basic-chemical/details/${id}`)
       .then(({ data }) => {
         setBasicChemicalDetails(data.basicchemicals1);
+        // console.log(data)
       });
   };
   useEffect(() => {
     fetchProduct();
-  });
+  },[]);
 
 
   const [basicchemical, setBasicChemical] = useState([]);

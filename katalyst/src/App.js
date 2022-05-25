@@ -11,6 +11,7 @@ import ProductDetails from "./Pages/Products/Product_Details";
 import AuxiliaryChemiacl from "./Pages/Products/AuxiliaryChemiacl";
 import Dyestuff from "./Pages/Products/Dyestuff";
 import Career from "./Pages/Career/Career";
+import JobDescription from "./Pages/Career/JobDescription";
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
               <Route path="/dyestuff" element={<Dyestuff/>} />
               <Route path="/contact-us" element={<ContactUs/>} />
               <Route path="/basic-chemical/details/:id" element={<ProductDetails/>} />
+              <Route path="/job/details/:id" element={<JobDescription/>} />
               <Route path ="/career" element={<Career/>} />
             </Routes>
           </div>

@@ -45,33 +45,7 @@ function ContactUs() {
         setDescriptione("");
       });
   };
-  // const changeHandler = (event) => {
-  // 	setImage(event.target.files[0]);
-  // };
-  // state = {
-  //   f_name: '',
-  //   l_name: '',
-  //   name_of_organization: '',
-  //   position: '',
-  //   phone_number: '',
-  //   email: '',
-  //   description: '',
-  // }
 
-  // handleInput = (e) =>{
-  //   this.setState({
-  //     [e.target.name]: e.target.value
-  //   });
-  // }
-
-  // sandMessage = (e) => {
-  //   e.preventDefault();
-
-  //   const response = await axios.post('http://127.0.0.1:8000/api/messages/add', this.state);
-  //   if(response.data.status === 200){
-  //     console.log(res.data.message)
-  //   }
-  // }
   return (
     <>
       <div className="contact-bg">
