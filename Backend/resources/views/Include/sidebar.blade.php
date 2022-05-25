@@ -25,12 +25,12 @@
                 @endif
 
 
-                <li>
+                {{-- <li>
                     <a href="{{ route('profile') }}">
                         <i class="fas fa-info-circle"></i>
                         <span> Company Profile </span>
                     </a>
-                </li>
+                </li> --}}
 
                 <li>
                     <a href="{{ route('banner') }}">
