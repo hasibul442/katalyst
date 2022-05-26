@@ -15,12 +15,14 @@ class CreateCandidatesTable extends Migration
     {
         Schema::create('candidates', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('job_id')->nullable();
+            $table->unsignedInteger('job_id');
             $table->string('candidate_name')->nullable();
             $table->string('last_degree')->nullable();
             $table->string('mobile_number')->nullable();
             $table->string('email')->nullable();
             $table->string('cv')->nullable();
+
+            $table->foreign('job_id')->references('id')->on('jobposts')->onDelete('cascade');
             $table->timestamps();
         });
     }

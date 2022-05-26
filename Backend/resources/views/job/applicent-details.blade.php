@@ -80,7 +80,8 @@
                                 <td>{{ $item->last_degree }}</td>
                                 <td>{{ $item->mobile_number }}</td>
                                 <td>{{ $item->email }}</td>
-                                <td>{{ $item->cv }}</td>
+                                <td> <a href="{{ asset('/assets/image/cv/'.$item->cv) }}">{{ $item->cv }}</a>
+                                    </td>
                             </tr>
                         @endforeach
                     </tbody>

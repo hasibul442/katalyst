@@ -54,7 +54,7 @@
                                 <div class="form-group mb-3">
                                     @if (Route::has('password.request'))
                                     <a class="text-muted float-right" href="{{ route('password.request') }}">
-                                        <small>Forgot your password?</small>
+                                        {{-- <small>Forgot your password?</small> --}}
                                     </a>
                                     @endif
                                     <label for="password">Password</label>
@@ -77,11 +77,11 @@
 
                             </form>
 
-                            <div class="row mt-3">
+                            {{-- <div class="row mt-3">
                                 <div class="col-12 text-center">
                                     <p class="text-muted mb-0">Don't have an account? <a href="{{ route('register') }}" class="text-dark ml-1"><b>Sign Up</b></a></p>
                                 </div> <!-- end col -->
-                            </div>
+                            </div> --}}
                             <!-- end row -->
 
                         </div> <!-- end card-body -->

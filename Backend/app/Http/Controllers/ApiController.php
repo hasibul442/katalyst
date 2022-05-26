@@ -40,8 +40,8 @@ class ApiController extends Controller
     }
 
     public function job(){
-        $currentdate = Carbon::now();
-        $job = Jobposts::where('status','Active')->get();
+        $currentdate = Carbon::now()->format('Y-m-d');
+        $job = Jobposts::where('status','Active')->where('application_dead_line','>=',$currentdate)->orderByDesc('created_at')->get();
         return response()->json($job);
     }
     public function jobdetails($id){
