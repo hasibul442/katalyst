@@ -102,7 +102,7 @@ function Homepage() {
                   src={`https://katalystbd.com/admin/assets/image/banner/${banner.image}`}
                   alt="Banner_Photo"
                 />
-                <Carousel.Caption fade={true}>
+                <Carousel.Caption >
                   <h2 className="animate__animated animate__bounceInDown">
                     {banner.title}
                   </h2>
