@@ -63,7 +63,7 @@ function AuxiliaryChemiacl() {
     },[])
 
     const fetchAuxiliaryChemical = async() =>{
-        await axios.get(`http://localhost:8000/api/auxiliarychemicals`).then(({data})=>{
+        await axios.get(`https://katalystbd.com/admin/api/auxiliarychemicals`).then(({data})=>{
             setAuxiliaryChemical(data);
         })
     }
@@ -76,7 +76,7 @@ function AuxiliaryChemiacl() {
   
     const fetchBasicChemical = async () => {
       await axios
-        .get(`http://localhost:8000/api/basic-chemicals`)
+        .get(`https://katalystbd.com/admin/api/basic-chemicals`)
         .then(({ data }) => {
           setBasicChemical(data);
         });
@@ -171,7 +171,7 @@ function AuxiliaryChemiacl() {
                 <div key={item.id}>
                 <div className="box m-2">
                   <img
-                    src={`http://127.0.0.1:8000/assets/image/basicchemicals/${item.chemical_image}`}
+                    src={`https://katalystbd.com/admin/assets/image/basicchemicals/${item.chemical_image}`}
                     style={{ height: "300px" }}
                     alt="Product"
                   />

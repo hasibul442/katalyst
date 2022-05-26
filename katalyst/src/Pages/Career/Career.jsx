@@ -12,7 +12,7 @@ function Career() {
   }, []);
 
   const fetchJobOpen = async () => {
-    await axios.get(`http://localhost:8000/api/jobsopen`).then(({ data }) => {
+    await axios.get(`https://katalystbd.com/admin/api/jobsopen`).then(({ data }) => {
       setJobOpen(data);
       console.log(data);
     });

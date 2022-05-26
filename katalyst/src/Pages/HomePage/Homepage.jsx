@@ -65,7 +65,7 @@ function Homepage() {
 
   const [banners, setBanners] = useState([]);
   const fetchData = async () => {
-    const response = await fetch("http://127.0.0.1:8000/api/banner");
+    const response = await fetch("https://katalystbd.com/admin/api/banner");
     const data = await response.json();
     setBanners(data);
     console.log(data);
@@ -83,7 +83,7 @@ function Homepage() {
 
   const fetchBasicChemical = async () => {
     await axios
-      .get(`http://localhost:8000/api/basic-chemicals`)
+      .get(`https://katalystbd.com/admin/api/basic-chemicals`)
       .then(({ data }) => {
         setBasicChemical(data);
         console.log(data);
@@ -99,7 +99,7 @@ function Homepage() {
                 <img
                   className="d-block w-100"
                   style={{ height: "650px" }}
-                  src={`http://127.0.0.1:8000/assets/image/banner/${banner.image}`}
+                  src={`https://katalystbd.com/admin/assets/image/banner/${banner.image}`}
                   alt="Banner_Photo"
                 />
                 <Carousel.Caption fade={true}>
@@ -328,7 +328,7 @@ function Homepage() {
                 <div key={item.id}>
                   <div className="box m-2">
                     <img
-                      src={`http://127.0.0.1:8000/assets/image/basicchemicals/${item.chemical_image}`}
+                      src={`https://katalystbd.com/admin/assets/image/basicchemicals/${item.chemical_image}`}
                       style={{ height: "400px" }}
                       alt="Product"
                     />

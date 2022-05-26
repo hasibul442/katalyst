@@ -9,7 +9,7 @@ function JobDescription() {
   const [jobdetails, setJobDetails] = useState("");
   const featchJobDescription = async () => {
     await axios
-      .get(`http://localhost:8000/api/jobs/details/${id}`)
+      .get(`https://katalystbd.com/admin/api/jobs/details/${id}`)
       .then(({ data }) => {
         setJobDetails(data.jobdetails);
         console.log(data);
@@ -44,7 +44,7 @@ function JobDescription() {
     formData.append("cv", cv);
 
     await axios
-      .post(`http://127.0.0.1:8000/api/application/submit`, formData)
+      .post(`https://katalystbd.com/admin/api/application/submit`, formData)
       .then(({ data }) => {
         Swal.fire({
           icon: "success",

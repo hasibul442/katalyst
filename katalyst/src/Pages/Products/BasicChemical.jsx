@@ -13,7 +13,7 @@ function BasicChemical() {
   },[])
 
   const fetchBasicChemical = async () => {
-    await axios.get(`http://localhost:8000/api/basic-chemicals`).then(({data})=>{
+    await axios.get(`https://katalystbd.com/admin/api/basic-chemicals`).then(({data})=>{
       setBasicChemical(data)
       // console.log(data)
     })
@@ -59,7 +59,7 @@ function BasicChemical() {
                   <div className="col-md-4 col-sm-6 pb-3" key={item.id}>
                   <div className="box">
                     <img
-                      src={`http://127.0.0.1:8000/assets/image/basicchemicals/${item.chemical_image}`}
+                      src={`https://katalystbd.com/admin/assets/image/basicchemicals/${item.chemical_image}`}
                       style={{ height: "400px" }}
                       alt="Product"
                     />

@@ -59,7 +59,7 @@ function Product_Details() {
   const [basicchemical1, setBasicChemicalDetails] = useState("");
   const fetchProduct = async () => {
     await axios
-      .get(`http://localhost:8000/api/basic-chemical/details/${id}`)
+      .get(`https://katalystbd.com/admin/api/basic-chemical/details/${id}`)
       .then(({ data }) => {
         setBasicChemicalDetails(data.basicchemicals1);
         // console.log(data)
@@ -78,7 +78,7 @@ function Product_Details() {
 
   const fetchBasicChemical = async () => {
     await axios
-      .get(`http://localhost:8000/api/basic-chemicals`)
+      .get(`https://katalystbd.com/admin/api/basic-chemicals`)
       .then(({ data }) => {
         setBasicChemical(data);
       });
@@ -119,7 +119,7 @@ function Product_Details() {
                     <div className="product-details-octa-img-block text-center mt-5">
                       <div className="product-details-octa-img-block2">
                         <img
-                          src={`http://127.0.0.1:8000/assets/image/basicchemicals/${basicchemical1.chemical_image}`}
+                          src={`https://katalystbd.com/admin/assets/image/basicchemicals/${basicchemical1.chemical_image}`}
                           alt={ basicchemical1.chemical_name}
                           className="img-fluid product-details-octa-image"
                         />
@@ -160,7 +160,7 @@ function Product_Details() {
                 <div key={item.id}>
                 <div className="box m-2">
                   <img
-                    src={`http://127.0.0.1:8000/assets/image/basicchemicals/${item.chemical_image}`}
+                    src={`https://katalystbd.com/admin/assets/image/basicchemicals/${item.chemical_image}`}
                     style={{ height: "300px" }}
                     alt="Product"
                   />

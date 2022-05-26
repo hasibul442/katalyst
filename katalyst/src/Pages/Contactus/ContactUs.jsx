@@ -28,7 +28,7 @@ function ContactUs() {
     formData.append("description", description);
 
     await axios
-      .post(`http://127.0.0.1:8000/api/messages/add`, formData)
+      .post(`https://katalystbd.com/admin/api/messages/add`, formData)
       .then(({ data }) => {
         // console.log(data.message);
         Swal.fire({
