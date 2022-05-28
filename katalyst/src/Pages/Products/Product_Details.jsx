@@ -67,7 +67,7 @@ function Product_Details() {
   };
   useEffect(() => {
     fetchProduct();
-  },[]);
+  }, []);
 
 
   const [basicchemical, setBasicChemical] = useState([]);

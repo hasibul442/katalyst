@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 
 import { Link } from "react-router-dom";
 import "./career.css";
-import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import axios from "axios";
 // import "react-tabs/style/react-tabs.css";
 function Career() {
