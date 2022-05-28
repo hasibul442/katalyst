@@ -6,54 +6,7 @@
 .footer{
     background-color: #13002e;
 }
-.social-container {
-    /* text-align: center; */
-}
-/* .social-icons {
-    padding: 0;
-} */
-/* .social-icons div {
-    position: relative;
-    font-size: 1.2em;
-    margin-top: 0.15em;
-}
-.social-icons i {
-    color: #fff;
-    position: absolute;
-    top: 5%;
-    left: 10%;
-    transition: all 265ms ease-out;
-}
-.count{
-    padding-left: 20px;
-} */
 
-/* .social-icons .social-link:before {
-    transform: scale(1);
-    -ms-transform: scale(1);
-    -webkit-transform: scale(1);
-    content: " ";
-    width: 40px;
-    height: 40px;
-    border-radius: 100%;
-    display: block;
-    background-color: #f307f3;
-    transition: all 265ms ease-out;
-}
-.social-icons .social-link:hover:before {
-    transform: scale(0);
-    transition: all 265ms ease-in;
-}
- .social-icons .social-link:hover i {
-    transform: scale(1.5);
-    -ms-transform: scale(1.5);
-    -webkit-transform: scale(1.5);
-    color: #d800f5;
-    background-color: #f307f3;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    transition: all 265ms ease-in;
-} */
 .footer2{
     background-color: #13002e;
     height: 50px;
@@ -82,4 +35,72 @@
     color: #ffffff;
     transition: 0.5s;
     border-radius: 20px 50px;
+}
+
+
+
+.effect {
+    width: 100%;
+}
+
+.effect .buttons {
+    display: flex;
+}
+.effect a:last-child {
+    margin-right: 0px;
+}
+
+.effect a {
+    text-decoration: none !important;
+    color: #fff;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    margin-right: 20px;
+    font-size: 20px;
+    overflow: hidden;
+    position: relative;
+}
+.effect a i {
+    position: relative;
+    z-index: 3;
+}
+.effect a.fb {
+    background-color: #4267B2;
+}
+.effect a.youtube {
+    background-color: #ff0000;
+}
+.effect a.linkedin {
+    background-color: #0072b1;
+}
+
+/* aeneas effect */
+.effect.aeneas a {
+    transition: transform 0.4s linear 0s, border-top-left-radius 0.1s linear 0s, border-top-right-radius 0.1s linear 0.1s, border-bottom-right-radius 0.1s linear 0.2s, border-bottom-left-radius 0.1s linear 0.3s;
+}
+.effect.aeneas a i {
+    transition: transform 0.4s linear 0s;
+}
+.effect.aeneas a:hover {
+    transform: rotate(360deg);
+    border-radius: 50%;
+}
+.effect.aeneas a:hover i {
+    transform: rotate(-360deg);
+}
+
+.counter-text{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+}
+.visitor-amount{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    color: #ec008c;
 }

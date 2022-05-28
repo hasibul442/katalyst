@@ -52,7 +52,7 @@
     margin-top: 20%;
 }
 .aboutus-mission-vision{
-    background-image: linear-gradient(#ffffffd5,#00000070, #000000),
+    background-image: linear-gradient(#0000009d,#0000009d, #0000009d),
     url("./../../../public/aboutus/aboutus-3.jpg");
   width: auto;
   /* height: 650px; */
@@ -93,18 +93,7 @@
     background-color: #552e8c;
     color: #fff;
 }
-/* .border-box-7{
-    height: 350px;
-    background-color: #4d0686;
-}
-.border-box-8{
-    height: 350px;
-    background-color: #73ff00;
-}
-.border-box-9{
-    height: 350px;
-    background-color: #ffee00;
-} */
+
 .mission-title{
     font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
     font-size: 35px;
@@ -173,4 +162,164 @@
         text-transform: uppercase;
   }
 
+  .vmv{
+    margin-top: 70px;
+    z-index: 10;
+  }
+  .vision-group{
+    color: #ffffff;
+    z-index: 0;
+  }
 
+  .vision-block{
+    left: calc(50% + 150px);
+    top: calc(-30% + -450px);
+  }
+  .vision-block h3:before{
+    position: absolute;
+    content: " ";
+    display: block;
+    width: 100px;
+    height: 1px;
+    background: #fcfcfc;
+    /* left: calc(50% + 175px); */
+    right: 96%;
+    top: calc(58px * 1.2 + 15px);
+    transform: rotate(-45deg);
+  }
+  .vision-block-1{
+    margin-top: 15px;
+  }
+  .vision-block-1 ul{
+    border-top: 1px solid #fff;
+    max-width: 375px;
+    padding-top: 15px;
+  }
+
+
+  .mission-block{
+    left: calc(0% + 30px);
+    top: calc(30% + -300px);
+    /* display: block; */
+    width: 375px;
+  }
+  .mission-block h3{
+    text-align: end;
+  }
+  .mission-block h3::after{
+    position: absolute;
+    content: " ";
+    display: block;
+    width: 100px;
+    height: 1px;
+    background: #fcfcfc;
+    /* left: calc(50% + 175px); */
+    right: -23%;
+    top: calc(58px * 1.2 + 15px);
+    transform: rotate(45deg);
+  }
+  .mission-block-1{
+    margin-top: 15px;
+  }
+  .mission-block-1 ul{
+    border-top: 1px solid #fff;
+    max-width: 375px;
+    padding-top: 15px;
+  }
+
+  .mobile-view{
+    display: none;
+  }
+
+  .value-block{
+    left: calc(50% + 250px);
+    top: calc(-30% + -250px);
+  }
+  .value-block h3:before{
+    position: absolute;
+    content: " ";
+    display: block;
+    width: 100px;
+    height: 1px;
+    background: #fcfcfc;
+    /* left: calc(50% + 175px); */
+    right: 96%;
+    top: calc(58px * 1.2 + 15px);
+    transform: rotate(-45deg);
+  }
+  .value-block-1{
+    margin-top: 15px;
+  }
+  .value-block-1 ul{
+    border-top: 1px solid #fff;
+    max-width: 375px;
+    padding-top: 15px;
+  }
+
+  .vmv-title{
+    color: #fff;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    font-size: 35px;
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+  .vision-block-only ul{
+    color: #fff;
+    border-top: 1px solid #fff;
+    padding-top: 15px;
+  }
+  @media (min-width: 992px) and (max-width: 1399px) {
+    /* .vision-block{
+      left: calc(50% + 150px);
+      top: calc(-30% + -450px);
+    } */
+    .vision-block h3:before{
+      right: 95%;
+      top: calc(58px * 1.2 + 14px);
+    }
+    .value-block{
+      left: calc(50% + 230px);
+      top: calc(-30% + -300px);
+    }
+    .value-block h3:before{
+      right: 94%;
+      top: calc(58px * 1.2 + 14px);
+      transform: rotate(-45deg);
+    }
+  }
+
+  @media (min-width: 1200px) and (max-width: 1399px)  {
+    .mission-block{
+      left: calc(0% + 0px);
+      top: calc(30% + -380px);
+      width: 300px;
+    }
+    .mission-block h3::after{
+      width: 170px;
+      right: -48%;
+      top: calc(55px * 1.2 + 43px);
+      transform: rotate(45deg);
+    }
+  }
+  @media (min-width: 992px) and (max-width: 1199px)  {
+    .mission-block{
+      left: calc(0% + 0px);
+      top: calc(30% + -400px);
+      width: 250px;
+    }
+    .mission-block h3::after{
+      width: 170px;
+      right: -57%;
+      top: calc(55px * 1.2 + 40px);
+      transform: rotate(45deg);
+    }
+  }
+@media (min-width: 300px) and (max-width: 991px) {
+  .mobile-view{
+    display: contents;
+  }
+  .desktop-view{
+    display: none;
+  }
+  
+}

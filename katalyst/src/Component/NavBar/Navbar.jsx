@@ -9,12 +9,13 @@ function Navbar() {
   const handleClick = () => setClick(!click);
   return (
     <>
+      <section id='nav-bar'>
       <nav className="navbar navbar-expand-lg shadow ftco-navbar-light" id="ftco-navbar">
         <div className="container">
           <Link className="navbar-brand" to='/'>
-            <img src="/logo/katalyst.png" alt="Company Logo" height= '50px' className="navbar-logo"/>
+            <img src="/logo/katalystbd.png" alt="Company Logo" height= '40px' className="navbar-logo"/>
           </Link>
-          <div className='menu-icon navbar-toggler text-light'  onClick={handleClick} data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <div className='menu-icon navbar-toggler text-dark'  onClick={handleClick} data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                   <i className= {click ? 'fas fa-times' : 'fas fa-bars'} ></i>
           </div>
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
@@ -76,6 +77,7 @@ function Navbar() {
           </div>
         </div>
       </nav>
+      </section>
     </>
   );
 }

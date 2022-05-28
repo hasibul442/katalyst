@@ -52,7 +52,7 @@ function Career() {
           <div className="row mb-5">
             {jobopen.length > 0 &&
               jobopen.map((item) => (
-                <div className="col-md-4" key={item.id}>
+                <div className="col-md-4 mb-3" key={item.id}>
                   <Link to={`/job/details/${item.id}`} className="job_blocks">
                     <div className="card">
                       <div className="card-body">

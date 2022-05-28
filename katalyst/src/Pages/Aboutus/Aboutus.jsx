@@ -87,16 +87,202 @@ function Aboutus() {
         </div>
       </section>
 
-      <section className="aboutus-mission-vision">
-        <div className="custom-shape">
-          <img
-            src="/custom_shape/Asset-2.png"
-            className="shape-image1"
-            alt="Custom Shape"
-          />
+      <section className="aboutus-mission-vision ">
+        <div className="desktop-view">
+          <div className="custom-shape">
+            <img
+              src="/custom_shape/Asset-2.png"
+              className="shape-image1"
+              alt="Custom Shape"
+            />
+          </div>
+
+          <div className="text-center container">
+            <p
+              className="background-title text-center mt-5"
+              style={{ color: "#fff" }}
+            >
+              {" "}
+              VISION{" "}
+            </p>
+            <div className="pt-5 pb-5 vmv">
+              <img
+                src="/aboutus/vmv.svg"
+                alt=""
+                className="img-fluid"
+                style={{ width: "350px", zIndex: 10 }}
+              />
+            </div>
+          </div>
+
+          <div className="container " style={{ marginBottom: "80px" }}>
+            <div className="vision-group vision-group-1 position-relative">
+              <div className="vision-block position-absolute">
+                <h3>Our Vision</h3>
+                <div className="vision-block-1">
+                  <ul>
+                    <li>
+                      To become the first choice of customers for a value added,
+                      ecofriendly chemicals and process.{" "}
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div className="vision-group vision-group-2 position-relative">
+              <div className="mission-block position-absolute">
+                <h3>Our Mission</h3>
+                <div className="mission-block-1">
+                  <ul>
+                    <li>
+                      To source and supply the best quality, value added and
+                      ecofriendly chemicals and process to customers of the
+                      industries we operate in so that we can promote natural
+                      decomposition to reduce carbon footprint, to reduce water
+                      and energy consumption to overcome the challenges of
+                      global warming.
+                    </li>
+                    <li>
+                      To develop and to retain customers committed to quality
+                      and consistent purchase behavior.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div className="vision-group value-group-2 position-relative">
+              <div className="value-block position-absolute">
+                <h3>Our Value</h3>
+                <div className="value-block-1">
+                  <ul>
+                    <p>
+                      Our core values define what we stand for, whom we work
+                      with and how we interact with colleagues, customers,
+                      principles, shareholders and others stakeholders. Our core
+                      values are:
+                    </p>
+                    <li>Passion for quality partners</li>
+                    <li>Accountability</li>
+                    <li>Promises and commitments.</li>
+                    <li>Professional Attitude and ethics.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
 
-            
+        <div className="mobile-view">
+          <div className="custom-shape">
+            <img
+              src="/custom_shape/Asset-2.png"
+              className="shape-image1"
+              alt="Custom Shape"
+            />
+          </div>
+
+          <div className="text-center container">
+            <p
+              className="background-title text-center mt-5"
+              style={{ color: "#fff" }}
+            >
+              {" "}
+              VISION{" "}
+            </p>
+          </div>
+
+          <div className="container">
+            <div className="row">
+              <div className="col-lg-6">
+                <div className="text-center">
+                  <img
+                    src="/aboutus/vision.svg"
+                    alt=""
+                    className="img-fluid w-25"
+                  />
+                </div>
+              </div>
+
+              <div className="col-lg-6">
+                <div>
+                  <p className="vmv-title">Our VISION</p>
+                  <div className="vision-block-only">
+                    <ul>
+                      <li>
+                        To become the first choice of customers for a value
+                        added, ecofriendly chemicals and process.{" "}
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              
+              <div className="col-lg-6">
+                <div className="text-center">
+                  <img
+                    src="/aboutus/mission.svg"
+                    alt=""
+                    className="img-fluid w-25"
+                  />
+                </div>
+              </div>
+
+              <div className="col-lg-6">
+                <div>
+                  <p className="vmv-title">Our Mission</p>
+                  <div className="vision-block-only">
+                    <ul>
+                    <li>
+                      To source and supply the best quality, value added and
+                      ecofriendly chemicals and process to customers of the
+                      industries we operate in so that we can promote natural
+                      decomposition to reduce carbon footprint, to reduce water
+                      and energy consumption to overcome the challenges of
+                      global warming.
+                    </li>
+                    <li>
+                      To develop and to retain customers committed to quality
+                      and consistent purchase behavior.
+                    </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              
+              <div className="col-lg-6">
+                <div className="text-center">
+                  <img
+                    src="/aboutus/value.svg"
+                    alt=""
+                    className="img-fluid w-25"
+                  />
+                </div>
+              </div>
+
+              <div className="col-lg-6">
+                <div>
+                  <p className="vmv-title">Our Value</p>
+                  <div className="vision-block-only">
+                    <ul>
+                    <p>
+                      Our core values define what we stand for, whom we work
+                      with and how we interact with colleagues, customers,
+                      principles, shareholders and others stakeholders. Our core
+                      values are:
+                    </p>
+                    <li>Passion for quality partners</li>
+                    <li>Accountability</li>
+                    <li>Promises and commitments.</li>
+                    <li>Professional Attitude and ethics.</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
 
       <div className="custom-shape-box">
@@ -123,7 +309,7 @@ function Aboutus() {
 
             <div className="col-md-6">
               <span className="why-choose-us-progress-bar-title">
-                Product Supply
+                Price Competitive
               </span>
               <div className="progress">
                 <div
@@ -147,30 +333,46 @@ function Aboutus() {
                 <div
                   className="progress-bar progress-bar-animated progress-bar-striped"
                   role="progressbar"
-                  style={{ width: "95%", backgroundColor: "#242F9B" }}
+                  style={{ width: "100%", backgroundColor: "#242F9B" }}
                   aria-valuenow="25"
                   aria-valuemin="0"
                   aria-valuemax="100"
                 >
-                  95%
+                  100%
                 </div>
               </div>
 
               <br />
 
               <span className="why-choose-us-progress-bar-title">
-                Customer Satisfaction
+                Shipment Time
               </span>
               <div className="progress">
                 <div
                   className="progress-bar progress-bar-animated progress-bar-striped"
                   role="progressbar"
-                  style={{ width: "99%", backgroundColor: "#FF5D5D" }}
+                  style={{ width: "100%", backgroundColor: "#FF5D5D" }}
                   aria-valuenow="25"
                   aria-valuemin="0"
                   aria-valuemax="100"
                 >
-                  99%
+                  100%
+                </div>
+              </div>
+
+              <br />
+
+              <span className="why-choose-us-progress-bar-title">Service</span>
+              <div className="progress">
+                <div
+                  className="progress-bar progress-bar-animated progress-bar-striped"
+                  role="progressbar"
+                  style={{ width: "100%", backgroundColor: "#ec008c" }}
+                  aria-valuenow="25"
+                  aria-valuemin="0"
+                  aria-valuemax="100"
+                >
+                  100%
                 </div>
               </div>
             </div>

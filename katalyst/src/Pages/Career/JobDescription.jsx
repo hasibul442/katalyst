@@ -114,8 +114,8 @@ function JobDescription() {
         </div>
       </section>
 
-      <section className="mt-5">
-        <h3 className="text-center">Apply For This Job</h3>
+      <section className="mt-5 container">
+        <h3 className="text-center background-title">Apply For This Job</h3>
 
         <form onSubmit={applyforjob}>
           <div className="row pb-3">
@@ -127,7 +127,6 @@ function JobDescription() {
                 }}
                 value={id}
                 className="form-control"
-                placeholder="First Name"
                 name="job_id"
               />
             </div>
@@ -139,7 +138,7 @@ function JobDescription() {
                 }}
                 value={candidate_name}
                 className="form-control"
-                placeholder="First Name"
+                placeholder="Full Name"
                 name="candidate_name"
                 required
               />
@@ -152,7 +151,7 @@ function JobDescription() {
                 }}
                 value={last_degree}
                 className="form-control"
-                placeholder="Last Name"
+                placeholder="Last Degree"
                 name="last_degree"
                 required
               />
@@ -162,13 +161,14 @@ function JobDescription() {
           <div className="row pb-3">
             <div className="col">
               <input
-                type="text"
+                type="phone"
                 onChange={(event) => {
                   setmobileNumber(event.target.value);
                 }}
                 value={mobile_number}
                 className="form-control"
-                placeholder="Organization Name"
+                placeholder="Phone Number"
+                minLength={11}
                 name="mobile_number"
               />
             </div>
@@ -195,13 +195,15 @@ function JobDescription() {
                 onChange={changeCVHandler}
                 className="form-control"
                 name="cv"
+                required
+                accept="application/pdf"
               />
             </div>
           </div>
 
           <div className="pb-3 text-center">
             <button className="btn btn-primary button-style" type="submit">
-              <span>Send Message</span>
+              <span>Submit Resume</span>
               <div className="wave"></div>
             </button>
           </div>
