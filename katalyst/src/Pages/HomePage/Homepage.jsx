@@ -125,21 +125,21 @@ function Homepage() {
         <div className="container">
           <div className="row">
             <div className="col-md-6">
-              <RellaxWrapper speed={2} className="text-center">
+              <div className="text-center">
                 <div className="history-img mx-auto my-auto">
                   <div className="history-image-shape">
                     <img
                       src="/homepage/homepage-1.jpg"
                       alt=""
-                      className="img-fluid shadow history-side-image"
+                      className="img-fluid  history-side-image"
                     />
                   </div>
                 </div>
-              </RellaxWrapper>
+              </div>
             </div>
 
             <div className="col-md-6 my-auto" data-aos="fade-up">
-              <p className="h2 katalyst-history-headline">OUR STORIES</p>
+              <p className="h2 katalyst-history-headline">OUR COMPANY</p>
               <p className="history-short-description">
                 Katalyst Bangladesh, is a partnership entity of four
                 professionals having academic background of Textile Engineering
@@ -161,7 +161,7 @@ function Homepage() {
           </div>
         </div>
 
-        <section>
+        <section className="mt-5">
           <div className="company-history-point" data-aos="fade-up">
             <p className="h2 katalyst-history-headline text-center">
               Our Strength

@@ -69,17 +69,17 @@ function Aboutus() {
 
             <div className="col-md-6">
               <div className="background-image">
-                <RellaxWrapper speed={4} className="text-center">
+                <div className="text-center">
                   <div className="history-img mx-auto my-auto">
                     <div className="history-image-shape">
                       <img
-                        src="/aboutus/aboutus-img-1.jpg"
+                        src="/homepage/homepage-1.jpg"
                         alt=""
                         className="img-fluid shadow history-side-image"
                       />
                     </div>
                   </div>
-                </RellaxWrapper>
+                </div>
               </div>
             </div>
           </div>
@@ -101,8 +101,7 @@ function Aboutus() {
               className="background-title text-center mt-5"
               style={{ color: "#fff" }}
             >
-              {" "}
-              VISION{" "}
+              MISSION, VISION & VALUES
             </p>
             <div className="pt-5 pb-5 vmv">
               <img
@@ -187,8 +186,7 @@ function Aboutus() {
               className="background-title text-center mt-5"
               style={{ color: "#fff" }}
             >
-              {" "}
-              VISION{" "}
+              MISSION, VISION & VALUES
             </p>
           </div>
 
@@ -292,92 +290,57 @@ function Aboutus() {
         />
       </div>
 
-      <section className="pb-5">
-        <div className="container">
-          <div className="row">
-            <div className="col-md-6">
-              <p className="why-choose-us-title">WHY CHOOSE US</p>
-              <p className="why-choose-us-subtitle">
-                Our Company has 10 years experience in this sector
-              </p>
-              <p className="why-choose-us-description">
-                Our Company is working relentlessly to develop business
-                relationship with customers of the said industries.
-              </p>
-            </div>
-
-            <div className="col-md-6">
-              <span className="why-choose-us-progress-bar-title">
-                Price Competitive
-              </span>
-              <div className="progress">
-                <div
-                  className="progress-bar bg-info progress-bar-animated progress-bar-striped"
-                  role="progressbar"
-                  style={{ width: "100%" }}
-                  aria-valuenow="25"
-                  aria-valuemin="0"
-                  aria-valuemax="100"
-                >
-                  100%
+      <section>
+          <div className="company-history-point" data-aos="fade-up">
+            <p className="h2 katalyst-history-headline text-center">
+              Why Choose Us
+            </p>
+            <p
+              className="history-short-description text-center"
+              style={{ color: "#ec008c" }}
+            >
+              OUR JOURNEY FOR THE LAST 10 YEARS WAS ALL ABOUT EXPLORING NEW
+              FRONTIERS
+            </p>
+            <div className="d-sm-flex justify-content-around pt-3">
+              <div className="pb-2">
+                <div className="text-center">
+                  <i className="fas fa-trophy fa-3x"></i>
+                  <p>
+                    Quality <br /> Products
+                  </p>
                 </div>
               </div>
 
-              <br />
-
-              <span className="why-choose-us-progress-bar-title">
-                Product Qulity
-              </span>
-              <div className="progress">
-                <div
-                  className="progress-bar progress-bar-animated progress-bar-striped"
-                  role="progressbar"
-                  style={{ width: "100%", backgroundColor: "#242F9B" }}
-                  aria-valuenow="25"
-                  aria-valuemin="0"
-                  aria-valuemax="100"
-                >
-                  100%
+              <div className="pb-2">
+                <div className="text-center">
+                  <i className="fad fa-dollar-sign fa-3x"></i>
+                  <p>
+                    Competitive <br /> price
+                  </p>
                 </div>
               </div>
 
-              <br />
-
-              <span className="why-choose-us-progress-bar-title">
-                Shipment Time
-              </span>
-              <div className="progress">
-                <div
-                  className="progress-bar progress-bar-animated progress-bar-striped"
-                  role="progressbar"
-                  style={{ width: "100%", backgroundColor: "#FF5D5D" }}
-                  aria-valuenow="25"
-                  aria-valuemin="0"
-                  aria-valuemax="100"
-                >
-                  100%
+              <div className="pb-2">
+                <div className="text-center">
+                  <i className="fad fa-ship fa-3x"></i>
+                  <p>
+                    In time <br /> shipment
+                  </p>
                 </div>
               </div>
 
-              <br />
-
-              <span className="why-choose-us-progress-bar-title">Service</span>
-              <div className="progress">
-                <div
-                  className="progress-bar progress-bar-animated progress-bar-striped"
-                  role="progressbar"
-                  style={{ width: "100%", backgroundColor: "#ec008c" }}
-                  aria-valuenow="25"
-                  aria-valuemin="0"
-                  aria-valuemax="100"
-                >
-                  100%
+              <div className="pb-2">
+                <div className="text-center">
+                  <i className="fas fa-user-friends fa-3x"></i>
+                  <p>
+                    Our outstanding <br /> services
+                  </p>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
     </>
   );
 }
