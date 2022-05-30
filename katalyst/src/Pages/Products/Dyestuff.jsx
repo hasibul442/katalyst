@@ -64,7 +64,7 @@ useEffect(()=>{
 const fetchDyestuff = async() =>{
     await axios.get(`https://katalystbd.com/admin/api/dyestuffs`).then(({data})=>{
       setDyestuff(data);
-      console.log(data)
+      // console.log(data)
     })
 }
 
@@ -98,10 +98,10 @@ return (
       >
         Dyestuffs
       </h1>
-      <h5 className="text-center item--title">
+      {/* <h5 className="text-center item--title">
         Produce with the highest quality of material ,provide the best
         service
-      </h5>
+      </h5> */}
       {/* <p className='text-center item--title'>Feel free to contact with us. We are always waiting eagerly for you to help. Contact with us, discuss about your project and get the best solution from us.</p> */}
     </div>
   </div>

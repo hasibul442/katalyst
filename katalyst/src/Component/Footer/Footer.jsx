@@ -29,16 +29,16 @@ function Footer() {
         <div className="footer">
           <div className="container ">
             <div className="row pt-4">
-              <div className="col-lg-5">
-                <h4 className="text-white"><i className="fad fa-align-right" style={{ color: "#EC008C" }}></i> <span className="footer-headline">Touch With Us</span></h4>
-                <p><i className="fas fa-map-marker-alt" style={{color: "#65C18C"}}></i> <a className="touch-with-us-text"  href="https://goo.gl/maps/fNXbEh9e6tEeKg718">&nbsp;House# 428A (3rd Floor), Road# 30, New DOHS Mohakhali, Dhaka</a></p>
-                <p><i className="fas fa-phone-office" style={{color: "#65C18C"}}></i> <a className="touch-with-us-text" href="tel:+880248811048">&nbsp;(+880) 248811048-49</a></p>
-                <p><i className="fas fa-mobile-alt" style={{color: "#65C18C"}}></i> <a className="touch-with-us-text" href="tel:+8801713090871">&nbsp;(+880) 1713-090871</a></p>
-                <p><i className="fas fa-mobile-alt" style={{color: "#65C18C"}}></i> <a className="touch-with-us-text" href="tel:+8801318321617">&nbsp;(+880) 1318-321617</a></p>
-                <p><i className="fas fa-envelope" style={{color: "#65C18C"}}></i><a className="touch-with-us-text" href="mailto:indrojite.roy@movingmachinesbd.com">&nbsp;indrojite.roy@movingmachinesbd.com</a></p>
+              <div className="col-lg-8">
+                <h5 className="text-white"><i className="fad fa-align-right" style={{ color: "#EC008C" }}></i> <span className="footer-headline">Contact Us</span></h5>
+                <span><i className="fas fa-map-marker-alt" style={{color: "#65C18C"}}></i> <a className="touch-with-us-text"  href="https://goo.gl/maps/fNXbEh9e6tEeKg718">&nbsp;House# 428A (3rd Floor), Road# 30, New DOHS Mohakhali, Dhaka</a></span><br />
+                <span><i className="fas fa-phone-office" style={{color: "#65C18C"}}></i> <a className="touch-with-us-text" href="tel:+880248811048">&nbsp;(+880) 248811048-49</a></span><br />
+                <span><i className="fas fa-mobile-alt" style={{color: "#65C18C"}}></i> <a className="touch-with-us-text" href="tel:+8801713090871">&nbsp;(+880) 1713-090871</a><span className="text-white"> ,</span> <a className="touch-with-us-text" href="tel:+8801318321617">&nbsp;(+880) 1318-321617</a></span><br />
+                {/* <p><i className="fas fa-mobile-alt" style={{color: "#65C18C"}}></i> <a className="touch-with-us-text" href="tel:+8801318321617">&nbsp;(+880) 1318-321617</a></p> */}
+                <span><i className="fas fa-envelope" style={{color: "#65C18C"}}></i><a className="touch-with-us-text" href="mailto:indrojite.roy@movingmachinesbd.com">&nbsp;indrojite.roy@movingmachinesbd.com</a></span>
               </div>
 
-              <div className="col-lg-4">
+              {/* <div className="col-lg-4">
                 <h4 className="text-white"><i className="fad fa-align-right"style={{ color: "#EC008C" }}></i> <span className="footer-headline"> Quick Link</span></h4>
                 <Link  to="/terms-and-condition" className="quick-link-text">
                   Terms and Conditions
@@ -49,10 +49,10 @@ function Footer() {
                 <Link to="/career" className="quick-link-text">
                   Career
                 </Link>
-              </div>
+              </div> */}
 
-              <div className="col-lg-3">
-                <h4 className="text-white"><i className="fad fa-align-right"style={{ color: "#EC008C" }}></i> <span className="footer-headline"> Social Link</span></h4>
+              <div className="col-lg-4">
+                <h5 className="text-white"><i className="fad fa-align-right"style={{ color: "#EC008C" }}></i> <span className="footer-headline"> Social Link</span></h5>
                 <div>
                   <div className="effect aeneas">
                     <div className="buttons">

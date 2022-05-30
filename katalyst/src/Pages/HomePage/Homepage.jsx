@@ -68,7 +68,7 @@ function Homepage() {
     const response = await fetch("https://katalystbd.com/admin/api/banner");
     const data = await response.json();
     setBanners(data);
-    console.log(data);
+    // console.log(data);
   };
 
   useEffect(() => {
@@ -86,7 +86,7 @@ function Homepage() {
       .get(`https://katalystbd.com/admin/api/basic-chemicals`)
       .then(({ data }) => {
         setBasicChemical(data);
-        console.log(data);
+        // console.log(data);
       });
   };
   return (

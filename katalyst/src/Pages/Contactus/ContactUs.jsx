@@ -63,10 +63,10 @@ function ContactUs() {
           >
             Contact Us
           </h1>
-          <h5 className="text-center item--title">
+          {/* <h5 className="text-center item--title">
             If you need any service please contact us, we will try our best to
             answer
-          </h5>
+          </h5> */}
           {/* <p className='text-center item--title'>Feel free to contact with us. We are always waiting eagerly for you to help. Contact with us, discuss about your project and get the best solution from us.</p> */}
         </div>
       </div>

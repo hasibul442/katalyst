@@ -24,7 +24,8 @@
   /* transform: rotate(180deg); */
 }
 .texture {
-  background-image: url("./../../../public/texture/t-4.png");
+  background-image: linear-gradient(#fffffff8, #ffffffec),
+  url("./../../../public/texture/Asset-2.png");
   height: 100%;
 }
 

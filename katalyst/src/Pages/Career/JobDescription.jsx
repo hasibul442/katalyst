@@ -12,7 +12,7 @@ function JobDescription() {
       .get(`https://katalystbd.com/admin/api/jobs/details/${id}`)
       .then(({ data }) => {
         setJobDetails(data.jobdetails);
-        console.log(data);
+        // console.log(data);
       });
   };
 
