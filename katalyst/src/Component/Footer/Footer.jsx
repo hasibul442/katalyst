@@ -35,7 +35,7 @@ function Footer() {
                 <span><i className="fas fa-phone-office" style={{color: "#65C18C"}}></i> <a className="touch-with-us-text" href="tel:+880248811048">&nbsp;(+880) 248811048-49</a></span><br />
                 <span><i className="fas fa-mobile-alt" style={{color: "#65C18C"}}></i> <a className="touch-with-us-text" href="tel:+8801713090871">&nbsp;(+880) 1713-090871</a><span className="text-white"> ,</span> <a className="touch-with-us-text" href="tel:+8801318321617">&nbsp;(+880) 1318-321617</a></span><br />
                 {/* <p><i className="fas fa-mobile-alt" style={{color: "#65C18C"}}></i> <a className="touch-with-us-text" href="tel:+8801318321617">&nbsp;(+880) 1318-321617</a></p> */}
-                <span><i className="fas fa-envelope" style={{color: "#65C18C"}}></i><a className="touch-with-us-text" href="mailto:indrojite.roy@movingmachinesbd.com">&nbsp;indrojite.roy@movingmachinesbd.com</a></span>
+                <span><i className="fas fa-envelope" style={{color: "#65C18C"}}></i><a className="touch-with-us-text" href="mailto:ashish.chakrabartty@katalystbd.com">&nbsp;ashish.chakrabartty@katalystbd.com</a></span>
               </div>
 
               {/* <div className="col-lg-4">
@@ -78,7 +78,7 @@ function Footer() {
         <div className="footer2">
           <p className="text-center footer-text my-auto pb-2">
             Copyright © {new Date().getFullYear()} Katalyst Bangladesh | All
-            Rights Reserved
+            Rights Reserved | <small>Developed by Hasibul Hasan</small>
           </p>
         </div>
       </section>

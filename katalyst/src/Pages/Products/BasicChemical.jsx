@@ -48,9 +48,9 @@ function BasicChemical() {
       <section className="pt-5">
         <div className="container">
           <p className="basic-chemicals-title">Basic Chemical</p>
-          <p className="basic-chemicals-subtitle">
+          {/* <p className="basic-chemicals-subtitle">
           To become the first choice of customers for a value added, ecofriendly chemicals and process.
-          </p>
+          </p> */}
 
           <div className="row mt-5 mb-5">
             {

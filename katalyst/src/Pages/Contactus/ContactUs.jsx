@@ -249,7 +249,7 @@ function ContactUs() {
                     </div>
                     <h3 className="address-headline">Email</h3>
                     <p className="text-white">
-                      indrojite.roy@movingmachinesbd.com
+                    ashish.chakrabartty@katalystbd.com
                     </p>
                   </div>
                 </div>

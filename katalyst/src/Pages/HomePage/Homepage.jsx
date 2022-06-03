@@ -103,7 +103,7 @@ function Homepage() {
                   alt="Banner_Photo"
                 />
                 <Carousel.Caption >
-                  <h2 className="animate__animated animate__bounceInDown">
+                  <h2 className="animate__animated animate__bounceInDown" style={{ color: banner.title_color }}>
                     {banner.title}
                   </h2>
                 </Carousel.Caption>
@@ -129,7 +129,7 @@ function Homepage() {
                 <div className="history-img mx-auto my-auto">
                   <div className="history-image-shape">
                     <img
-                      src="/homepage/homepage-1.jpg"
+                      src="/homepage/homepage-1.png"
                       alt=""
                       className="img-fluid  history-side-image"
                     />
@@ -163,16 +163,18 @@ function Homepage() {
 
         <section className="mt-5">
           <div className="company-history-point" data-aos="fade-up">
+          <br />
             <p className="h2 katalyst-history-headline text-center">
               Our Strength
             </p>
-            <p
+            <br />
+            {/* <p
               className="history-short-description text-center"
               style={{ color: "#ec008c" }}
             >
               OUR JOURNEY FOR THE LAST 10 YEARS WAS ALL ABOUT EXPLORING NEW
               FRONTIERS
-            </p>
+            </p> */}
             <div className="d-sm-flex justify-content-around pt-3">
               <div className="pb-2">
                 <div className="text-center">
@@ -218,14 +220,14 @@ function Homepage() {
         <div className="container pt-5">
           <div className="homepage-product-left-block">
             <h2 className="katalyst-history-headline text-center">
-              Types Of Product
+             Products
             </h2>
-            <p className="text-center pb-4">
+            {/* <p className="text-center pb-4">
               For over 10 years, the Katalyst family has been building
               relationships with many Company. Our core values define what we
               stand for, whom we work with and how we interact with colleagues,
               customers, principles, shareholders and others stakeholders.
-            </p>
+            </p> */}
             {/* <Link to="/basic-chemicals" className="learn-more button-style-2">
               <span className="circle" aria-hidden="true">
                 <span className="icon arrow"></span>
@@ -262,7 +264,7 @@ function Homepage() {
             <div className="col-lg-4">
               <div className="product-box mb-2 mt-2">
                 <img
-                  src="/product/Product-type-2.jpg"
+                  src="/product/auxiliary_chemicals.jpg"
                   alt=""
                   className="img-fluid"
                 />

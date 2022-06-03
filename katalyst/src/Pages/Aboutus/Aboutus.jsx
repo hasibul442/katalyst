@@ -73,7 +73,7 @@ function Aboutus() {
                   <div className="history-img mx-auto my-auto">
                     <div className="history-image-shape">
                       <img
-                        src="/homepage/homepage-1.jpg"
+                        src="/homepage/homepage-1.png"
                         alt=""
                         className="img-fluid shadow history-side-image"
                       />
@@ -116,7 +116,7 @@ function Aboutus() {
           <div className="container " style={{ marginBottom: "80px" }}>
             <div className="vision-group vision-group-1 position-relative">
               <div className="vision-block position-absolute">
-                <h3>Our Vision</h3>
+                <h3><br/></h3>
                 <div className="vision-block-1">
                   <ul>
                     <li>
@@ -130,7 +130,7 @@ function Aboutus() {
 
             <div className="vision-group vision-group-2 position-relative">
               <div className="mission-block position-absolute">
-                <h3>Our Mission</h3>
+                <h3><br/></h3>
                 <div className="mission-block-1">
                   <ul>
                     <li>
@@ -152,7 +152,7 @@ function Aboutus() {
 
             <div className="vision-group value-group-2 position-relative">
               <div className="value-block position-absolute">
-                <h3>Our Value</h3>
+                <h3><br/></h3>
                 <div className="value-block-1">
                   <ul>
                     <p>
@@ -204,7 +204,7 @@ function Aboutus() {
 
               <div className="col-lg-6">
                 <div>
-                  <p className="vmv-title">Our VISION</p>
+                  <p className="vmv-title"><br/></p>
                   <div className="vision-block-only">
                     <ul>
                       <li>
@@ -228,7 +228,7 @@ function Aboutus() {
 
               <div className="col-lg-6">
                 <div>
-                  <p className="vmv-title">Our Mission</p>
+                  <p className="vmv-title"><br/></p>
                   <div className="vision-block-only">
                     <ul>
                     <li>
@@ -260,7 +260,7 @@ function Aboutus() {
 
               <div className="col-lg-6">
                 <div>
-                  <p className="vmv-title">Our Value</p>
+                  <p className="vmv-title"><br/></p>
                   <div className="vision-block-only">
                     <ul>
                     <p>
@@ -295,13 +295,13 @@ function Aboutus() {
             <p className="h2 katalyst-history-headline text-center">
               Why Choose Us
             </p>
-            <p
+            {/* <p
               className="history-short-description text-center"
               style={{ color: "#ec008c" }}
             >
               OUR JOURNEY FOR THE LAST 10 YEARS WAS ALL ABOUT EXPLORING NEW
               FRONTIERS
-            </p>
+            </p> */}
             <div className="d-sm-flex justify-content-around pt-3">
               <div className="pb-2">
                 <div className="text-center">
