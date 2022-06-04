@@ -264,7 +264,7 @@ function Homepage() {
             <div className="col-lg-4">
               <div className="product-box mb-2 mt-2">
                 <img
-                  src="/product/auxiliary_chemicals.jpg"
+                  src="/auxiliary_chemicals.jpg"
                   alt=""
                   className="img-fluid"
                 />
@@ -374,7 +374,7 @@ function Homepage() {
                     </p>
                   </li>
                   <li>
-                    <Link to="/product/details" className="see-more ">
+                    <Link to="/auxiliarychemicals" className="see-more ">
                       See More
                     </Link>
                   </li>
@@ -402,7 +402,7 @@ function Homepage() {
                     </p>
                   </li>
                   <li>
-                    <Link to="/product/details" className="see-more ">
+                    <Link to="/deystuff" className="see-more ">
                       See More
                     </Link>
                   </li>
