@@ -102,8 +102,11 @@ function Homepage() {
                   src={`https://katalystbd.com/admin/assets/image/banner/${banner.image}`}
                   alt="Banner_Photo"
                 />
-                <Carousel.Caption >
-                  <h2 className="animate__animated animate__bounceInDown" style={{ color: banner.title_color }}>
+                <Carousel.Caption>
+                  <h2
+                    className="animate__animated animate__bounceInDown"
+                    style={{ color: banner.title_color }}
+                  >
                     {banner.title}
                   </h2>
                 </Carousel.Caption>
@@ -141,12 +144,11 @@ function Homepage() {
             <div className="col-md-6 my-auto" data-aos="fade-up">
               <p className="h2 katalyst-history-headline">OUR COMPANY</p>
               <p className="history-short-description">
-                Katalyst Bangladesh, is a partnership entity of four
-                professionals having academic background of Textile Engineering
-                and Biochemistry with combined pharmaceutical and textile
-                experiences of more than 75 years. has been established in early
-                2019 considering the growth potentiality of textile dyeing and
-                washing industries.
+                Katalyst Bangladesh, a partnership entity, was established
+                considering the growth potentiality of textile industries in
+                Bangladesh.<br/> Textile manufacturers in Bangladesh need fiber,
+                yarn, fabric, dyestuff, basic and auxiliary chemicals as their
+                raw materials
               </p>
 
               <div>
@@ -163,7 +165,7 @@ function Homepage() {
 
         <section className="mt-5">
           <div className="company-history-point" data-aos="fade-up">
-          <br />
+            <br />
             <p className="h2 katalyst-history-headline text-center">
               Our Strength
             </p>
@@ -219,9 +221,7 @@ function Homepage() {
       <section className="mt-5 texture-1">
         <div className="container pt-5">
           <div className="homepage-product-left-block">
-            <h2 className="katalyst-history-headline text-center">
-             Products
-            </h2>
+            <h2 className="katalyst-history-headline text-center">Products</h2>
             {/* <p className="text-center pb-4">
               For over 10 years, the Katalyst family has been building
               relationships with many Company. Our core values define what we
@@ -402,7 +402,7 @@ function Homepage() {
                     </p>
                   </li>
                   <li>
-                    <Link to="/deystuff" className="see-more ">
+                    <Link to="/dyestuff" className="see-more ">
                       See More
                     </Link>
                   </li>

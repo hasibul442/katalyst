@@ -55,7 +55,7 @@ function Navbar() {
                   </li>
                   <li>
                     <Link className="dropdown-item" to="/dyestuff">
-                      Dyes Stuff
+                      DyeStuffs
                     </Link>
                   </li>
                 </ul>

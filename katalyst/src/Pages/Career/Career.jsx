@@ -17,6 +17,51 @@ function Career() {
     });
   };
 
+  function openjob(){
+            if(jobopen.length > 0){
+              return (
+                jobopen.length > 0 &&
+              jobopen.map((item) => (
+                <div className="col-md-4 mb-3" key={item.id}>
+                  <Link to={`/job/details/${item.id}`} className="job_blocks">
+                    <div className="card">
+                      <div className="card-body">
+                        <p className="position_name">
+                          <i className="fad fa-angle-double-right"></i>{" "}
+                          {item.position_name}
+                        </p>
+                        <span className="application_dead_line">
+                          <i className="fas fa-calendar-day"></i>{" "}
+                          {item.application_dead_line}
+                        </span>
+                        <br />
+                        <span className="application_dead_line">
+                          <i className="fad fa-users"></i> {item.vacancy}
+                        </span>
+                      </div>
+                    </div>
+                  </Link>
+                </div>
+              ))
+              );
+            }
+            else{
+              return (
+                <div className="col-md-12 mb-3">
+                  <div  className="job_blocks">
+                    <div className="card">
+                      <div className="card-body">
+                        <h3 className="text-center">No Jobs Are Available</h3>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              );
+            }
+
+    
+  }
+
   return (
     <>
       <div className="career-bg">
@@ -49,29 +94,7 @@ function Career() {
       <section className="mt-5">
         <div className="job-post container">
           <div className="row mb-5">
-            {jobopen.length > 0 &&
-              jobopen.map((item) => (
-                <div className="col-md-4 mb-3" key={item.id}>
-                  <Link to={`/job/details/${item.id}`} className="job_blocks">
-                    <div className="card">
-                      <div className="card-body">
-                        <p className="position_name">
-                          <i className="fad fa-angle-double-right"></i>{" "}
-                          {item.position_name}
-                        </p>
-                        <span className="application_dead_line">
-                          <i className="fas fa-calendar-day"></i>{" "}
-                          {item.application_dead_line}
-                        </span>
-                        <br />
-                        <span className="application_dead_line">
-                          <i className="fad fa-users"></i> {item.vacancy}
-                        </span>
-                      </div>
-                    </div>
-                  </Link>
-                </div>
-              ))}
+              {openjob()}
           </div>
         </div>
       </section>

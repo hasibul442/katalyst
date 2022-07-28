@@ -47,6 +47,7 @@
 }
 .background-description {
   font-size: 18px;
+  justify-content: center;
 }
 .background-image{
     margin-top: 60px;
